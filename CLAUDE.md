@@ -13,7 +13,9 @@ built to be **sold to K-12 school districts**. AI-driven, with **print materials
 output** because districts are banning classroom screen time.
 
 ## Confirmed product decisions (discovery, 2026-07-17)
-- **Standards:** WIDA framework (~40 states). Anchor on **Standard 1 (Social & Instructional)** +
+- **Standards:** WIDA is primary (~40 states) but is **not** CA, TX, NY, or AZ — a large share of US
+  ELs by headcount. A crosswalk lives in `curriculum/standards/frameworks.json`; it is **unvalidated**
+  and must be reviewed by someone holding each state's documents. Anchor on **Standard 1 (Social & Instructional)** +
   **Standard 2 (Language Arts)**; grade clusters 6–8 / 9–12; proficiency **levels 1–3**.
 - **Wedge / MVP:** secondary **newcomers** (grades 6–12, recently arrived). Scope = **Survival + ELD**
   across all four domains (Listening, Speaking, Reading, Writing).
@@ -32,8 +34,10 @@ vocabulary, scaffolds, render targets, check }`.
 - The **personalization engine** places a student on a WIDA level *per domain* and serves the matching variant.
 - The **same card** compiles to a printable PDF, a projector slide, or an interactive task — so print-first
   and 1:1 districts buy the same product.
-- Each **check** emits WIDA level-movement **evidence** that rolls up into teacher/admin growth dashboards
-  (the administrator's buying trigger).
+- Each **check** is **formative evidence** a teacher records. It is NOT a measure of proficiency-level
+  movement — that is the state summative's job (ACCESS/ELPAC/TELPAS/NYSESLAT). Growth reporting is
+  the administrator's buying trigger, but claiming level movement without validity evidence is a
+  credibility and compliance risk. Frame as progress toward Can-Do descriptors.
 
 ## Repo layout
 ```
@@ -66,6 +70,23 @@ No Node in this environment — tooling is Python 3 (stdlib only, no install ste
   level switch (L1/L2/L3) and surface switch (device/print) both work and compose correctly; no
   console errors. Fixed a malformed CSS rule (a selector list ran into an `@media` block) that was
   dropping the dark-mode pressed-chip color.
+
+## Hard gates before any district sees this
+1. **Credentialed review.** No licensed EL/TESOL educator has reviewed any of the 144 variants. Every
+   mastery threshold ("4 of 5 trials") was authored without a basis and will change under review.
+2. **Standards crosswalk validation** — see `curriculum/standards/frameworks.json`.
+3. **Legal review** of the teaching notes. They touch mandated reporting, immigration, and health.
+   Unit 08 previously asserted that calling 911 carries no immigration consequence; that claim was
+   removed 2026-07-20 because it varies by jurisdiction. Others need counsel's eyes.
+4. **Privacy paperwork**: SDPC National Data Privacy Agreement, NY Ed Law 2-d, IL SOPPA, CA AB1584.
+5. **ESSA evidence tier + logic model** — Title III money increasingly asks for it. We are Tier 4.
+6. **VPAT / Section 508.** Contrast is now AA-clean (verified in-browser, both themes, 2072 text
+   nodes, zero failures) but keyboard nav and screen-reader semantics are untested.
+
+## Coverage honesty (what "K-12 platform" does not yet mean)
+- WIDA **levels 1–3 of 6**. Most ELs in a district sit at 3–5.
+- **24 weeks** of a ~36-week year.
+- **Secondary (6–12) newcomers only.** Elementary is different work. Do not demo this as "K-12".
 
 ## Known duplication (worth fixing before the content grows)
 Two places still hold copies of curriculum content instead of reading it:

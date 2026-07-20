@@ -4,7 +4,17 @@
   "phase": "C",
   "weeks": "19–20",
   "focus": "Adjectives, colors and sizes, make comparisons between things.",
-  "wida": { "standards": ["SI", "LA"], "keyUses": ["Inform"] },
+  "standards": {
+    "wida": {
+      "standards": [
+        "SI",
+        "LA"
+      ],
+      "keyUses": [
+        "Inform"
+      ]
+    }
+  },
   "function": "Describe and compare things with detail",
   "grammar": [
     "Adjective before noun: a big red book",
@@ -14,8 +24,39 @@
     "It looks / feels / sounds ___."
   ],
   "vocabulary": {
-    "core": ["big", "small", "long", "short", "tall", "old", "new", "hot", "cold", "fast", "slow", "heavy", "light", "expensive", "cheap", "colors", "shapes", "than", "same", "different"],
-    "academic": ["compare", "contrast", "describe", "similar", "difference", "characteristic", "property", "measure", "category"]
+    "core": [
+      "big",
+      "small",
+      "long",
+      "short",
+      "tall",
+      "old",
+      "new",
+      "hot",
+      "cold",
+      "fast",
+      "slow",
+      "heavy",
+      "light",
+      "expensive",
+      "cheap",
+      "colors",
+      "shapes",
+      "than",
+      "same",
+      "different"
+    ],
+    "academic": [
+      "compare",
+      "contrast",
+      "describe",
+      "similar",
+      "difference",
+      "characteristic",
+      "property",
+      "measure",
+      "category"
+    ]
   },
   "foundationalLiteracy": "The -er and -est endings as a spelling pattern, including the doubling rule (big → bigger). Recognizing that longer adjectives take more instead.",
   "culturalNote": "Comparison is the first genuinely academic language function in the sequence — it is what science labs, math word problems, and social studies all run on. Point this out to students explicitly: this unit is the one that starts paying off in their other classes. Avoid comparisons of people's appearance, wealth, or home countries; keep the objects neutral.",
@@ -28,17 +69,20 @@
         "1": {
           "canDo": "Point to an object when it is described by one attribute.",
           "scaffold": "Object sets varying by a single feature: the big ball, the red ball.",
-          "check": "Selects the correct object from 4 in 8 of 10 trials."
+          "check": "Selects the correct object from 4 in 8 of 10 trials.",
+          "l1Bridge": "Adjectives glossed with paired objects; teach opposites together."
         },
         "2": {
           "canDo": "Understand a spoken comparison of two things.",
           "scaffold": "Paired picture cards. Comparison sentences limited to taught structures.",
-          "check": "Identifies which of two items is described in 4 of 5 comparisons."
+          "check": "Identifies which of two items is described in 4 of 5 comparisons.",
+          "l1Bridge": "Explain comparison structure in the home language — languages mark comparison very differently."
         },
         "3": {
           "canDo": "Follow a spoken description of several items and rank them.",
           "scaffold": "Ranking organizer. Description at normal rate, played twice.",
-          "check": "Correctly orders 4 items from a spoken description using superlatives."
+          "check": "Correctly orders 4 items from a spoken description using superlatives.",
+          "l1Bridge": "Ranking organizer headings glossed."
         }
       }
     },
@@ -50,17 +94,20 @@
         "1": {
           "canDo": "Describe an object with one adjective.",
           "scaffold": "Adjective picture bank. Two-word answers accepted: big book.",
-          "check": "Describes 6 objects with an appropriate adjective."
+          "check": "Describes 6 objects with an appropriate adjective.",
+          "l1Bridge": "Student may give the adjective in the home language; teacher supplies the English."
         },
         "2": {
           "canDo": "Compare two things using a comparative frame.",
           "scaffold": "Frame: The ___ is ___er than the ___. Object pairs provided.",
-          "check": "Produces 4 correct comparative sentences about real objects."
+          "check": "Produces 4 correct comparative sentences about real objects.",
+          "l1Bridge": "Explicitly contrast how the home language forms comparatives with English -er / more."
         },
         "3": {
           "canDo": "Compare several things and justify which is best for a purpose.",
           "scaffold": "Superlative bank plus a because frame. Real decision scenario provided.",
-          "check": "Uses a superlative and justifies the choice with a because clause."
+          "check": "Uses a superlative and justifies the choice with a because clause.",
+          "l1Bridge": "Justify the choice in the home language first, then in English with because."
         }
       }
     },
@@ -72,17 +119,20 @@
         "1": {
           "canDo": "Match adjectives to pictures.",
           "scaffold": "Word–picture cards with opposite pairs shown together.",
-          "check": "Matches 10 adjectives, including 4 opposite pairs."
+          "check": "Matches 10 adjectives, including 4 opposite pairs.",
+          "l1Bridge": "Adjective-picture cards glossed once."
         },
         "2": {
           "canDo": "Read a description and identify which object it refers to.",
           "scaffold": "3-sentence descriptions with 4 candidate pictures. Adjectives bolded.",
-          "check": "Correctly identifies the object in 4 of 5 descriptions."
+          "check": "Correctly identifies the object in 4 of 5 descriptions.",
+          "l1Bridge": "Description vocabulary glossed."
         },
         "3": {
           "canDo": "Read a comparison text and extract the criteria being compared.",
           "scaffold": "Short product or animal comparison plus a criteria table to complete.",
-          "check": "Fills a 2-item, 3-criteria comparison table from a paragraph."
+          "check": "Fills a 2-item, 3-criteria comparison table from a paragraph.",
+          "l1Bridge": "Criteria table headings glossed; the table is completed in English."
         }
       }
     },
@@ -94,17 +144,20 @@
         "1": {
           "canDo": "Label pictures with adjectives.",
           "scaffold": "Picture page with an adjective word bank and labeling lines.",
-          "check": "Labels 8 pictures with appropriate adjectives."
+          "check": "Labels 8 pictures with appropriate adjectives.",
+          "l1Bridge": "Adjective word bank shown bilingually."
         },
         "2": {
           "canDo": "Write comparative sentences about two objects.",
           "scaffold": "Frames plus an adjective bank marked for -er versus more.",
-          "check": "Writes 4 comparative sentences with correct -er/more choice."
+          "check": "Writes 4 comparative sentences with correct -er/more choice.",
+          "l1Bridge": "Mark the -er / more split explicitly against the home-language pattern."
         },
         "3": {
           "canDo": "Write a paragraph comparing two things and stating a preference.",
           "scaffold": "Comparison organizer with criteria columns. Transition bank: however, but, while.",
-          "check": "Writes a 6-sentence comparison with 2 criteria, a transition, and a justified preference."
+          "check": "Writes a 6-sentence comparison with 2 criteria, a transition, and a justified preference.",
+          "l1Bridge": "Plan the comparison in the home language, write it in English."
         }
       }
     }

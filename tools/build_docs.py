@@ -15,6 +15,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 UNITS_DIR = ROOT / "curriculum" / "units"
+FRAMEWORKS = ROOT / "curriculum" / "standards" / "frameworks.json"
 OUT = ROOT / "docs" / "brooklyn-curriculum.html"
 
 LEVELS = [("1", "Entering"), ("2", "Emerging"), ("3", "Developing")]
@@ -43,10 +44,10 @@ def slots(text):
 STYLE = """
   :root {
     --paper:#F4F6F5; --surface:#FFFFFF; --surface-2:#ECF0EE;
-    --ink:#17242A; --ink-2:#4B5E64; --ink-3:#7C8D91;
+    --ink:#17242A; --ink-2:#4B5E64; --ink-3:#616F72;
     --line:#D9E1DE; --line-2:#E7ECEA;
     --accent:#1E6E63; --accent-ink:#124039; --accent-tint:#E1EEEA;
-    --warm:#B6611F; --warm-tint:#F3E6D6;
+    --warm:#9E541A; --warm-tint:#F3E6D6;
     --lvl1-bg:#E3F1ED; --lvl2-bg:#D2E9E2; --lvl3-bg:#C3E0D7;
     --lvl1-fg:#2C6A5E; --lvl2-fg:#1F6255; --lvl3-fg:#154B41;
     --shadow:0 1px 2px rgba(20,45,40,.05), 0 8px 24px -12px rgba(20,45,40,.18);
@@ -100,6 +101,14 @@ STYLE = """
   .phase-head h2 { font-size:clamp(21px,3.2vw,27px); }
   .phase-head .wk { margin-left:auto; color:var(--ink-3); font-family:var(--mono); font-size:12.5px; }
 
+  /* standards coverage */
+  .standards { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+               box-shadow:var(--shadow); padding:clamp(20px,3vw,28px); margin-bottom:52px; }
+  .standards h2 { font-size:15px; font-family:var(--mono); letter-spacing:.1em;
+                  text-transform:uppercase; color:var(--ink-3); font-weight:600; }
+  .standards thead th small { display:block; font-weight:400; text-transform:none;
+                              letter-spacing:0; color:var(--ink-3); font-size:11px; }
+
   /* unit */
   .unit { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
           box-shadow:var(--shadow); padding:clamp(20px,3vw,32px); margin-bottom:28px;
@@ -138,7 +147,9 @@ STYLE = """
   table.matrix thead th { font-family:var(--mono); font-size:11.5px; letter-spacing:.1em;
                           text-transform:uppercase; color:var(--ink-3); border-bottom:1px solid var(--line);
                           white-space:nowrap; }
-  td.rowhead, th.rowhead { font-weight:600; white-space:nowrap; width:120px; }
+  /* explicit, not inherited — see the quirks-mode note in main() */
+  table.matrix td { color:var(--ink); }
+  td.rowhead, th.rowhead { color:var(--ink); font-weight:600; white-space:nowrap; width:120px; }
   td.rowhead small { display:block; font-weight:400; color:var(--ink-3);
                      font-size:11.5px; letter-spacing:.04em; }
   .c1 { background:var(--lvl1-bg); } .c2 { background:var(--lvl2-bg); } .c3 { background:var(--lvl3-bg); }
@@ -178,16 +189,16 @@ STYLE = """
 """
 
 LIGHT = """--paper:#F4F6F5; --surface:#FFFFFF; --surface-2:#ECF0EE;
-    --ink:#17242A; --ink-2:#4B5E64; --ink-3:#7C8D91;
+    --ink:#17242A; --ink-2:#4B5E64; --ink-3:#616F72;
     --line:#D9E1DE; --line-2:#E7ECEA;
     --accent:#1E6E63; --accent-ink:#124039; --accent-tint:#E1EEEA;
-    --warm:#B6611F; --warm-tint:#F3E6D6;
+    --warm:#9E541A; --warm-tint:#F3E6D6;
     --lvl1-bg:#E3F1ED; --lvl2-bg:#D2E9E2; --lvl3-bg:#C3E0D7;
     --lvl1-fg:#2C6A5E; --lvl2-fg:#1F6255; --lvl3-fg:#154B41;
     --shadow:0 1px 2px rgba(20,45,40,.05), 0 8px 24px -12px rgba(20,45,40,.18);"""
 
 DARK = """--paper:#0E181C; --surface:#14232A; --surface-2:#1B2E36;
-    --ink:#E8EFEC; --ink-2:#A6BAB7; --ink-3:#70878A;
+    --ink:#E8EFEC; --ink-2:#BECCCA; --ink-3:#819697;
     --line:#26383F; --line-2:#203138;
     --accent:#5BC6B4; --accent-ink:#AEE3D8; --accent-tint:#173A38;
     --warm:#E0925A; --warm-tint:#33241A;
@@ -206,9 +217,10 @@ def render_unit(u):
     a(f'    <h3>{title}</h3>')
     a(f'    <p class="focus">{e(u["focus"])}</p>')
 
+    wida = u["standards"]["wida"]
     stds = " &middot; ".join(f'{s} {STANDARD_NAMES.get(s, "")}'.strip()
-                             for s in u["wida"]["standards"])
-    kus = ", ".join(e(k) for k in u["wida"]["keyUses"])
+                             for s in wida["standards"])
+    kus = ", ".join(e(k) for k in wida["keyUses"])
     a('    <div class="metastrip">')
     a(f'      <span class="chip"><b>WIDA</b> {stds}</span>')
     a(f'      <span class="chip"><b>Key Use</b> {kus}</span>')
@@ -254,6 +266,7 @@ def render_unit(u):
             a(f'      <td class="c{n}">')
             a(f'        <span class="cando">{e(lv["canDo"])}</span>')
             a(f'        <span class="sub"><b>Scaffold</b><br>{e(lv["scaffold"])}</span>')
+            a(f'        <span class="sub"><b>Home-language bridge</b><br>{e(lv["l1Bridge"])}</span>')
             a(f'        <span class="sub"><b>Check</b><br>{e(lv["check"])}</span>')
             a('      </td>')
         a('    </tr>')
@@ -284,9 +297,21 @@ def main():
     cards = sum(len(u["cards"]) for u in units)
     out = []
     a = out.append
+    # A full document, not a fragment. Without a doctype the browser uses quirks
+    # mode, where table cells do NOT inherit `color` from ancestors — that shipped
+    # black-on-dark rowheads that were invisible in dark mode and unnoticeable in
+    # light. This file is opened directly from disk, so it must stand alone.
+    a("<!doctype html>")
+    a('<html lang="en">')
+    a("<head>")
+    a('<meta charset="utf-8">')
+    a('<meta name="viewport" content="width=device-width, initial-scale=1">')
+    a('<meta name="color-scheme" content="light dark">')
     a("<title>Brooklyn &mdash; Curriculum Reference</title>")
     css = STYLE.replace("__LIGHT__", LIGHT).replace("__DARK__", DARK)
     a("<style>" + css + "</style>")
+    a("</head>")
+    a("<body>")
     a('<div class="page"><div class="wrap">')
 
     a('<header class="hero">')
@@ -302,6 +327,34 @@ def main():
     a('    <span class="chip"><b>~24</b> weeks</span>')
     a('  </div>')
     a('</header>')
+
+    # standards coverage — states the crosswalk's unverified status up front
+    if FRAMEWORKS.exists():
+        fw = json.loads(FRAMEWORKS.read_text())
+        xw = fw["levelCrosswalk"]
+        a('<section class="standards">')
+        a('  <h2>Standards coverage</h2>')
+        a('  <div class="scroll-x"><table class="matrix"><thead><tr>')
+        a('    <th class="rowhead">Brooklyn level</th>')
+        for key in ["wida", "caEld", "txElps", "nyNls"]:
+            f = fw["frameworks"][key]
+            a(f'    <th>{e(f["name"])}<br><small>{e(f["coverage"])}</small></th>')
+        a('  </tr></thead><tbody>')
+        for n, _ in LEVELS:
+            row = xw["map"][n]
+            a('    <tr>')
+            a(f'      <td class="rowhead">{e(row["brooklyn"])}</td>')
+            for key in ["wida", "caEld", "txElps", "nyNls"]:
+                a(f'      <td class="c{n}">{e(row[key])}</td>')
+            a('    </tr>')
+        a('  </tbody></table></div>')
+        if not xw.get("verified"):
+            a('  <div class="note"><h4>Crosswalk not yet validated</h4>'
+              f'<p>{e(xw["caveat"])} Authored from framework structure, not from the state '
+              'standards documents. A credentialed reviewer holding each state&rsquo;s current '
+              'documents must validate this before it is shown to a district in that state. '
+              'Expectation-code-level mapping is deliberately absent rather than guessed.</p></div>')
+        a('</section>')
 
     a('<nav class="toc"><h2>Contents</h2><ol>')
     for u in units:
@@ -323,6 +376,8 @@ def main():
       'Independent alignment to the WIDA ELD Standards Framework (2020). Not affiliated with, '
       'authorized by, or endorsed by WIDA / the University of Wisconsin.</footer>')
     a('</div></div>')
+    a("</body>")
+    a("</html>")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(out))

@@ -4,7 +4,18 @@
   "phase": "B",
   "weeks": "15–16",
   "focus": "Places in town, ask for and give directions, transportation, staying safe.",
-  "wida": { "standards": ["SI", "SS"], "keyUses": ["Inform", "Explain"] },
+  "standards": {
+    "wida": {
+      "standards": [
+        "SI",
+        "SS"
+      ],
+      "keyUses": [
+        "Inform",
+        "Explain"
+      ]
+    }
+  },
   "function": "Get where I need to go and ask for help in my community",
   "grammar": [
     "Where is the ___?",
@@ -15,11 +26,42 @@
     "Prepositions of place and movement"
   ],
   "vocabulary": {
-    "core": ["store", "bank", "hospital", "clinic", "library", "park", "bus", "bus stop", "train", "street", "corner", "left", "right", "straight", "near", "far", "stop", "help", "police", "emergency", "address"],
-    "academic": ["community", "transportation", "route", "location", "direction", "resource", "public", "service"]
+    "core": [
+      "store",
+      "bank",
+      "hospital",
+      "clinic",
+      "library",
+      "park",
+      "bus",
+      "bus stop",
+      "train",
+      "street",
+      "corner",
+      "left",
+      "right",
+      "straight",
+      "near",
+      "far",
+      "stop",
+      "help",
+      "police",
+      "emergency",
+      "address"
+    ],
+    "academic": [
+      "community",
+      "transportation",
+      "route",
+      "location",
+      "direction",
+      "resource",
+      "public",
+      "service"
+    ]
   },
   "foundationalLiteracy": "Reading street signs and addresses. Number-and-word combinations (1400 South, Route 9). Own address to automaticity — this is a safety skill, not just a literacy one.",
-  "culturalNote": "Teach 911 explicitly, including that it is free, that it works from any phone, and that using it will not by itself bring immigration consequences — but be honest that you are a teacher, not a lawyer, and never advise on immigration status. Many newcomer families avoid police contact for well-founded reasons. Frame this unit around independence and safety, and make sure every student can say their own address and a caregiver's phone number from memory before the unit ends.",
+  "culturalNote": "Teach 911 explicitly: what it is for, that it is free, and that it works from any phone. Do NOT make claims about whether calling brings immigration consequences — that varies by jurisdiction and enforcement posture, and a teacher is not a lawyer. Many newcomer families avoid police contact for well-founded reasons; acknowledge that honestly rather than reassuring past what you know, and route questions to a local immigrant legal-aid organization. Districts must have this note reviewed by counsel and localized before use. Frame the unit around independence and safety, and make sure every student can say their own address and a caregiver's phone number from memory before it ends.",
   "cards": [
     {
       "id": "u08-listening",
@@ -29,17 +71,20 @@
         "1": {
           "canDo": "Point to a community place or a direction arrow when named.",
           "scaffold": "Picture cards of local places and large left/right/straight arrows.",
-          "check": "Identifies 6 places and 3 direction words from spoken input."
+          "check": "Identifies 6 places and 3 direction words from spoken input.",
+          "l1Bridge": "Place words glossed; direction arrows are language-neutral."
         },
         "2": {
           "canDo": "Follow a two-step spoken direction on a simple map.",
           "scaffold": "Neighborhood map with a start marker. Directions repeated on request.",
-          "check": "Traces the correct route from a 2-step spoken direction in 4 of 5 trials."
+          "check": "Traces the correct route from a 2-step spoken direction in 4 of 5 trials.",
+          "l1Bridge": "Direction vocabulary pre-taught in the home language."
         },
         "3": {
           "canDo": "Follow multi-step spoken directions and a transit announcement.",
           "scaffold": "Recorded bus announcement plus a 3-step direction. Note-catcher provided.",
-          "check": "Identifies the correct stop and traces a 3-step route from one listening."
+          "check": "Identifies the correct stop and traces a 3-step route from one listening.",
+          "l1Bridge": "Transit announcement note-catcher headings glossed."
         }
       }
     },
@@ -51,17 +96,20 @@
         "1": {
           "canDo": "Name a place and say my address or ask for help in one word.",
           "scaffold": "Wallet card with address and emergency contact. Help as a taught single word.",
-          "check": "States or shows own address and says help when prompted by a scenario."
+          "check": "States or shows own address and says help when prompted by a scenario.",
+          "l1Bridge": "Wallet card printed bilingually with address and emergency contact. This is a safety artifact, not a worksheet."
         },
         "2": {
           "canDo": "Ask for directions to a place using a frame.",
           "scaffold": "Frame: Excuse me, where is the ___? / How do I get to ___?",
-          "check": "Asks a complete direction question and repeats the answer back."
+          "check": "Asks a complete direction question and repeats the answer back.",
+          "l1Bridge": "Frame rehearsed after the home-language equivalent."
         },
         "3": {
           "canDo": "Give directions to someone else and explain which bus to take.",
           "scaffold": "Preposition and sequence bank (first, then, after that). Map to reference.",
-          "check": "Gives a 3-step direction a peer can follow and names the correct route."
+          "check": "Gives a 3-step direction a peer can follow and names the correct route.",
+          "l1Bridge": "Plan the directions in the home language, give them in English."
         }
       }
     },
@@ -73,17 +121,20 @@
         "1": {
           "canDo": "Recognize community signs and my own address in print.",
           "scaffold": "Photo cards of real local signage: stop, exit, open, closed, hospital.",
-          "check": "Matches 6 signs to meanings and identifies own address from 4 options."
+          "check": "Matches 6 signs to meanings and identifies own address from 4 options.",
+          "l1Bridge": "Community and safety signs glossed and NOT faded — over-scaffold safety, never under."
         },
         "2": {
           "canDo": "Read a bus schedule or a simple map key.",
           "scaffold": "Real transit schedule, enlarged, with the target route highlighted and a key glossed.",
-          "check": "Finds the departure time for a given stop in 4 of 5 attempts."
+          "check": "Finds the departure time for a given stop in 4 of 5 attempts.",
+          "l1Bridge": "Transit schedule key glossed in the home language."
         },
         "3": {
           "canDo": "Read information about a community resource and explain what it offers.",
           "scaffold": "Simplified flyer for a real local service (clinic, library card, food pantry).",
-          "check": "Identifies what the service provides, who qualifies, and how to access it."
+          "check": "Identifies what the service provides, who qualifies, and how to access it.",
+          "l1Bridge": "Resource flyers provided in the home language wherever the district has translations."
         }
       }
     },
@@ -95,17 +146,20 @@
         "1": {
           "canDo": "Write my address and an emergency contact number.",
           "scaffold": "Wallet-card template with labeled fields. Copied, then reproduced from memory.",
-          "check": "Writes own full address and one emergency number without a model."
+          "check": "Writes own full address and one emergency number without a model.",
+          "l1Bridge": "Address order differs by country; show the US order explicitly in the home language."
         },
         "2": {
           "canDo": "Label a map of my neighborhood and write a simple direction.",
           "scaffold": "Blank map plus a place word bank and direction sentence frames.",
-          "check": "Labels 6 places and writes 2 correct direction sentences."
+          "check": "Labels 6 places and writes 2 correct direction sentences.",
+          "l1Bridge": "Place word bank shown bilingually."
         },
         "3": {
           "canDo": "Write directions from school to a place in my community.",
           "scaffold": "Sequence-word bank and a numbered organizer. Must include at least three steps.",
-          "check": "Writes 4 sequenced steps using correct prepositions and sequence words."
+          "check": "Writes 4 sequenced steps using correct prepositions and sequence words.",
+          "l1Bridge": "Sequence the directions in the home language, write them in English."
         }
       }
     }

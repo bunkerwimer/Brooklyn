@@ -4,7 +4,17 @@
   "phase": "A",
   "weeks": "5–6",
   "focus": "Follow common commands, ask for help, understand yes/no and wh- questions.",
-  "wida": { "standards": ["SI", "LA"], "keyUses": ["Inform"] },
+  "standards": {
+    "wida": {
+      "standards": [
+        "SI",
+        "LA"
+      ],
+      "keyUses": [
+        "Inform"
+      ]
+    }
+  },
   "function": "Follow classroom directions and ask for what I need to participate",
   "grammar": [
     "Imperatives: Open ___. Take out ___. Turn to ___.",
@@ -14,8 +24,35 @@
     "Yes/no questions vs. wh- questions (what, where, who, when)"
   ],
   "vocabulary": {
-    "core": ["open", "close", "take out", "put away", "listen", "look", "write", "read", "stand up", "sit down", "line up", "page", "book", "help", "repeat", "slowly", "again"],
-    "academic": ["direction", "instruction", "question", "answer", "example", "practice", "turn in", "due"]
+    "core": [
+      "open",
+      "close",
+      "take out",
+      "put away",
+      "listen",
+      "look",
+      "write",
+      "read",
+      "stand up",
+      "sit down",
+      "line up",
+      "page",
+      "book",
+      "help",
+      "repeat",
+      "slowly",
+      "again"
+    ],
+    "academic": [
+      "direction",
+      "instruction",
+      "question",
+      "answer",
+      "example",
+      "practice",
+      "turn in",
+      "due"
+    ]
   },
   "foundationalLiteracy": "Sight words for high-frequency classroom verbs. Recognizing question words in print by their initial wh- pattern.",
   "culturalNote": "In many cultures saying 'I don't understand' to a teacher is disrespectful, or admitting confusion causes loss of face — so students nod and smile while understanding nothing. Teach and explicitly celebrate help-seeking as correct school behavior. This unit is the single highest-leverage one in Phase A: it unlocks every mainstream class the student sits in.",
@@ -28,17 +65,20 @@
         "1": {
           "canDo": "Respond physically to a one-step classroom command.",
           "scaffold": "Total Physical Response routine. Teacher models the action while saying it.",
-          "check": "Performs the correct action for 8 of 10 one-step commands without a model."
+          "check": "Performs the correct action for 8 of 10 one-step commands without a model.",
+          "l1Bridge": "Demonstrate each command physically; confirm meaning in the home language once, then drop it."
         },
         "2": {
           "canDo": "Follow a two-step direction and identify the wh- question being asked.",
           "scaffold": "Question-word poster with icons (what = thing, where = place, who = person).",
-          "check": "Completes 2-step directions and sorts 5 questions by their question word."
+          "check": "Completes 2-step directions and sorts 5 questions by their question word.",
+          "l1Bridge": "Question words (what/where/who/when) glossed in the home language on the poster."
         },
         "3": {
           "canDo": "Follow multi-step academic directions and know when I have missed something.",
           "scaffold": "Directions given once at normal rate; student may request one repeat.",
-          "check": "Completes a 3-step task and self-identifies the step that needs clarifying."
+          "check": "Completes a 3-step task and self-identifies the step that needs clarifying.",
+          "l1Bridge": "Student may take notes in the home language while following English directions."
         }
       }
     },
@@ -50,17 +90,20 @@
         "1": {
           "canDo": "Ask for help using a single word or a help card.",
           "scaffold": "Desk card with help / bathroom / I don't understand and an icon for each. Pointing counts.",
-          "check": "Signals a need using the card or word without prompting, twice in a class period."
+          "check": "Signals a need using the card or word without prompting, twice in a class period.",
+          "l1Bridge": "Help card printed in both languages so the student can signal without speaking English."
         },
         "2": {
           "canDo": "Ask someone to repeat or slow down using a full phrase.",
           "scaffold": "Frame strip taped to the desk. Practiced chorally at the start of each session.",
-          "check": "Uses a repair phrase (repeat / slowly / I don't understand) unprompted in real time."
+          "check": "Uses a repair phrase (repeat / slowly / I don't understand) unprompted in real time.",
+          "l1Bridge": "State explicitly, in the home language, that asking a teacher to repeat is polite here."
         },
         "3": {
           "canDo": "Ask a clarifying question about the task itself.",
           "scaffold": "Question stem bank: Do we…? Should I…? What page…? Is this due…?",
-          "check": "Asks a specific clarifying question that resolves a genuine ambiguity."
+          "check": "Asks a specific clarifying question that resolves a genuine ambiguity.",
+          "l1Bridge": "Formulate the clarifying question in the home language, ask it in English."
         }
       }
     },
@@ -72,17 +115,20 @@
         "1": {
           "canDo": "Recognize common written direction words with icon support.",
           "scaffold": "Icon-and-word cards for circle, write, match, draw, read.",
-          "check": "Matches 6 direction words to their icons."
+          "check": "Matches 6 direction words to their icons.",
+          "l1Bridge": "Direction verbs paired with icons and a one-time home-language gloss."
         },
         "2": {
           "canDo": "Read the directions on a worksheet and know what to do.",
           "scaffold": "Directions highlighted; verb underlined. Glossary strip at the top of the page.",
-          "check": "Correctly starts 3 of 3 tasks based on written directions alone."
+          "check": "Correctly starts 3 of 3 tasks based on written directions alone.",
+          "l1Bridge": "Worksheet direction verbs glossed in the margin."
         },
         "3": {
           "canDo": "Read a short assignment description and identify the task, the format, and the due date.",
           "scaffold": "Annotation guide: box the verb, circle the due date, underline the product.",
-          "check": "Extracts all three elements from an authentic assignment sheet."
+          "check": "Extracts all three elements from an authentic assignment sheet.",
+          "l1Bridge": "Assignment terms (due, submit, draft) glossed — several are false friends."
         }
       }
     },
@@ -94,17 +140,20 @@
         "1": {
           "canDo": "Copy the date, my name, and the page number onto my work.",
           "scaffold": "Heading template printed at the top of every packet page.",
-          "check": "Heads a paper correctly and independently."
+          "check": "Heads a paper correctly and independently.",
+          "l1Bridge": "Heading fields (name, date, page) labeled bilingually on the template."
         },
         "2": {
           "canDo": "Write a question I have about the lesson.",
           "scaffold": "Question stem bank plus an exit-ticket slip with one line.",
-          "check": "Writes a legible question using a correct question word and a question mark."
+          "check": "Writes a legible question using a correct question word and a question mark.",
+          "l1Bridge": "Student may write the question in the home language first, then translate with support."
         },
         "3": {
           "canDo": "Write a short message to a teacher explaining what I need.",
           "scaffold": "Model message plus a politeness bank. Reminder to state the class and the problem.",
-          "check": "Writes 2–3 sentences that name the class, the problem, and the request."
+          "check": "Writes 2–3 sentences that name the class, the problem, and the request.",
+          "l1Bridge": "Drafting in the home language is permitted; the message is submitted in English."
         }
       }
     }

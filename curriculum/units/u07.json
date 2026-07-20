@@ -4,7 +4,16 @@
   "phase": "B",
   "weeks": "13–14",
   "focus": "Foods, likes and dislikes, order lunch, ask for quantities.",
-  "wida": { "standards": ["SI"], "keyUses": ["Inform"] },
+  "standards": {
+    "wida": {
+      "standards": [
+        "SI"
+      ],
+      "keyUses": [
+        "Inform"
+      ]
+    }
+  },
   "function": "Get food I can eat and say what I like and don't like",
   "grammar": [
     "I like ___. / I don't like ___.",
@@ -15,8 +24,39 @@
     "Count vs. non-count nouns: an apple / some rice"
   ],
   "vocabulary": {
-    "core": ["breakfast", "lunch", "dinner", "milk", "water", "juice", "bread", "rice", "chicken", "beans", "fruit", "vegetables", "apple", "tray", "line", "hungry", "full", "like", "want", "please", "some", "more"],
-    "academic": ["quantity", "portion", "nutrition", "ingredient", "allergy", "preference", "menu"]
+    "core": [
+      "breakfast",
+      "lunch",
+      "dinner",
+      "milk",
+      "water",
+      "juice",
+      "bread",
+      "rice",
+      "chicken",
+      "beans",
+      "fruit",
+      "vegetables",
+      "apple",
+      "tray",
+      "line",
+      "hungry",
+      "full",
+      "like",
+      "want",
+      "please",
+      "some",
+      "more"
+    ],
+    "academic": [
+      "quantity",
+      "portion",
+      "nutrition",
+      "ingredient",
+      "allergy",
+      "preference",
+      "menu"
+    ]
   },
   "foundationalLiteracy": "Reading a menu as a text type — scanning columns rather than reading left to right. Plural -s on food nouns.",
   "culturalNote": "Food is where dignity and hunger meet, so be careful. Many newcomers qualify for free lunch and may not know it, or may be ashamed to use it — tell them plainly and privately that it is normal. Religious dietary restrictions (halal, kosher, vegetarian) matter enormously and students often cannot identify which US foods violate them, so teach 'Does this have pork in it?' as a survival phrase. Some students have experienced real food scarcity; never use games about wasting or throwing away food.",
@@ -29,17 +69,20 @@
         "1": {
           "canDo": "Point to a food when it is named aloud.",
           "scaffold": "Real photographs of the actual cafeteria offerings, not clip art.",
-          "check": "Identifies 8 of 10 spoken food words."
+          "check": "Identifies 8 of 10 spoken food words.",
+          "l1Bridge": "Use photos of the actual serving line — food is largely language-neutral when shown."
         },
         "2": {
           "canDo": "Understand a spoken cafeteria question and respond.",
           "scaffold": "Recorded server prompts: Milk or juice? Do you want a fruit?",
-          "check": "Responds appropriately to 4 of 5 spoken serving-line questions."
+          "check": "Responds appropriately to 4 of 5 spoken serving-line questions.",
+          "l1Bridge": "Serving-line questions previewed in the home language."
         },
         "3": {
           "canDo": "Follow a spoken description of a meal and identify what's in it.",
           "scaffold": "Menu description played at normal rate with an ingredient note-catcher.",
-          "check": "Lists 4 components of a described meal and flags one restricted ingredient."
+          "check": "Lists 4 components of a described meal and flags one restricted ingredient.",
+          "l1Bridge": "Ingredient terms glossed precisely; dietary-restriction vocabulary must be exact."
         }
       }
     },
@@ -51,17 +94,20 @@
         "1": {
           "canDo": "Name a food and say yes, no, or please in the lunch line.",
           "scaffold": "Pocket picture card of the day's options. Pointing plus please is a full success.",
-          "check": "Gets the intended food using words, the card, or both."
+          "check": "Gets the intended food using words, the card, or both.",
+          "l1Bridge": "Pocket card printed bilingually so the student can order without speaking English."
         },
         "2": {
           "canDo": "Order lunch and say what I like using a frame.",
           "scaffold": "Frame strip: Can I have ___, please? I like ___. I don't like ___.",
-          "check": "Completes a serving-line exchange using a full polite request."
+          "check": "Completes a serving-line exchange using a full polite request.",
+          "l1Bridge": "Polite request frame rehearsed after the home-language equivalent."
         },
         "3": {
           "canDo": "Ask about ingredients and explain what I can't eat and why.",
           "scaffold": "Open frame plus a restriction bank (allergy, religion, vegetarian) and because.",
-          "check": "Asks an ingredient question and explains a restriction with a because clause."
+          "check": "Asks an ingredient question and explains a restriction with a because clause.",
+          "l1Bridge": "Rehearse the restriction in the home language first. Accuracy matters more than fluency here."
         }
       }
     },
@@ -73,17 +119,20 @@
         "1": {
           "canDo": "Recognize food words with picture support.",
           "scaffold": "Word–photo matching using the school's own menu items.",
-          "check": "Matches 8 food words to photos."
+          "check": "Matches 8 food words to photos.",
+          "l1Bridge": "Menu items glossed once alongside photos."
         },
         "2": {
           "canDo": "Read the daily menu and choose what I want.",
           "scaffold": "Enlarged real menu with icons added to each line.",
-          "check": "Selects a full meal from the printed menu and reads the choices aloud."
+          "check": "Selects a full meal from the printed menu and reads the choices aloud.",
+          "l1Bridge": "Menu category headings glossed in the home language."
         },
         "3": {
           "canDo": "Read a food label and find an ingredient I need to avoid.",
           "scaffold": "Real package labels with the ingredient list boxed. Target words listed on a strip.",
-          "check": "Locates a specified ingredient on 3 of 3 unfamiliar labels."
+          "check": "Locates a specified ingredient on 3 of 3 unfamiliar labels.",
+          "l1Bridge": "Allergen and ingredient terms provided bilingually and NOT faded — this is a safety translation."
         }
       }
     },
@@ -95,17 +144,20 @@
         "1": {
           "canDo": "Copy food words and circle what I like.",
           "scaffold": "Picture-and-word grid with like/don't like columns to check.",
-          "check": "Sorts 8 foods into like and don't like columns."
+          "check": "Sorts 8 foods into like and don't like columns.",
+          "l1Bridge": "Like / don't like columns labeled bilingually."
         },
         "2": {
           "canDo": "Write sentences about foods I like and don't like.",
           "scaffold": "Frames plus a food word bank with pictures.",
-          "check": "Writes 4 sentences using like and don't like correctly."
+          "check": "Writes 4 sentences using like and don't like correctly.",
+          "l1Bridge": "Food word bank shown bilingually."
         },
         "3": {
           "canDo": "Write a short description of a meal from my home country.",
           "scaffold": "Paragraph organizer plus an ingredient and adjective bank. Student is the expert here.",
-          "check": "Writes 5 sentences naming ingredients and explaining when the meal is eaten."
+          "check": "Writes 5 sentences naming ingredients and explaining when the meal is eaten.",
+          "l1Bridge": "The home-country meal may be drafted in the home language; the student is the expert and should not be capped by English."
         }
       }
     }

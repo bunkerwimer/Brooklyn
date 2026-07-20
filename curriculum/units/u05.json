@@ -4,7 +4,16 @@
   "phase": "B",
   "weeks": "9–10",
   "focus": "Name emotions and body parts, say \"I need…,\" visit the nurse, basic health.",
-  "wida": { "standards": ["SI"], "keyUses": ["Inform"] },
+  "standards": {
+    "wida": {
+      "standards": [
+        "SI"
+      ],
+      "keyUses": [
+        "Inform"
+      ]
+    }
+  },
   "function": "Say how I feel and what I need",
   "grammar": [
     "I am ___ (tired / sick / okay).",
@@ -14,8 +23,39 @@
     "Do you need ___?"
   ],
   "vocabulary": {
-    "core": ["happy", "sad", "tired", "sick", "hungry", "thirsty", "cold", "hot", "scared", "okay", "head", "stomach", "throat", "hand", "arm", "leg", "hurt", "pain", "nurse", "medicine", "water", "rest"],
-    "academic": ["symptom", "injury", "emergency", "describe", "health", "wellness", "appointment"]
+    "core": [
+      "happy",
+      "sad",
+      "tired",
+      "sick",
+      "hungry",
+      "thirsty",
+      "cold",
+      "hot",
+      "scared",
+      "okay",
+      "head",
+      "stomach",
+      "throat",
+      "hand",
+      "arm",
+      "leg",
+      "hurt",
+      "pain",
+      "nurse",
+      "medicine",
+      "water",
+      "rest"
+    ],
+    "academic": [
+      "symptom",
+      "injury",
+      "emergency",
+      "describe",
+      "health",
+      "wellness",
+      "appointment"
+    ]
   },
   "foundationalLiteracy": "Body-part labeling with a diagram. The -ache compound pattern (headache, stomachache, toothache) as a spelling and meaning family.",
   "culturalNote": "Handle this unit with care. Newcomers may have experienced trauma, injury, or loss in transit, and questions about the body and how you feel can surface it. Never require a student to disclose. Keep the emotional vocabulary factual and low-stakes, offer a non-verbal way to opt out, and know your school's referral path before you teach it. Also: describing pain to an adult is culturally variable — some students are taught to endure it silently. Say plainly that telling the nurse is the right thing to do here.",
@@ -28,17 +68,20 @@
         "1": {
           "canDo": "Point to a body part or a feeling face when it is named.",
           "scaffold": "Body diagram and a feelings-face chart. Pointing is a complete answer.",
-          "check": "Identifies 6 body parts and 4 feelings from spoken words."
+          "check": "Identifies 6 body parts and 4 feelings from spoken words.",
+          "l1Bridge": "Body-part and feeling words glossed in the home language; pointing is always sufficient."
         },
         "2": {
           "canDo": "Understand a spoken question about how I feel and what hurts.",
           "scaffold": "Nurse role-play script with picture support. Questions limited to 4 known frames.",
-          "check": "Responds appropriately to 4 of 5 spoken health questions."
+          "check": "Responds appropriately to 4 of 5 spoken health questions.",
+          "l1Bridge": "Preview the nurse's questions in the home language so the student knows what will be asked."
         },
         "3": {
           "canDo": "Follow spoken health instructions and understand a follow-up question.",
           "scaffold": "Recorded nurse dialogue at normal rate with a note-catcher.",
-          "check": "Reports the instruction given and answers a follow-up about duration or severity."
+          "check": "Reports the instruction given and answers a follow-up about duration or severity.",
+          "l1Bridge": "Follow-up questions about duration and severity glossed in advance."
         }
       }
     },
@@ -50,17 +93,20 @@
         "1": {
           "canDo": "Say one word or point to show how I feel or what hurts.",
           "scaffold": "Feelings card and body diagram on the desk. Pointing accepted without speech.",
-          "check": "Communicates a need or feeling to an adult by word or gesture."
+          "check": "Communicates a need or feeling to an adult by word or gesture.",
+          "l1Bridge": "Student may name the symptom in the home language. Getting help outranks producing English."
         },
         "2": {
           "canDo": "Tell the nurse what hurts and how I feel using a frame.",
           "scaffold": "Frame strip: My ___ hurts. I feel ___. I need ___.",
-          "check": "Produces a 2-sentence report of a symptom and a need."
+          "check": "Produces a 2-sentence report of a symptom and a need.",
+          "l1Bridge": "Frame rehearsed after hearing the equivalent in the home language."
         },
         "3": {
           "canDo": "Describe a symptom with detail and answer follow-up questions.",
           "scaffold": "Detail bank: since when, how bad, what helps. Open frame.",
-          "check": "Describes a symptom with onset and severity and answers two follow-ups."
+          "check": "Describes a symptom with onset and severity and answers two follow-ups.",
+          "l1Bridge": "A distressed student may describe the symptom in the home language first, then in English."
         }
       }
     },
@@ -72,17 +118,20 @@
         "1": {
           "canDo": "Recognize health and safety signs and the word nurse.",
           "scaffold": "Real signage photos: nurse, exit, first aid, do not enter.",
-          "check": "Matches 5 safety signs to their meanings."
+          "check": "Matches 5 safety signs to their meanings.",
+          "l1Bridge": "Safety signs glossed in the home language and NOT faded — this is a safety skill, not a language test."
         },
         "2": {
           "canDo": "Read a simple health form and find the fields I must fill in.",
           "scaffold": "Enlarged form with required fields highlighted and icons on each label.",
-          "check": "Identifies all required fields on an unfamiliar simple form."
+          "check": "Identifies all required fields on an unfamiliar simple form.",
+          "l1Bridge": "Form field labels glossed in the home language."
         },
         "3": {
           "canDo": "Read a short set of care instructions and say what to do and when.",
           "scaffold": "Instruction card with a sequencing organizer (first / then / if).",
-          "check": "Orders 4 instruction steps and identifies the condition that triggers step 4."
+          "check": "Orders 4 instruction steps and identifies the condition that triggers step 4.",
+          "l1Bridge": "Care instructions provided bilingually; the trigger condition is identified in English."
         }
       }
     },
@@ -94,17 +143,20 @@
         "1": {
           "canDo": "Circle or copy a feeling word on a check-in slip.",
           "scaffold": "Daily check-in slip with four faces and words. Circling is sufficient.",
-          "check": "Completes a daily check-in independently for five consecutive days."
+          "check": "Completes a daily check-in independently for five consecutive days.",
+          "l1Bridge": "Check-in slip printed bilingually."
         },
         "2": {
           "canDo": "Fill in a nurse pass or a simple health form.",
           "scaffold": "Labeled form, word bank of symptoms and body parts.",
-          "check": "Completes a nurse pass with name, symptom, and time."
+          "check": "Completes a nurse pass with name, symptom, and time.",
+          "l1Bridge": "Symptom word bank shown bilingually."
         },
         "3": {
           "canDo": "Write a short note explaining an absence or a health need.",
           "scaffold": "Model note plus a reason bank. Requires a date and a reason.",
-          "check": "Writes a 3-sentence note with date, reason, and request."
+          "check": "Writes a 3-sentence note with date, reason, and request.",
+          "l1Bridge": "Absence note may be drafted in the home language and finalized in English with support."
         }
       }
     }

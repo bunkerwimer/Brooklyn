@@ -4,7 +4,17 @@
   "phase": "C",
   "weeks": "23–24",
   "focus": "Talk about the future and \"want to,\" study skills, academic-language on-ramp.",
-  "wida": { "standards": ["LA", "SI"], "keyUses": ["Explain"] },
+  "standards": {
+    "wida": {
+      "standards": [
+        "LA",
+        "SI"
+      ],
+      "keyUses": [
+        "Explain"
+      ]
+    }
+  },
   "function": "Say what I want to do and explain how I will get there",
   "grammar": [
     "I want to ___. / I would like to ___.",
@@ -15,8 +25,40 @@
     "because / so / in order to"
   ],
   "vocabulary": {
-    "core": ["want", "need", "hope", "plan", "goal", "future", "next year", "graduate", "job", "college", "study", "practice", "improve", "try", "help", "ask", "finish"],
-    "academic": ["goal", "plan", "achieve", "requirement", "credit", "diploma", "transcript", "career", "apply", "explain", "reason", "evidence", "purpose"]
+    "core": [
+      "want",
+      "need",
+      "hope",
+      "plan",
+      "goal",
+      "future",
+      "next year",
+      "graduate",
+      "job",
+      "college",
+      "study",
+      "practice",
+      "improve",
+      "try",
+      "help",
+      "ask",
+      "finish"
+    ],
+    "academic": [
+      "goal",
+      "plan",
+      "achieve",
+      "requirement",
+      "credit",
+      "diploma",
+      "transcript",
+      "career",
+      "apply",
+      "explain",
+      "reason",
+      "evidence",
+      "purpose"
+    ]
   },
   "foundationalLiteracy": "Reading a transcript and a graduation-requirement list as document text types. Multi-syllable academic words broken into syllables (grad-u-ate, re-quire-ment).",
   "culturalNote": "Be concrete and be honest. Secondary newcomers, especially those arriving at 16 or 17, face real structural problems: credit deficits, age-out rules that vary by state, and interrupted transcripts. Bring in the counselor for this unit — students need actual information about their own credits, not just the vocabulary for talking about goals. Do not promise outcomes that depend on immigration status, and do not give legal advice; connect families to qualified help instead. Many students carry an obligation to work and send money home, so treat 'get a job' as a legitimate goal rather than steering everyone toward college.",
@@ -29,17 +71,20 @@
         "1": {
           "canDo": "Tell whether a spoken sentence is about now or later.",
           "scaffold": "Two-card sort: now / later. Contrasting pairs said aloud.",
-          "check": "Sorts 8 of 10 sentences correctly by time reference."
+          "check": "Sorts 8 of 10 sentences correctly by time reference.",
+          "l1Bridge": "Explain the now / later sort in the home language."
         },
         "2": {
           "canDo": "Understand someone's spoken goal and the reason for it.",
           "scaffold": "Recorded peer statements. Goal and reason columns to complete.",
-          "check": "Identifies the goal and the reason in 4 of 5 spoken statements."
+          "check": "Identifies the goal and the reason in 4 of 5 spoken statements.",
+          "l1Bridge": "Goal and reason vocabulary glossed."
         },
         "3": {
           "canDo": "Follow a spoken explanation of requirements and identify the steps.",
           "scaffold": "Counselor explanation at normal rate plus a steps organizer. Played twice.",
-          "check": "Lists 4 steps and identifies one condition (if/then) from the explanation."
+          "check": "Lists 4 steps and identifies one condition (if/then) from the explanation.",
+          "l1Bridge": "The counselor's explanation should be INTERPRETED, not glossed — graduation requirements are too consequential to approximate."
         }
       }
     },
@@ -51,17 +96,20 @@
         "1": {
           "canDo": "Say one thing I want using a frame.",
           "scaffold": "Picture bank of goals plus the frame I want ___.",
-          "check": "States 3 wants using the frame and a picture prompt."
+          "check": "States 3 wants using the frame and a picture prompt.",
+          "l1Bridge": "Student may state the goal in the home language; teacher supplies the English."
         },
         "2": {
           "canDo": "State a goal and one reason for it.",
           "scaffold": "Frame: I want to ___ because ___. Goal and reason banks provided.",
-          "check": "States a goal with a because clause that genuinely explains it."
+          "check": "States a goal with a because clause that genuinely explains it.",
+          "l1Bridge": "Rehearse the because frame after the home-language equivalent."
         },
         "3": {
           "canDo": "Explain a goal, the steps to reach it, and what I need help with.",
           "scaffold": "Open frame with a sequence bank and an if/then structure. Counselor present.",
-          "check": "Explains a goal with 2 steps, one condition, and a specific request for help."
+          "check": "Explains a goal with 2 steps, one condition, and a specific request for help.",
+          "l1Bridge": "Plan the request in the home language; hold any conversation about credits with an interpreter present."
         }
       }
     },
@@ -73,17 +121,20 @@
         "1": {
           "canDo": "Recognize school and goal words in print.",
           "scaffold": "Word–picture cards: graduate, job, college, study, help.",
-          "check": "Matches 8 goal-related words to pictures or meanings."
+          "check": "Matches 8 goal-related words to pictures or meanings.",
+          "l1Bridge": "Goal words glossed once."
         },
         "2": {
           "canDo": "Read a short profile of someone's plan and find their goal.",
           "scaffold": "5-sentence profiles with goal statements bolded and vocabulary glossed.",
-          "check": "Identifies the goal and one step in 3 of 3 profiles."
+          "check": "Identifies the goal and one step in 3 of 3 profiles.",
+          "l1Bridge": "Profile vocabulary glossed."
         },
         "3": {
           "canDo": "Read graduation requirements and identify what I still need.",
           "scaffold": "Simplified requirement list plus the student's own transcript, with a checklist.",
-          "check": "Identifies 3 requirements already met and 2 still outstanding."
+          "check": "Identifies 3 requirements already met and 2 still outstanding.",
+          "l1Bridge": "Graduation requirements MUST be provided in the home language. Never make a student parse their own transcript in a new language."
         }
       }
     },
@@ -95,17 +146,20 @@
         "1": {
           "canDo": "Write or copy a goal sentence.",
           "scaffold": "Frame with a picture goal bank and one writing line.",
-          "check": "Writes 2 goal sentences using the frame correctly."
+          "check": "Writes 2 goal sentences using the frame correctly.",
+          "l1Bridge": "Goal word bank shown bilingually."
         },
         "2": {
           "canDo": "Write 3–4 sentences about my goals and reasons.",
           "scaffold": "Frames plus goal and reason banks. Because reminder at the top.",
-          "check": "Writes 4 sentences, at least 2 with a because clause."
+          "check": "Writes 4 sentences, at least 2 with a because clause.",
+          "l1Bridge": "Drafting in the home language is permitted."
         },
         "3": {
           "canDo": "Write a short plan explaining my goal, my steps, and what I need.",
           "scaffold": "Plan organizer: goal, three steps, one obstacle, one request. Transition bank.",
-          "check": "Writes a 7-sentence plan with sequenced steps, one if/then, and a clear request."
+          "check": "Writes a 7-sentence plan with sequenced steps, one if/then, and a clear request.",
+          "l1Bridge": "The plan may be drafted in the home language. The English copy is for the counselor; the family copy should be in the home language."
         }
       }
     }

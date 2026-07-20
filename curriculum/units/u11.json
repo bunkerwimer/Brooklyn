@@ -4,7 +4,16 @@
   "phase": "C",
   "weeks": "21–22",
   "focus": "Simple past, sequence words, narrate my journey and past events.",
-  "wida": { "standards": ["LA"], "keyUses": ["Narrate"] },
+  "standards": {
+    "wida": {
+      "standards": [
+        "LA"
+      ],
+      "keyUses": [
+        "Narrate"
+      ]
+    }
+  },
   "function": "Tell about something that happened in the past",
   "grammar": [
     "Simple past regular: -ed (walked, started)",
@@ -14,8 +23,36 @@
     "Did you ___? / I didn't ___."
   ],
   "vocabulary": {
-    "core": ["was", "were", "went", "came", "had", "saw", "took", "moved", "left", "arrived", "started", "stayed", "before", "after", "ago", "last", "then", "finally"],
-    "academic": ["past", "event", "sequence", "narrative", "experience", "timeline", "chronological", "recount"]
+    "core": [
+      "was",
+      "were",
+      "went",
+      "came",
+      "had",
+      "saw",
+      "took",
+      "moved",
+      "left",
+      "arrived",
+      "started",
+      "stayed",
+      "before",
+      "after",
+      "ago",
+      "last",
+      "then",
+      "finally"
+    ],
+    "academic": [
+      "past",
+      "event",
+      "sequence",
+      "narrative",
+      "experience",
+      "timeline",
+      "chronological",
+      "recount"
+    ]
   },
   "foundationalLiteracy": "The -ed ending and its three spoken sounds (/t/, /d/, /əd/) — walked, moved, started. High-frequency irregular past forms as sight words, since they cannot be decoded by rule.",
   "culturalNote": "This is the highest-risk unit in the entire sequence. Many newcomers have journeys involving violence, family separation, detention, or loss, and 'tell your story' is a demand that can retraumatize. Three rules, non-negotiable: (1) Narrating one's own migration is ALWAYS optional — offer a neutral alternative (a past school day, a holiday, a story from a book) with no penalty and no explanation required. (2) Never make personal narratives public — no gallery walks, no reading aloud, no posting on the wall unless a student volunteers. (3) Know your mandated-reporter obligations and your school's counseling referral path before you begin, because disclosures do happen in this unit. Teach the past tense with neutral content first, then let students choose their own topic. A student who writes about a soccer game instead of a border crossing has met the standard completely.",
@@ -28,17 +65,20 @@
         "1": {
           "canDo": "Tell whether a spoken sentence is about now or before.",
           "scaffold": "Two-card sort: now / before. Contrasting pairs said aloud.",
-          "check": "Sorts 8 of 10 sentences correctly by time."
+          "check": "Sorts 8 of 10 sentences correctly by time.",
+          "l1Bridge": "Explain the now / before sort in the home language — past marking varies enormously across languages."
         },
         "2": {
           "canDo": "Understand a short spoken story and put events in order.",
           "scaffold": "Picture strip to sequence while listening. Replayed on request.",
-          "check": "Orders 5 story events correctly from spoken narration."
+          "check": "Orders 5 story events correctly from spoken narration.",
+          "l1Bridge": "Story events previewed in the home language before the ordering task."
         },
         "3": {
           "canDo": "Follow a longer spoken narrative and identify when each event happened.",
           "scaffold": "Timeline organizer with blank date markers. Normal rate, played twice.",
-          "check": "Places 5 events on a timeline with their correct time markers."
+          "check": "Places 5 events on a timeline with their correct time markers.",
+          "l1Bridge": "Timeline may be annotated in the home language."
         }
       }
     },
@@ -50,17 +90,20 @@
         "1": {
           "canDo": "Say one thing I did, using a past-tense word.",
           "scaffold": "Picture cards of past actions plus a past-verb bank. Single sentence accepted.",
-          "check": "Produces 3 sentences with a recognizable past-tense verb."
+          "check": "Produces 3 sentences with a recognizable past-tense verb.",
+          "l1Bridge": "Student may tell the event in the home language first; teacher supplies the English past form. Never require English for a personal story."
         },
         "2": {
           "canDo": "Tell about a past event in 3–4 sentences using sequence words.",
           "scaffold": "Sequence frame plus an irregular-past reference strip. Topic is student's choice.",
-          "check": "Narrates a chosen past event in 4 sentences with correct sequencing."
+          "check": "Narrates a chosen past event in 4 sentences with correct sequencing.",
+          "l1Bridge": "Rehearse the sequence in the home language, deliver in English. The topic stays the student's choice."
         },
         "3": {
           "canDo": "Tell a longer story and explain why something happened.",
           "scaffold": "Open frame with a because clause and a feelings bank. Topic entirely student-chosen.",
-          "check": "Narrates in connected past tense and explains one cause with because."
+          "check": "Narrates in connected past tense and explains one cause with because.",
+          "l1Bridge": "The student may narrate in the home language and then retell in English, or decline. Both are full credit."
         }
       }
     },
@@ -72,17 +115,20 @@
         "1": {
           "canDo": "Recognize common past-tense verbs in print.",
           "scaffold": "Present/past word pairs on cards: go/went, is/was, see/saw.",
-          "check": "Matches 8 present-tense verbs to their past forms."
+          "check": "Matches 8 present-tense verbs to their past forms.",
+          "l1Bridge": "Present/past verb pairs glossed once."
         },
         "2": {
           "canDo": "Read a short narrative and answer what happened questions.",
           "scaffold": "6-sentence story with past verbs bolded and vocabulary glossed.",
-          "check": "Answers 4 of 5 literal comprehension questions about a narrative."
+          "check": "Answers 4 of 5 literal comprehension questions about a narrative.",
+          "l1Bridge": "Narrative vocabulary glossed in the margin."
         },
         "3": {
           "canDo": "Read a personal narrative and identify the order of events and the narrator's feelings.",
           "scaffold": "Published newcomer narrative plus a timeline and a feelings-evidence organizer.",
-          "check": "Sequences 5 events and cites one sentence showing how the narrator felt."
+          "check": "Sequences 5 events and cites one sentence showing how the narrator felt.",
+          "l1Bridge": "Offer published newcomer narratives in the home language where they exist."
         }
       }
     },
@@ -94,17 +140,20 @@
         "1": {
           "canDo": "Write or copy simple past sentences about a picture sequence.",
           "scaffold": "Picture strip with past-verb word bank and one line per picture.",
-          "check": "Writes 4 sentences with correct past-tense verbs from a word bank."
+          "check": "Writes 4 sentences with correct past-tense verbs from a word bank.",
+          "l1Bridge": "Past-verb word bank shown bilingually."
         },
         "2": {
           "canDo": "Write a short narrative about an event I choose.",
           "scaffold": "Sequence organizer plus an irregular-past reference strip. Topic free.",
-          "check": "Writes 5 sentences in consistent past tense with 3 sequence words."
+          "check": "Writes 5 sentences in consistent past tense with 3 sequence words.",
+          "l1Bridge": "Drafting in the home language is permitted; final version in English."
         },
         "3": {
           "canDo": "Write a personal narrative with a beginning, middle, and end.",
           "scaffold": "Narrative organizer with a setting, events, and a closing reflection. Topic free.",
-          "check": "Writes a 7-sentence narrative in consistent past tense with a closing reflection."
+          "check": "Writes a 7-sentence narrative in consistent past tense with a closing reflection.",
+          "l1Bridge": "The student may write the narrative in the home language and translate with support. The language of the first draft is never the point."
         }
       }
     }

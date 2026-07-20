@@ -4,7 +4,18 @@
   "phase": "C",
   "weeks": "17–18",
   "focus": "Present tense, frequency words, describe a typical day at school and home.",
-  "wida": { "standards": ["SI", "LA"], "keyUses": ["Inform", "Narrate"] },
+  "standards": {
+    "wida": {
+      "standards": [
+        "SI",
+        "LA"
+      ],
+      "keyUses": [
+        "Inform",
+        "Narrate"
+      ]
+    }
+  },
   "function": "Describe what I do regularly and how often I do it",
   "grammar": [
     "Simple present: I wake up at ___. She works at ___.",
@@ -14,8 +25,36 @@
     "Do you ___? / Does he ___?"
   ],
   "vocabulary": {
-    "core": ["wake up", "get up", "eat", "go", "come", "start", "finish", "study", "work", "sleep", "walk", "ride", "always", "usually", "sometimes", "never", "every day", "on weekends"],
-    "academic": ["routine", "schedule", "frequency", "sequence", "typical", "daily", "describe", "process"]
+    "core": [
+      "wake up",
+      "get up",
+      "eat",
+      "go",
+      "come",
+      "start",
+      "finish",
+      "study",
+      "work",
+      "sleep",
+      "walk",
+      "ride",
+      "always",
+      "usually",
+      "sometimes",
+      "never",
+      "every day",
+      "on weekends"
+    ],
+    "academic": [
+      "routine",
+      "schedule",
+      "frequency",
+      "sequence",
+      "typical",
+      "daily",
+      "describe",
+      "process"
+    ]
   },
   "foundationalLiteracy": "The -s ending on third-person verbs versus the -s plural on nouns — a persistent confusion worth naming explicitly. Reading a paragraph as a connected text rather than a list of sentences.",
   "culturalNote": "This is the first unit where students narrate their own lives at paragraph length, and home routines vary widely — some students work jobs, care for siblings, or send money home. Don't let 'a typical day' become an implicit comparison in which their life looks wrong. Let students narrate school routines if home is too personal. Note also that a student who works a night shift is not lazy when they sleep in class; this unit often surfaces that information for the first time.",
@@ -28,17 +67,20 @@
         "1": {
           "canDo": "Match a spoken routine verb to a picture of the action.",
           "scaffold": "Action picture cards in a daily sequence. Pointing accepted.",
-          "check": "Identifies 8 of 10 routine verbs from spoken input."
+          "check": "Identifies 8 of 10 routine verbs from spoken input.",
+          "l1Bridge": "Routine verbs glossed alongside action photos."
         },
         "2": {
           "canDo": "Understand a short spoken routine and put the actions in order.",
           "scaffold": "Picture strip to sequence while listening. Audio replayed on request.",
-          "check": "Orders 5 actions correctly from a spoken description."
+          "check": "Orders 5 actions correctly from a spoken description.",
+          "l1Bridge": "Sequence words glossed before the ordering task."
         },
         "3": {
           "canDo": "Follow a spoken routine and catch how often each thing happens.",
           "scaffold": "Note-catcher with action and frequency columns. Normal rate, played twice.",
-          "check": "Records 4 actions with their correct frequency adverbs."
+          "check": "Records 4 actions with their correct frequency adverbs.",
+          "l1Bridge": "Frequency adverbs glossed — they rarely map cleanly and are a persistent error source."
         }
       }
     },
@@ -50,17 +92,20 @@
         "1": {
           "canDo": "Name a daily action and say when I do it.",
           "scaffold": "Picture cards plus a clock. Two-word answers accepted: eat, seven.",
-          "check": "Names 5 daily actions with an approximate time."
+          "check": "Names 5 daily actions with an approximate time.",
+          "l1Bridge": "Student may name the action in the home language; teacher supplies the English verb."
         },
         "2": {
           "canDo": "Describe my morning using sequence words and a frame.",
           "scaffold": "Frame: First I ___. Then I ___. After that I ___. Verb bank with pictures.",
-          "check": "Produces 4 sequenced sentences about a real morning routine."
+          "check": "Produces 4 sequenced sentences about a real morning routine.",
+          "l1Bridge": "Sequence frame rehearsed after the home-language equivalent."
         },
         "3": {
           "canDo": "Describe my routine with frequency words and ask a partner about theirs.",
           "scaffold": "Frequency bank plus a modeled question. Open frame.",
-          "check": "Uses 3 different frequency adverbs correctly and asks a reciprocal question."
+          "check": "Uses 3 different frequency adverbs correctly and asks a reciprocal question.",
+          "l1Bridge": "Plan the usual-versus-exception contrast in the home language, deliver it in English."
         }
       }
     },
@@ -72,17 +117,20 @@
         "1": {
           "canDo": "Read routine verbs with picture support.",
           "scaffold": "Word–picture cards for 10 high-frequency daily verbs.",
-          "check": "Matches 8 of 10 verbs to action pictures."
+          "check": "Matches 8 of 10 verbs to action pictures.",
+          "l1Bridge": "Verb-picture cards glossed once."
         },
         "2": {
           "canDo": "Read a short paragraph about someone's day and answer when questions.",
           "scaffold": "6-sentence passage with times bolded and vocabulary glossed.",
-          "check": "Answers 4 of 5 literal when and what questions."
+          "check": "Answers 4 of 5 literal when and what questions.",
+          "l1Bridge": "Passage vocabulary glossed in the margin."
         },
         "3": {
           "canDo": "Read two routines and compare them.",
           "scaffold": "Two short passages plus a Venn organizer and comparison sentence starters.",
-          "check": "Identifies 2 similarities and 2 differences and states one in a full sentence."
+          "check": "Identifies 2 similarities and 2 differences and states one in a full sentence.",
+          "l1Bridge": "Comparison sentence starters glossed; the comparison is written in English."
         }
       }
     },
@@ -94,17 +142,20 @@
         "1": {
           "canDo": "Write times next to pictures of daily actions.",
           "scaffold": "Picture timeline with blank time slots and a word bank.",
-          "check": "Completes a 6-action timeline with times and copied verbs."
+          "check": "Completes a 6-action timeline with times and copied verbs.",
+          "l1Bridge": "Timeline word bank shown bilingually."
         },
         "2": {
           "canDo": "Write 4–5 sentences about my day using sequence words.",
           "scaffold": "Sequence-word bank plus a lined organizer with one line per step.",
-          "check": "Writes 5 sentences using at least 3 different sequence words."
+          "check": "Writes 5 sentences using at least 3 different sequence words.",
+          "l1Bridge": "Sequence-word bank shown bilingually."
         },
         "3": {
           "canDo": "Write a paragraph about my routine using frequency adverbs correctly.",
           "scaffold": "Paragraph organizer with a topic sentence. Frequency-adverb placement reminder.",
-          "check": "Writes a 6-sentence paragraph with correct third-person -s and adverb placement."
+          "check": "Writes a 6-sentence paragraph with correct third-person -s and adverb placement.",
+          "l1Bridge": "Draft the paragraph in the home language if needed; final version in English."
         }
       }
     }

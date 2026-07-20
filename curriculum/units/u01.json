@@ -4,7 +4,16 @@
   "phase": "A",
   "weeks": "1–2",
   "focus": "Greet and respond, introduce myself, give personal information, spell my name.",
-  "wida": { "standards": ["SI"], "keyUses": ["Inform"] },
+  "standards": {
+    "wida": {
+      "standards": [
+        "SI"
+      ],
+      "keyUses": [
+        "Inform"
+      ]
+    }
+  },
   "function": "Introduce myself and give personal information",
   "grammar": [
     "My name is ___.",
@@ -13,8 +22,29 @@
     "This is ___."
   ],
   "vocabulary": {
-    "core": ["hello", "hi", "goodbye", "name", "my", "your", "from", "speak", "yes", "no", "please", "thank you", "nice to meet you"],
-    "academic": ["introduce", "information", "country", "language", "first name", "last name"]
+    "core": [
+      "hello",
+      "hi",
+      "goodbye",
+      "name",
+      "my",
+      "your",
+      "from",
+      "speak",
+      "yes",
+      "no",
+      "please",
+      "thank you",
+      "nice to meet you"
+    ],
+    "academic": [
+      "introduce",
+      "information",
+      "country",
+      "language",
+      "first name",
+      "last name"
+    ]
   },
   "foundationalLiteracy": "The alphabet as names of letters, not yet sounds. Recognize and write my own name accurately. Letter formation for the letters in my name and country.",
   "culturalNote": "Name order varies by culture — in many countries the family name comes first. Ask how a student wants to be called and say it correctly; a mispronounced name on day one is the fastest way to lose a newcomer. Some students have a name they use at home and one assigned at a border or camp. Let them choose.",
@@ -27,17 +57,20 @@
         "1": {
           "canDo": "Point to the right person or photo when greeted or named aloud.",
           "scaffold": "Photo cards of classmates on the desk. Teacher says one name; student points. Gesture accepted as a full answer.",
-          "check": "Points to the correct photo in 4 of 5 trials."
+          "check": "Points to the correct photo in 4 of 5 trials.",
+          "l1Bridge": "Preview hello, name, and from in the home language; pointing to the photo is a full answer."
         },
         "2": {
           "canDo": "Identify a person's name and country from a short spoken introduction.",
           "scaffold": "Two-column picture grid (names / flags). Audio replays on demand at slowed rate.",
-          "check": "Marks the correct name and country from a 3-sentence spoken introduction."
+          "check": "Marks the correct name and country from a 3-sentence spoken introduction.",
+          "l1Bridge": "Give country and language names in the home language first, then English, so only the frame is new."
         },
         "3": {
           "canDo": "Follow a multi-part spoken introduction and match details to the right people.",
           "scaffold": "Note-catcher grid with three columns. Audio plays twice at normal rate.",
-          "check": "Correctly matches 3 speakers to name, country, and language from connected speech."
+          "check": "Correctly matches 3 speakers to name, country, and language from connected speech.",
+          "l1Bridge": "Note-catcher may be annotated in the home language; the matching task stays in English."
         }
       }
     },
@@ -49,17 +82,20 @@
         "1": {
           "canDo": "Say a one-word greeting and my name.",
           "scaffold": "Echo an audio model. Word bank with photo support. A wave counts as the greeting.",
-          "check": "Produces a greeting plus own name intelligibly to a partner."
+          "check": "Produces a greeting plus own name intelligibly to a partner.",
+          "l1Bridge": "Student may greet in the home language first, then echo the English model. Both count."
         },
         "2": {
           "canDo": "Give a 2–3 sentence self-introduction using a model.",
           "scaffold": "Sentence frames with three slots (name / country / language) and a world map.",
-          "check": "Produces 3 framed sentences with correct personal information."
+          "check": "Produces 3 framed sentences with correct personal information.",
+          "l1Bridge": "Rehearse the three-slot frame silently in the home language before producing it in English."
         },
         "3": {
           "canDo": "Introduce myself and ask a partner one question back.",
           "scaffold": "Open frame plus one modeled question. No word bank required.",
-          "check": "Introduces self in connected speech and initiates one question to a partner."
+          "check": "Introduces self in connected speech and initiates one question to a partner.",
+          "l1Bridge": "Plan the reciprocal question in the home language; deliver it in English."
         }
       }
     },
@@ -71,17 +107,20 @@
         "1": {
           "canDo": "Recognize my own name and the words hello, name, from with picture support.",
           "scaffold": "Word–picture matching cards. Own name shown alongside three distractors.",
-          "check": "Selects own written name from 4 options; matches 3 core words to pictures."
+          "check": "Selects own written name from 4 options; matches 3 core words to pictures.",
+          "l1Bridge": "If the home language uses a different script, show the student's own name in both."
         },
         "2": {
           "canDo": "Read a labeled ID card and find name, country, and language.",
           "scaffold": "Highlighter task on a large-print ID card with icon labels on each field.",
-          "check": "Locates and highlights all three fields on an unfamiliar ID card."
+          "check": "Locates and highlights all three fields on an unfamiliar ID card.",
+          "l1Bridge": "ID-card field labels (name, country, language) glossed in the home language."
         },
         "3": {
           "canDo": "Read a short peer profile and match it to the correct photo.",
           "scaffold": "Three 2-sentence profiles, three photos. Key vocabulary glossed in the margin.",
-          "check": "Matches 3 of 3 profiles to photos using details, not guessing."
+          "check": "Matches 3 of 3 profiles to photos using details, not guessing.",
+          "l1Bridge": "Home-language glossary for the three profiles; the matching is done in English."
         }
       }
     },
@@ -93,17 +132,20 @@
         "1": {
           "canDo": "Trace and copy my name and country onto a name-tent.",
           "scaffold": "Dotted-line tracing guide, then a copy line. Model card stays in view.",
-          "check": "Produces a legible name-tent with own name spelled correctly."
+          "check": "Produces a legible name-tent with own name spelled correctly.",
+          "l1Bridge": "Where the home script differs, practice the Latin-alphabet form alongside the original."
         },
         "2": {
           "canDo": "Complete a personal-information form (name, country, language).",
           "scaffold": "Labeled form with icons and a word bank of country and language names.",
-          "check": "Completes all three fields legibly and in the correct slots."
+          "check": "Completes all three fields legibly and in the correct slots.",
+          "l1Bridge": "Form labels glossed in the home language; the student writes in English."
         },
         "3": {
           "canDo": "Write 2–3 sentences introducing myself.",
           "scaffold": "Starter capitals provided; punctuation reminder strip at the top of the page.",
-          "check": "Writes 3 sentences with capital letters on names and end punctuation."
+          "check": "Writes 3 sentences with capital letters on names and end punctuation.",
+          "l1Bridge": "Draft one sentence in the home language, then write all three in English."
         }
       }
     }

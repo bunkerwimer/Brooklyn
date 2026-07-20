@@ -42,7 +42,7 @@ def check_unit(path):
     no = unit.get("no", path.stem)
 
     # --- required top-level fields
-    for field in ["no", "title", "phase", "weeks", "focus", "wida", "function",
+    for field in ["no", "title", "phase", "weeks", "focus", "standards", "function",
                   "grammar", "vocabulary", "foundationalLiteracy", "cards", "workedTask"]:
         if field not in unit:
             err(no, f"missing required field '{field}'")
@@ -52,8 +52,10 @@ def check_unit(path):
     if unit.get("phase") not in PHASES:
         err(no, f"phase must be one of {PHASES}, got {unit.get('phase')!r}")
 
-    # --- wida
-    wida = unit.get("wida", {})
+    # --- standards
+    if "wida" in unit:
+        err(no, "`wida` must live under `standards.wida` (run tools/migrate_standards_l1.py)")
+    wida = unit.get("standards", {}).get("wida", {})
     for std in wida.get("standards", []):
         if std not in WIDA_STANDARDS:
             err(no, f"unknown WIDA standard {std!r}")
@@ -90,7 +92,7 @@ def check_unit(path):
             err(no, f"{domain} must have levels {LEVELS}, got {sorted(levels.keys())}")
         for lv in LEVELS:
             spec = levels.get(lv, {})
-            for field in ["canDo", "scaffold", "check"]:
+            for field in ["canDo", "scaffold", "check", "l1Bridge"]:
                 if not spec.get(field, "").strip():
                     err(no, f"{domain} L{lv} missing '{field}'")
 

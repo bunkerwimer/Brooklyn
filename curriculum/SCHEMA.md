@@ -16,9 +16,14 @@ in HTML; the docs are generated (`npm run build:docs` → `node tools/build-docs
   "phase": "A",                  // A = Orientation & Survival, B = Daily Life, C = Expanding Language
   "weeks": "1–2",
   "focus": "One-line description shown in the scope & sequence.",
-  "wida": {
-    "standards": ["SI"],         // SI, LA, MA, SC, SS — WIDA ELD Standards (2020)
-    "keyUses": ["Inform"]        // Narrate, Inform, Explain, Argue
+  "standards": {
+    "wida": {
+      "standards": ["SI"],       // SI, LA, MA, SC, SS — WIDA ELD Standards (2020)
+      "keyUses": ["Inform"]      // Narrate, Inform, Explain, Argue
+    }
+    // Other frameworks (CA ELD, TX ELPS, NY) are NOT tagged per unit. They are
+    // derived at render time from curriculum/standards/frameworks.json, so a unit
+    // is authored once and mapped many times. See "Standards coverage" below.
   },
   "function": "The language function the unit is built around.",
   "grammar": ["Target structure 1", "Target structure 2"],
@@ -44,7 +49,8 @@ in HTML; the docs are generated (`npm run build:docs` → `node tools/build-docs
     "1": {                       // WIDA 1 Entering / 2 Emerging / 3 Developing
       "canDo": "The observable target. This is what a teacher looks for.",
       "scaffold": "The support that makes it reachable at this level.",
-      "check": "The evidence that produces WIDA level-movement data."
+      "l1Bridge": "How the home language carries meaning at this level.",
+      "check": "The evidence a teacher records."
     },
     "2": { … }, "3": { … }
   }
@@ -53,7 +59,24 @@ in HTML; the docs are generated (`npm run build:docs` → `node tools/build-docs
 
 **`canDo`** is the contract with the district — it maps to a WIDA Can-Do descriptor and is what
 appears on a report. **`scaffold`** is what the print packet and device task actually build.
-**`check`** is what rolls up into growth dashboards; write it so a teacher could score it in seconds.
+**`check`** is what a teacher records; write it so it can be scored in seconds.
+
+**`check` is formative, not psychometric.** It is evidence a teacher observed something, not a
+measurement of proficiency-level movement. Level movement is measured by the state summative
+(ACCESS, ELPAC, TELPAS, NYSESLAT). Never describe these as level-movement data to a district
+without validity and reliability evidence, which does not exist yet.
+
+**`l1Bridge`** is the home-language support, written to be **language-agnostic** — it names a
+mechanism ("gloss the field labels", "rehearse in the home language, produce in English"), never a
+specific language, so it works for a highly multilingual roster. It **fades** across levels:
+
+- **L1** home language carries meaning; English is echoed
+- **L2** home language previews and rehearses; English is produced
+- **L3** home language is for planning and thinking; English is the product
+
+Two deliberate exceptions where the bridge does **not** fade, because comprehension outranks
+language practice: **safety and health information**, and **anything a family must act on**
+(graduation requirements, medical instructions, legal rights).
 
 ## Worked task
 
@@ -84,6 +107,19 @@ Applied consistently across all twelve units:
 
 Levels change the **scaffold**, never the **content**. A newcomer at L1 and a peer at L3 are in the
 same conversation — this is the pedagogical claim the whole product rests on.
+
+## Standards coverage
+
+WIDA is the primary framework, but it is roughly 40 states and — critically — **not** California,
+Texas, New York, or Arizona, which together hold a large share of the nation's English learners.
+`curriculum/standards/frameworks.json` holds framework metadata plus a level and domain crosswalk
+so one authored objective can be reported against several frameworks.
+
+**The crosswalk is unvalidated.** No official equivalence exists between these frameworks; they
+define proficiency on different constructs. Domain mapping is high confidence, level mapping is not,
+and expectation-code-level mapping is deliberately **absent rather than guessed**. A credentialed
+reviewer holding each state's current documents must validate it before the curriculum is shown to
+a district in that state. The generated doc prints this caveat on the page.
 
 ## Standards note
 

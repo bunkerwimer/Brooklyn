@@ -1,0 +1,145 @@
+{
+  "_README": [
+    "Framework metadata and level crosswalk for Brooklyn.",
+    "",
+    "CRITICAL: `verified` is false on every crosswalk below. No official equivalence exists",
+    "between WIDA, CA ELD, TX ELPS, and NY levels — the frameworks define proficiency",
+    "differently and vendors who claim exact alignment are overstating. These mappings are",
+    "a defensible starting point authored from framework structure, NOT from the standards",
+    "documents themselves, and they MUST be validated by someone holding each state's current",
+    "documents before any of this is shown to a district in that state.",
+    "",
+    "Domain-level mappings are high confidence. Expectation-code-level mappings (e.g. which",
+    "specific TX ELPS student expectation a card satisfies) are deliberately ABSENT rather than",
+    "guessed — see `codeLevelMapping` on each framework."
+  ],
+
+  "frameworks": {
+    "wida": {
+      "name": "WIDA ELD Standards Framework",
+      "edition": "2020",
+      "primary": true,
+      "coverage": "~40 states and territories via the WIDA Consortium",
+      "levels": [
+        { "n": 1, "label": "Entering" },
+        { "n": 2, "label": "Emerging" },
+        { "n": 3, "label": "Developing" },
+        { "n": 4, "label": "Expanding" },
+        { "n": 5, "label": "Bridging" },
+        { "n": 6, "label": "Reaching" }
+      ],
+      "standards": {
+        "SI": "Language for Social and Instructional purposes",
+        "LA": "Language for Language Arts",
+        "MA": "Language for Mathematics",
+        "SC": "Language for Science",
+        "SS": "Language for Social Studies"
+      },
+      "keyUses": ["Narrate", "Inform", "Explain", "Argue"],
+      "summativeAssessment": "ACCESS for ELLs",
+      "codeLevelMapping": "present — Brooklyn authors directly against WIDA standards + Key Uses",
+      "disclaimerRequired": true
+    },
+
+    "caEld": {
+      "name": "California ELD Standards",
+      "edition": "2012",
+      "primary": false,
+      "coverage": "California",
+      "note": "Largest single EL population in the US. Not a WIDA state.",
+      "levels": [
+        { "n": 1, "label": "Emerging" },
+        { "n": 2, "label": "Expanding" },
+        { "n": 3, "label": "Bridging" }
+      ],
+      "structure": {
+        "partI": "Interacting in Meaningful Ways — Collaborative, Interpretive, Productive",
+        "partII": "Learning About How English Works"
+      },
+      "summativeAssessment": "ELPAC",
+      "codeLevelMapping": "TODO — requires the current CA ELD Standards document. Do not guess.",
+      "stateAdoption": "California has a state adoption process for K-8 instructional materials."
+    },
+
+    "txElps": {
+      "name": "Texas English Language Proficiency Standards (ELPS)",
+      "citation": "19 TAC §74.4",
+      "primary": false,
+      "coverage": "Texas",
+      "note": "Second-largest EL population in the US. Not a WIDA state.",
+      "levels": [
+        { "n": 1, "label": "Beginning" },
+        { "n": 2, "label": "Intermediate" },
+        { "n": 3, "label": "Advanced" },
+        { "n": 4, "label": "Advanced High" }
+      ],
+      "structure": {
+        "crossCurricular": "Learning strategies, Listening, Speaking, Reading, Writing"
+      },
+      "summativeAssessment": "TELPAS",
+      "codeLevelMapping": "TODO — requires the current ELPS text. Do not guess at expectation codes.",
+      "stateAdoption": "Texas runs a state review/adoption process for instructional materials."
+    },
+
+    "nyNls": {
+      "name": "New York State Next Generation Learning Standards / ELL supports",
+      "primary": false,
+      "coverage": "New York",
+      "note": "Large EL population. Not a WIDA state.",
+      "levels": [
+        { "n": 1, "label": "Entering" },
+        { "n": 2, "label": "Emerging" },
+        { "n": 3, "label": "Transitioning" },
+        { "n": 4, "label": "Expanding" },
+        { "n": 5, "label": "Commanding" }
+      ],
+      "summativeAssessment": "NYSESLAT",
+      "codeLevelMapping": "TODO — requires current NYSED documents. Do not guess.",
+      "privacyNote": "NY Ed Law 2-d imposes specific vendor obligations. Legal review required."
+    }
+  },
+
+  "levelCrosswalk": {
+    "verified": false,
+    "validatedBy": null,
+    "validatedOn": null,
+    "caveat": "Approximate structural alignment only. Frameworks define proficiency on different constructs; a student placed at one framework's level 2 is not necessarily at another's. Never present this as official equivalence to a district.",
+    "map": {
+      "1": {
+        "brooklyn": "1 · Entering",
+        "wida": "1 Entering",
+        "caEld": "Emerging (early)",
+        "txElps": "Beginning",
+        "nyNls": "Entering",
+        "confidence": "high — all four frameworks treat this band as single words, formulaic chunks, and non-verbal response"
+      },
+      "2": {
+        "brooklyn": "2 · Emerging",
+        "wida": "2 Emerging",
+        "caEld": "Emerging (late) to Expanding (early)",
+        "txElps": "Intermediate",
+        "nyNls": "Emerging",
+        "confidence": "medium — CA collapses six WIDA levels into three, so this band straddles a CA boundary"
+      },
+      "3": {
+        "brooklyn": "3 · Developing",
+        "wida": "3 Developing",
+        "caEld": "Expanding",
+        "txElps": "Advanced",
+        "nyNls": "Transitioning",
+        "confidence": "medium — TX Advanced spans more than WIDA 3 alone"
+      }
+    }
+  },
+
+  "domainCrosswalk": {
+    "verified": false,
+    "caveat": "Domain alignment is far more stable across frameworks than level alignment. Confidence is high here.",
+    "map": {
+      "Listening": { "wida": "Listening (Interpretive)", "caEld": "Part I — Interpretive", "txElps": "Listening", "nyNls": "Listening" },
+      "Speaking":  { "wida": "Speaking (Expressive)",   "caEld": "Part I — Collaborative / Productive", "txElps": "Speaking", "nyNls": "Speaking" },
+      "Reading":   { "wida": "Reading (Interpretive)",  "caEld": "Part I — Interpretive", "txElps": "Reading", "nyNls": "Reading" },
+      "Writing":   { "wida": "Writing (Expressive)",    "caEld": "Part I — Productive", "txElps": "Writing", "nyNls": "Writing" }
+    }
+  }
+}

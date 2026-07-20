@@ -1,11 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>Brooklyn &mdash; Curriculum Reference</title>
 <style>
   :root {
     --paper:#F4F6F5; --surface:#FFFFFF; --surface-2:#ECF0EE;
-    --ink:#17242A; --ink-2:#4B5E64; --ink-3:#7C8D91;
+    --ink:#17242A; --ink-2:#4B5E64; --ink-3:#616F72;
     --line:#D9E1DE; --line-2:#E7ECEA;
     --accent:#1E6E63; --accent-ink:#124039; --accent-tint:#E1EEEA;
-    --warm:#B6611F; --warm-tint:#F3E6D6;
+    --warm:#9E541A; --warm-tint:#F3E6D6;
     --lvl1-bg:#E3F1ED; --lvl2-bg:#D2E9E2; --lvl3-bg:#C3E0D7;
     --lvl1-fg:#2C6A5E; --lvl2-fg:#1F6255; --lvl3-fg:#154B41;
     --shadow:0 1px 2px rgba(20,45,40,.05), 0 8px 24px -12px rgba(20,45,40,.18);
@@ -15,7 +21,7 @@
     --mono:ui-monospace,SFMono-Regular,Menlo,"Cascadia Mono",Consolas,monospace;
   }
   @media (prefers-color-scheme: dark) { :root { --paper:#0E181C; --surface:#14232A; --surface-2:#1B2E36;
-    --ink:#E8EFEC; --ink-2:#A6BAB7; --ink-3:#70878A;
+    --ink:#E8EFEC; --ink-2:#BECCCA; --ink-3:#819697;
     --line:#26383F; --line-2:#203138;
     --accent:#5BC6B4; --accent-ink:#AEE3D8; --accent-tint:#173A38;
     --warm:#E0925A; --warm-tint:#33241A;
@@ -23,15 +29,15 @@
     --lvl1-fg:#A9D8CE; --lvl2-fg:#B9E5DB; --lvl3-fg:#CFEFE7;
     --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.6); } }
   :root[data-theme="light"] { --paper:#F4F6F5; --surface:#FFFFFF; --surface-2:#ECF0EE;
-    --ink:#17242A; --ink-2:#4B5E64; --ink-3:#7C8D91;
+    --ink:#17242A; --ink-2:#4B5E64; --ink-3:#616F72;
     --line:#D9E1DE; --line-2:#E7ECEA;
     --accent:#1E6E63; --accent-ink:#124039; --accent-tint:#E1EEEA;
-    --warm:#B6611F; --warm-tint:#F3E6D6;
+    --warm:#9E541A; --warm-tint:#F3E6D6;
     --lvl1-bg:#E3F1ED; --lvl2-bg:#D2E9E2; --lvl3-bg:#C3E0D7;
     --lvl1-fg:#2C6A5E; --lvl2-fg:#1F6255; --lvl3-fg:#154B41;
     --shadow:0 1px 2px rgba(20,45,40,.05), 0 8px 24px -12px rgba(20,45,40,.18); }
   :root[data-theme="dark"] { --paper:#0E181C; --surface:#14232A; --surface-2:#1B2E36;
-    --ink:#E8EFEC; --ink-2:#A6BAB7; --ink-3:#70878A;
+    --ink:#E8EFEC; --ink-2:#BECCCA; --ink-3:#819697;
     --line:#26383F; --line-2:#203138;
     --accent:#5BC6B4; --accent-ink:#AEE3D8; --accent-tint:#173A38;
     --warm:#E0925A; --warm-tint:#33241A;
@@ -80,6 +86,14 @@
   .phase-head h2 { font-size:clamp(21px,3.2vw,27px); }
   .phase-head .wk { margin-left:auto; color:var(--ink-3); font-family:var(--mono); font-size:12.5px; }
 
+  /* standards coverage */
+  .standards { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+               box-shadow:var(--shadow); padding:clamp(20px,3vw,28px); margin-bottom:52px; }
+  .standards h2 { font-size:15px; font-family:var(--mono); letter-spacing:.1em;
+                  text-transform:uppercase; color:var(--ink-3); font-weight:600; }
+  .standards thead th small { display:block; font-weight:400; text-transform:none;
+                              letter-spacing:0; color:var(--ink-3); font-size:11px; }
+
   /* unit */
   .unit { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
           box-shadow:var(--shadow); padding:clamp(20px,3vw,32px); margin-bottom:28px;
@@ -118,7 +132,9 @@
   table.matrix thead th { font-family:var(--mono); font-size:11.5px; letter-spacing:.1em;
                           text-transform:uppercase; color:var(--ink-3); border-bottom:1px solid var(--line);
                           white-space:nowrap; }
-  td.rowhead, th.rowhead { font-weight:600; white-space:nowrap; width:120px; }
+  /* explicit, not inherited — see the quirks-mode note in main() */
+  table.matrix td { color:var(--ink); }
+  td.rowhead, th.rowhead { color:var(--ink); font-weight:600; white-space:nowrap; width:120px; }
   td.rowhead small { display:block; font-weight:400; color:var(--ink-3);
                      font-size:11.5px; letter-spacing:.04em; }
   .c1 { background:var(--lvl1-bg); } .c2 { background:var(--lvl2-bg); } .c3 { background:var(--lvl3-bg); }
@@ -156,6 +172,8 @@
     .phase-head { break-before:page; }
   }
 </style>
+</head>
+<body>
 <div class="page"><div class="wrap">
 <header class="hero">
   <div class="eyebrow">Brooklyn &middot; Curriculum Reference</div>
@@ -168,6 +186,39 @@
     <span class="chip"><b>~24</b> weeks</span>
   </div>
 </header>
+<section class="standards">
+  <h2>Standards coverage</h2>
+  <div class="scroll-x"><table class="matrix"><thead><tr>
+    <th class="rowhead">Brooklyn level</th>
+    <th>WIDA ELD Standards Framework<br><small>~40 states and territories via the WIDA Consortium</small></th>
+    <th>California ELD Standards<br><small>California</small></th>
+    <th>Texas English Language Proficiency Standards (ELPS)<br><small>Texas</small></th>
+    <th>New York State Next Generation Learning Standards / ELL supports<br><small>New York</small></th>
+  </tr></thead><tbody>
+    <tr>
+      <td class="rowhead">1 · Entering</td>
+      <td class="c1">1 Entering</td>
+      <td class="c1">Emerging (early)</td>
+      <td class="c1">Beginning</td>
+      <td class="c1">Entering</td>
+    </tr>
+    <tr>
+      <td class="rowhead">2 · Emerging</td>
+      <td class="c2">2 Emerging</td>
+      <td class="c2">Emerging (late) to Expanding (early)</td>
+      <td class="c2">Intermediate</td>
+      <td class="c2">Emerging</td>
+    </tr>
+    <tr>
+      <td class="rowhead">3 · Developing</td>
+      <td class="c3">3 Developing</td>
+      <td class="c3">Expanding</td>
+      <td class="c3">Advanced</td>
+      <td class="c3">Transitioning</td>
+    </tr>
+  </tbody></table></div>
+  <div class="note"><h4>Crosswalk not yet validated</h4><p>Approximate structural alignment only. Frameworks define proficiency on different constructs; a student placed at one framework's level 2 is not necessarily at another's. Never present this as official equivalence to a district. Authored from framework structure, not from the state standards documents. A credentialed reviewer holding each state&rsquo;s current documents must validate this before it is shown to a district in that state. Expectation-code-level mapping is deliberately absent rather than guessed.</p></div>
+</section>
 <nav class="toc"><h2>Contents</h2><ol>
   <li><a href="#u01"><span class="n">01</span>Hello &amp; Who I Am</a></li>
   <li><a href="#u02"><span class="n">02</span>My School</a></li>
@@ -238,16 +289,19 @@
       <td class="c1">
         <span class="cando">Point to the right person or photo when greeted or named aloud.</span>
         <span class="sub"><b>Scaffold</b><br>Photo cards of classmates on the desk. Teacher says one name; student points. Gesture accepted as a full answer.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Preview hello, name, and from in the home language; pointing to the photo is a full answer.</span>
         <span class="sub"><b>Check</b><br>Points to the correct photo in 4 of 5 trials.</span>
       </td>
       <td class="c2">
         <span class="cando">Identify a person's name and country from a short spoken introduction.</span>
         <span class="sub"><b>Scaffold</b><br>Two-column picture grid (names / flags). Audio replays on demand at slowed rate.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Give country and language names in the home language first, then English, so only the frame is new.</span>
         <span class="sub"><b>Check</b><br>Marks the correct name and country from a 3-sentence spoken introduction.</span>
       </td>
       <td class="c3">
         <span class="cando">Follow a multi-part spoken introduction and match details to the right people.</span>
         <span class="sub"><b>Scaffold</b><br>Note-catcher grid with three columns. Audio plays twice at normal rate.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Note-catcher may be annotated in the home language; the matching task stays in English.</span>
         <span class="sub"><b>Check</b><br>Correctly matches 3 speakers to name, country, and language from connected speech.</span>
       </td>
     </tr>
@@ -256,16 +310,19 @@
       <td class="c1">
         <span class="cando">Say a one-word greeting and my name.</span>
         <span class="sub"><b>Scaffold</b><br>Echo an audio model. Word bank with photo support. A wave counts as the greeting.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Student may greet in the home language first, then echo the English model. Both count.</span>
         <span class="sub"><b>Check</b><br>Produces a greeting plus own name intelligibly to a partner.</span>
       </td>
       <td class="c2">
         <span class="cando">Give a 2–3 sentence self-introduction using a model.</span>
         <span class="sub"><b>Scaffold</b><br>Sentence frames with three slots (name / country / language) and a world map.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Rehearse the three-slot frame silently in the home language before producing it in English.</span>
         <span class="sub"><b>Check</b><br>Produces 3 framed sentences with correct personal information.</span>
       </td>
       <td class="c3">
         <span class="cando">Introduce myself and ask a partner one question back.</span>
         <span class="sub"><b>Scaffold</b><br>Open frame plus one modeled question. No word bank required.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Plan the reciprocal question in the home language; deliver it in English.</span>
         <span class="sub"><b>Check</b><br>Introduces self in connected speech and initiates one question to a partner.</span>
       </td>
     </tr>
@@ -274,16 +331,19 @@
       <td class="c1">
         <span class="cando">Recognize my own name and the words hello, name, from with picture support.</span>
         <span class="sub"><b>Scaffold</b><br>Word–picture matching cards. Own name shown alongside three distractors.</span>
+        <span class="sub"><b>Home-language bridge</b><br>If the home language uses a different script, show the student's own name in both.</span>
         <span class="sub"><b>Check</b><br>Selects own written name from 4 options; matches 3 core words to pictures.</span>
       </td>
       <td class="c2">
         <span class="cando">Read a labeled ID card and find name, country, and language.</span>
         <span class="sub"><b>Scaffold</b><br>Highlighter task on a large-print ID card with icon labels on each field.</span>
+        <span class="sub"><b>Home-language bridge</b><br>ID-card field labels (name, country, language) glossed in the home language.</span>
         <span class="sub"><b>Check</b><br>Locates and highlights all three fields on an unfamiliar ID card.</span>
       </td>
       <td class="c3">
         <span class="cando">Read a short peer profile and match it to the correct photo.</span>
         <span class="sub"><b>Scaffold</b><br>Three 2-sentence profiles, three photos. Key vocabulary glossed in the margin.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Home-language glossary for the three profiles; the matching is done in English.</span>
         <span class="sub"><b>Check</b><br>Matches 3 of 3 profiles to photos using details, not guessing.</span>
       </td>
     </tr>
@@ -292,16 +352,19 @@
       <td class="c1">
         <span class="cando">Trace and copy my name and country onto a name-tent.</span>
         <span class="sub"><b>Scaffold</b><br>Dotted-line tracing guide, then a copy line. Model card stays in view.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Where the home script differs, practice the Latin-alphabet form alongside the original.</span>
         <span class="sub"><b>Check</b><br>Produces a legible name-tent with own name spelled correctly.</span>
       </td>
       <td class="c2">
         <span class="cando">Complete a personal-information form (name, country, language).</span>
         <span class="sub"><b>Scaffold</b><br>Labeled form with icons and a word bank of country and language names.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Form labels glossed in the home language; the student writes in English.</span>
         <span class="sub"><b>Check</b><br>Completes all three fields legibly and in the correct slots.</span>
       </td>
       <td class="c3">
         <span class="cando">Write 2–3 sentences introducing myself.</span>
         <span class="sub"><b>Scaffold</b><br>Starter capitals provided; punctuation reminder strip at the top of the page.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Draft one sentence in the home language, then write all three in English.</span>
         <span class="sub"><b>Check</b><br>Writes 3 sentences with capital letters on names and end punctuation.</span>
       </td>
     </tr>
@@ -376,16 +439,19 @@
       <td class="c1">
         <span class="cando">Point to a place in the school when it is named aloud.</span>
         <span class="sub"><b>Scaffold</b><br>Picture map of the building with icons. Teacher names one place; student points.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Building photos labeled in the home language on first exposure only.</span>
         <span class="sub"><b>Check</b><br>Points to the correct place for 5 of 6 named locations.</span>
       </td>
       <td class="c2">
         <span class="cando">Understand a short spoken direction to a place in the building.</span>
         <span class="sub"><b>Scaffold</b><br>Simplified floor map with a start marker. Direction repeated on request.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Direction words pre-taught in the home language before the map task.</span>
         <span class="sub"><b>Check</b><br>Traces the correct route on the map from a 2-step spoken direction.</span>
       </td>
       <td class="c3">
         <span class="cando">Follow a multi-step announcement and identify where I need to go and when.</span>
         <span class="sub"><b>Scaffold</b><br>Note-catcher with where / when / who columns. Audio at normal rate, played twice.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Note-catcher headings glossed; the announcement stays in English.</span>
         <span class="sub"><b>Check</b><br>Extracts place, time, and person from a 4-sentence announcement.</span>
       </td>
     </tr>
@@ -394,16 +460,19 @@
       <td class="c1">
         <span class="cando">Name a place in the school and say it when I need to go there.</span>
         <span class="sub"><b>Scaffold</b><br>Bathroom/nurse pass cards with the word and icon. One-word response accepted.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Student may name the place in the home language while showing the pass card; teacher supplies the English.</span>
         <span class="sub"><b>Check</b><br>Says or shows the correct place word to request permission.</span>
       </td>
       <td class="c2">
         <span class="cando">Ask where a place is and say where I need to go.</span>
         <span class="sub"><b>Scaffold</b><br>Frame strip: Where is the ___? / I need to go to the ___.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Rehearse 'Where is the ___?' after hearing the equivalent question in the home language.</span>
         <span class="sub"><b>Check</b><br>Asks a staff member for a location using a full framed question.</span>
       </td>
       <td class="c3">
         <span class="cando">Give a classmate directions to a place in the building.</span>
         <span class="sub"><b>Scaffold</b><br>Preposition bank (next to, across from, upstairs) plus a map to reference.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Plan the route in the home language, give the directions in English.</span>
         <span class="sub"><b>Check</b><br>Produces a 2–3 step direction a peer can actually follow.</span>
       </td>
     </tr>
@@ -412,16 +481,19 @@
       <td class="c1">
         <span class="cando">Recognize school signs and room numbers.</span>
         <span class="sub"><b>Scaffold</b><br>Real photographs of the building's own signage. Word–photo matching.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Pair each real sign photo with its home-language meaning once, then remove the gloss.</span>
         <span class="sub"><b>Check</b><br>Matches 5 signs (office, exit, restroom, library, nurse) to photos.</span>
       </td>
       <td class="c2">
         <span class="cando">Read my class schedule and find the room for a given period.</span>
         <span class="sub"><b>Scaffold</b><br>Enlarged schedule with color-coded periods and an icon per subject.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Schedule column headers (period, room, teacher) glossed in the home language.</span>
         <span class="sub"><b>Check</b><br>Names the correct room and teacher for 3 requested periods.</span>
       </td>
       <td class="c3">
         <span class="cando">Read a short staff directory and say who to go to for a problem.</span>
         <span class="sub"><b>Scaffold</b><br>Directory with roles glossed in plain language. Three scenario cards.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Staff role names glossed — job titles rarely transfer directly between school systems.</span>
         <span class="sub"><b>Check</b><br>Matches 3 scenarios (sick, lost schedule, new to school) to the right staff member.</span>
       </td>
     </tr>
@@ -430,16 +502,19 @@
       <td class="c1">
         <span class="cando">Copy my room numbers and teacher names onto a schedule card.</span>
         <span class="sub"><b>Scaffold</b><br>Pre-printed grid; student copies from the official schedule into a pocket card.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Room numbers are language-neutral; start here to build early success.</span>
         <span class="sub"><b>Check</b><br>Produces a legible personal schedule card with correct room numbers.</span>
       </td>
       <td class="c2">
         <span class="cando">Label a map of my school with the places I use.</span>
         <span class="sub"><b>Scaffold</b><br>Blank building map, word bank of 8 places, icons on the bank.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Map word bank shown bilingually; labels written in English.</span>
         <span class="sub"><b>Check</b><br>Labels 6 of 8 locations correctly.</span>
       </td>
       <td class="c3">
         <span class="cando">Write a short note asking to go somewhere or asking for help.</span>
         <span class="sub"><b>Scaffold</b><br>Model note plus a polite-phrase bank (May I…, I need…, Thank you).</span>
+        <span class="sub"><b>Home-language bridge</b><br>Draft the note in the home language if needed, then write the English version.</span>
         <span class="sub"><b>Check</b><br>Writes a 2-sentence note with a request and a courtesy phrase.</span>
       </td>
     </tr>
@@ -519,16 +594,19 @@
       <td class="c1">
         <span class="cando">Respond physically to a one-step classroom command.</span>
         <span class="sub"><b>Scaffold</b><br>Total Physical Response routine. Teacher models the action while saying it.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Demonstrate each command physically; confirm meaning in the home language once, then drop it.</span>
         <span class="sub"><b>Check</b><br>Performs the correct action for 8 of 10 one-step commands without a model.</span>
       </td>
       <td class="c2">
         <span class="cando">Follow a two-step direction and identify the wh- question being asked.</span>
         <span class="sub"><b>Scaffold</b><br>Question-word poster with icons (what = thing, where = place, who = person).</span>
+        <span class="sub"><b>Home-language bridge</b><br>Question words (what/where/who/when) glossed in the home language on the poster.</span>
         <span class="sub"><b>Check</b><br>Completes 2-step directions and sorts 5 questions by their question word.</span>
       </td>
       <td class="c3">
         <span class="cando">Follow multi-step academic directions and know when I have missed something.</span>
         <span class="sub"><b>Scaffold</b><br>Directions given once at normal rate; student may request one repeat.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Student may take notes in the home language while following English directions.</span>
         <span class="sub"><b>Check</b><br>Completes a 3-step task and self-identifies the step that needs clarifying.</span>
       </td>
     </tr>
@@ -537,16 +615,19 @@
       <td class="c1">
         <span class="cando">Ask for help using a single word or a help card.</span>
         <span class="sub"><b>Scaffold</b><br>Desk card with help / bathroom / I don't understand and an icon for each. Pointing counts.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Help card printed in both languages so the student can signal without speaking English.</span>
         <span class="sub"><b>Check</b><br>Signals a need using the card or word without prompting, twice in a class period.</span>
       </td>
       <td class="c2">
         <span class="cando">Ask someone to repeat or slow down using a full phrase.</span>
         <span class="sub"><b>Scaffold</b><br>Frame strip taped to the desk. Practiced chorally at the start of each session.</span>
+        <span class="sub"><b>Home-language bridge</b><br>State explicitly, in the home language, that asking a teacher to repeat is polite here.</span>
         <span class="sub"><b>Check</b><br>Uses a repair phrase (repeat / slowly / I don't understand) unprompted in real time.</span>
       </td>
       <td class="c3">
         <span class="cando">Ask a clarifying question about the task itself.</span>
         <span class="sub"><b>Scaffold</b><br>Question stem bank: Do we…? Should I…? What page…? Is this due…?</span>
+        <span class="sub"><b>Home-language bridge</b><br>Formulate the clarifying question in the home language, ask it in English.</span>
         <span class="sub"><b>Check</b><br>Asks a specific clarifying question that resolves a genuine ambiguity.</span>
       </td>
     </tr>
@@ -555,16 +636,19 @@
       <td class="c1">
         <span class="cando">Recognize common written direction words with icon support.</span>
         <span class="sub"><b>Scaffold</b><br>Icon-and-word cards for circle, write, match, draw, read.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Direction verbs paired with icons and a one-time home-language gloss.</span>
         <span class="sub"><b>Check</b><br>Matches 6 direction words to their icons.</span>
       </td>
       <td class="c2">
         <span class="cando">Read the directions on a worksheet and know what to do.</span>
         <span class="sub"><b>Scaffold</b><br>Directions highlighted; verb underlined. Glossary strip at the top of the page.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Worksheet direction verbs glossed in the margin.</span>
         <span class="sub"><b>Check</b><br>Correctly starts 3 of 3 tasks based on written directions alone.</span>
       </td>
       <td class="c3">
         <span class="cando">Read a short assignment description and identify the task, the format, and the due date.</span>
         <span class="sub"><b>Scaffold</b><br>Annotation guide: box the verb, circle the due date, underline the product.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Assignment terms (due, submit, draft) glossed — several are false friends.</span>
         <span class="sub"><b>Check</b><br>Extracts all three elements from an authentic assignment sheet.</span>
       </td>
     </tr>
@@ -573,16 +657,19 @@
       <td class="c1">
         <span class="cando">Copy the date, my name, and the page number onto my work.</span>
         <span class="sub"><b>Scaffold</b><br>Heading template printed at the top of every packet page.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Heading fields (name, date, page) labeled bilingually on the template.</span>
         <span class="sub"><b>Check</b><br>Heads a paper correctly and independently.</span>
       </td>
       <td class="c2">
         <span class="cando">Write a question I have about the lesson.</span>
         <span class="sub"><b>Scaffold</b><br>Question stem bank plus an exit-ticket slip with one line.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Student may write the question in the home language first, then translate with support.</span>
         <span class="sub"><b>Check</b><br>Writes a legible question using a correct question word and a question mark.</span>
       </td>
       <td class="c3">
         <span class="cando">Write a short message to a teacher explaining what I need.</span>
         <span class="sub"><b>Scaffold</b><br>Model message plus a politeness bank. Reminder to state the class and the problem.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Drafting in the home language is permitted; the message is submitted in English.</span>
         <span class="sub"><b>Check</b><br>Writes 2–3 sentences that name the class, the problem, and the request.</span>
       </td>
     </tr>
@@ -660,16 +747,19 @@
       <td class="c1">
         <span class="cando">Identify a number or a day when it is said aloud.</span>
         <span class="sub"><b>Scaffold</b><br>Number line and day cards on the desk. Student points or holds up the card.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Check which numbers the student already holds in the home language before teaching English ones.</span>
         <span class="sub"><b>Check</b><br>Identifies 8 of 10 spoken numbers 1–31 and 5 of 7 days.</span>
       </td>
       <td class="c2">
         <span class="cando">Understand a spoken time and match it to a clock.</span>
         <span class="sub"><b>Scaffold</b><br>Analog and digital clock pairs. Times limited to the hour and half hour.</span>
+        <span class="sub"><b>Home-language bridge</b><br>State explicitly, in the home language, that US clocks use 12-hour time with a.m./p.m.</span>
         <span class="sub"><b>Check</b><br>Matches 6 of 8 spoken times to the correct clock face.</span>
       </td>
       <td class="c3">
         <span class="cando">Follow a spoken schedule change and identify what moved and when.</span>
         <span class="sub"><b>Scaffold</b><br>Note-catcher with old time / new time columns. Announcement played twice.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Note-catcher headings glossed; the announcement stays in English.</span>
         <span class="sub"><b>Check</b><br>Correctly reports the changed event and its new time and day.</span>
       </td>
     </tr>
@@ -678,16 +768,19 @@
       <td class="c1">
         <span class="cando">Count aloud and say the day or the time from a model.</span>
         <span class="sub"><b>Scaffold</b><br>Choral counting routine. Clock manipulative in hand.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Counting may be rehearsed in the home language first to confirm number sense, then in English.</span>
         <span class="sub"><b>Check</b><br>Counts 1–20 and names the current day.</span>
       </td>
       <td class="c2">
         <span class="cando">Say what time a class starts and what day something happens.</span>
         <span class="sub"><b>Scaffold</b><br>Frame: My ___ class is at ___. / ___ is on ___. Schedule in view.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Subject names glossed in the home language on the schedule.</span>
         <span class="sub"><b>Check</b><br>States 3 class times and days accurately from own schedule.</span>
       </td>
       <td class="c3">
         <span class="cando">Describe my week and explain a scheduling conflict.</span>
         <span class="sub"><b>Scaffold</b><br>Time-preposition bank (on, at, in, before, after) and a weekly grid.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Reason about the scheduling conflict in the home language, explain it in English.</span>
         <span class="sub"><b>Check</b><br>Describes a week in connected speech and explains one conflict with because.</span>
       </td>
     </tr>
@@ -696,16 +789,19 @@
       <td class="c1">
         <span class="cando">Read numerals, days, and months on a calendar.</span>
         <span class="sub"><b>Scaffold</b><br>Large classroom calendar. Day and month names color-coded.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Day and month names glossed once; numerals need no translation.</span>
         <span class="sub"><b>Check</b><br>Locates today's date and names the month on a printed calendar.</span>
       </td>
       <td class="c2">
         <span class="cando">Read a bus, bell, or lunch schedule and find a specific time.</span>
         <span class="sub"><b>Scaffold</b><br>Authentic school schedule, enlarged, with the target row highlighted.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Schedule headings glossed in the home language.</span>
         <span class="sub"><b>Check</b><br>Answers 4 of 5 time questions from a real schedule.</span>
       </td>
       <td class="c3">
         <span class="cando">Read a school calendar and identify deadlines, holidays, and early-release days.</span>
         <span class="sub"><b>Scaffold</b><br>Month view with a legend. Three scenario questions.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Calendar legend terms (early release, no school) glossed — these are district-specific.</span>
         <span class="sub"><b>Check</b><br>Identifies the next no-school day and the date an assignment is due.</span>
       </td>
     </tr>
@@ -714,16 +810,19 @@
       <td class="c1">
         <span class="cando">Write numerals and copy today's date correctly.</span>
         <span class="sub"><b>Scaffold</b><br>Date frame with month/day/year labels above the blanks.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Explicitly contrast US month/day/year order with the student's home format, in the home language.</span>
         <span class="sub"><b>Check</b><br>Writes the current date in US format without a model.</span>
       </td>
       <td class="c2">
         <span class="cando">Fill in a weekly schedule with times and subjects.</span>
         <span class="sub"><b>Scaffold</b><br>Blank weekly grid, word bank of subjects, own schedule to copy from.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Subject word bank shown bilingually.</span>
         <span class="sub"><b>Check</b><br>Completes a weekly grid with correct times for 5 classes.</span>
       </td>
       <td class="c3">
         <span class="cando">Write a short plan for my week using time expressions.</span>
         <span class="sub"><b>Scaffold</b><br>Preposition bank plus a model paragraph. Requires at least three time phrases.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Plan the week in the home language, write it in English.</span>
         <span class="sub"><b>Check</b><br>Writes 4–5 sentences using on, at, and before/after correctly.</span>
       </td>
     </tr>
@@ -808,16 +907,19 @@
       <td class="c1">
         <span class="cando">Point to a body part or a feeling face when it is named.</span>
         <span class="sub"><b>Scaffold</b><br>Body diagram and a feelings-face chart. Pointing is a complete answer.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Body-part and feeling words glossed in the home language; pointing is always sufficient.</span>
         <span class="sub"><b>Check</b><br>Identifies 6 body parts and 4 feelings from spoken words.</span>
       </td>
       <td class="c2">
         <span class="cando">Understand a spoken question about how I feel and what hurts.</span>
         <span class="sub"><b>Scaffold</b><br>Nurse role-play script with picture support. Questions limited to 4 known frames.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Preview the nurse's questions in the home language so the student knows what will be asked.</span>
         <span class="sub"><b>Check</b><br>Responds appropriately to 4 of 5 spoken health questions.</span>
       </td>
       <td class="c3">
         <span class="cando">Follow spoken health instructions and understand a follow-up question.</span>
         <span class="sub"><b>Scaffold</b><br>Recorded nurse dialogue at normal rate with a note-catcher.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Follow-up questions about duration and severity glossed in advance.</span>
         <span class="sub"><b>Check</b><br>Reports the instruction given and answers a follow-up about duration or severity.</span>
       </td>
     </tr>
@@ -826,16 +928,19 @@
       <td class="c1">
         <span class="cando">Say one word or point to show how I feel or what hurts.</span>
         <span class="sub"><b>Scaffold</b><br>Feelings card and body diagram on the desk. Pointing accepted without speech.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Student may name the symptom in the home language. Getting help outranks producing English.</span>
         <span class="sub"><b>Check</b><br>Communicates a need or feeling to an adult by word or gesture.</span>
       </td>
       <td class="c2">
         <span class="cando">Tell the nurse what hurts and how I feel using a frame.</span>
         <span class="sub"><b>Scaffold</b><br>Frame strip: My ___ hurts. I feel ___. I need ___.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Frame rehearsed after hearing the equivalent in the home language.</span>
         <span class="sub"><b>Check</b><br>Produces a 2-sentence report of a symptom and a need.</span>
       </td>
       <td class="c3">
         <span class="cando">Describe a symptom with detail and answer follow-up questions.</span>
         <span class="sub"><b>Scaffold</b><br>Detail bank: since when, how bad, what helps. Open frame.</span>
+        <span class="sub"><b>Home-language bridge</b><br>A distressed student may describe the symptom in the home language first, then in English.</span>
         <span class="sub"><b>Check</b><br>Describes a symptom with onset and severity and answers two follow-ups.</span>
       </td>
     </tr>
@@ -844,16 +949,19 @@
       <td class="c1">
         <span class="cando">Recognize health and safety signs and the word nurse.</span>
         <span class="sub"><b>Scaffold</b><br>Real signage photos: nurse, exit, first aid, do not enter.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Safety signs glossed in the home language and NOT faded — this is a safety skill, not a language test.</span>
         <span class="sub"><b>Check</b><br>Matches 5 safety signs to their meanings.</span>
       </td>
       <td class="c2">
         <span class="cando">Read a simple health form and find the fields I must fill in.</span>
         <span class="sub"><b>Scaffold</b><br>Enlarged form with required fields highlighted and icons on each label.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Form field labels glossed in the home language.</span>
         <span class="sub"><b>Check</b><br>Identifies all required fields on an unfamiliar simple form.</span>
       </td>
       <td class="c3">
         <span class="cando">Read a short set of care instructions and say what to do and when.</span>
         <span class="sub"><b>Scaffold</b><br>Instruction card with a sequencing organizer (first / then / if).</span>
+        <span class="sub"><b>Home-language bridge</b><br>Care instructions provided bilingually; the trigger condition is identified in English.</span>
         <span class="sub"><b>Check</b><br>Orders 4 instruction steps and identifies the condition that triggers step 4.</span>
       </td>
     </tr>
@@ -862,16 +970,19 @@
       <td class="c1">
         <span class="cando">Circle or copy a feeling word on a check-in slip.</span>
         <span class="sub"><b>Scaffold</b><br>Daily check-in slip with four faces and words. Circling is sufficient.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Check-in slip printed bilingually.</span>
         <span class="sub"><b>Check</b><br>Completes a daily check-in independently for five consecutive days.</span>
       </td>
       <td class="c2">
         <span class="cando">Fill in a nurse pass or a simple health form.</span>
         <span class="sub"><b>Scaffold</b><br>Labeled form, word bank of symptoms and body parts.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Symptom word bank shown bilingually.</span>
         <span class="sub"><b>Check</b><br>Completes a nurse pass with name, symptom, and time.</span>
       </td>
       <td class="c3">
         <span class="cando">Write a short note explaining an absence or a health need.</span>
         <span class="sub"><b>Scaffold</b><br>Model note plus a reason bank. Requires a date and a reason.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Absence note may be drafted in the home language and finalized in English with support.</span>
         <span class="sub"><b>Check</b><br>Writes a 3-sentence note with date, reason, and request.</span>
       </td>
     </tr>
@@ -951,16 +1062,19 @@
       <td class="c1">
         <span class="cando">Point to a family member in a picture when the word is said.</span>
         <span class="sub"><b>Scaffold</b><br>Generic family picture cards, not the student's own family.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Kinship terms glossed carefully — they rarely map one-to-one between languages.</span>
         <span class="sub"><b>Check</b><br>Identifies 6 family words from spoken input.</span>
       </td>
       <td class="c2">
         <span class="cando">Understand a short spoken description of a person and pick them out.</span>
         <span class="sub"><b>Scaffold</b><br>Four photos varying by one or two features. Description replayed on request.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Descriptive adjectives glossed before the photo task.</span>
         <span class="sub"><b>Check</b><br>Selects the correct person from 4 photos in 4 of 5 trials.</span>
       </td>
       <td class="c3">
         <span class="cando">Follow a spoken description of a family and map the relationships.</span>
         <span class="sub"><b>Scaffold</b><br>Blank relationship web to fill in while listening. Played twice.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Relationship web may be annotated in the home language.</span>
         <span class="sub"><b>Check</b><br>Correctly places 5 people and their relationships from connected speech.</span>
       </td>
     </tr>
@@ -969,16 +1083,19 @@
       <td class="c1">
         <span class="cando">Name family members and say who I live with in single words.</span>
         <span class="sub"><b>Scaffold</b><br>Picture cards. One-word answers fully accepted.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Student may use the home-language kinship term; teacher supplies the nearest English word and names the mismatch.</span>
         <span class="sub"><b>Check</b><br>Names 4 family members and indicates who they live with.</span>
       </td>
       <td class="c2">
         <span class="cando">Describe a person using two or three sentences.</span>
         <span class="sub"><b>Scaffold</b><br>Frame: This is my ___. He/She is ___. Adjective bank with pictures.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Adjective bank shown bilingually.</span>
         <span class="sub"><b>Check</b><br>Produces 3 framed sentences describing one person.</span>
       </td>
       <td class="c3">
         <span class="cando">Describe my home and the people in it, and ask a partner about theirs.</span>
         <span class="sub"><b>Scaffold</b><br>Open frame, adjective and room bank, one modeled question to ask back.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Plan the description in the home language, deliver it in English including the question back.</span>
         <span class="sub"><b>Check</b><br>Describes home and people in connected speech and asks a reciprocal question.</span>
       </td>
     </tr>
@@ -987,16 +1104,19 @@
       <td class="c1">
         <span class="cando">Match family words to pictures.</span>
         <span class="sub"><b>Scaffold</b><br>Word–picture cards with a model line already matched.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Family word-picture cards glossed once.</span>
         <span class="sub"><b>Check</b><br>Matches 6 of 8 family words to pictures.</span>
       </td>
       <td class="c2">
         <span class="cando">Read a short description of a family and answer who questions.</span>
         <span class="sub"><b>Scaffold</b><br>5-sentence passage with a picture and glossed vocabulary.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Passage vocabulary glossed in the margin.</span>
         <span class="sub"><b>Check</b><br>Answers 4 of 5 literal who and how many questions.</span>
       </td>
       <td class="c3">
         <span class="cando">Read a longer description and infer a relationship that isn't stated directly.</span>
         <span class="sub"><b>Scaffold</b><br>Passage plus an inference prompt: How do you know? Evidence sentence starter.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Inference prompt given in the home language; evidence is cited from the English text.</span>
         <span class="sub"><b>Check</b><br>Makes one correct inference and cites the sentence that supports it.</span>
       </td>
     </tr>
@@ -1005,16 +1125,19 @@
       <td class="c1">
         <span class="cando">Label pictures of people and rooms.</span>
         <span class="sub"><b>Scaffold</b><br>Picture page with a word bank and labeling lines.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Word bank shown bilingually.</span>
         <span class="sub"><b>Check</b><br>Labels 6 items correctly.</span>
       </td>
       <td class="c2">
         <span class="cando">Write 3–4 sentences describing a person who is important to me.</span>
         <span class="sub"><b>Scaffold</b><br>Frames plus an adjective bank. Student chooses the person freely.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Student may draft in the home language; final sentences in English.</span>
         <span class="sub"><b>Check</b><br>Writes 3 sentences with a subject, a verb, and one adjective each.</span>
       </td>
       <td class="c3">
         <span class="cando">Write a paragraph describing my home and who is in it.</span>
         <span class="sub"><b>Scaffold</b><br>Paragraph organizer (topic sentence, 3 details, closing). There is/are reminder.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Organizer headings glossed; the paragraph is written in English.</span>
         <span class="sub"><b>Check</b><br>Writes a 5-sentence paragraph with a topic sentence and correct there is/are.</span>
       </td>
     </tr>
@@ -1099,16 +1222,19 @@
       <td class="c1">
         <span class="cando">Point to a food when it is named aloud.</span>
         <span class="sub"><b>Scaffold</b><br>Real photographs of the actual cafeteria offerings, not clip art.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Use photos of the actual serving line — food is largely language-neutral when shown.</span>
         <span class="sub"><b>Check</b><br>Identifies 8 of 10 spoken food words.</span>
       </td>
       <td class="c2">
         <span class="cando">Understand a spoken cafeteria question and respond.</span>
         <span class="sub"><b>Scaffold</b><br>Recorded server prompts: Milk or juice? Do you want a fruit?</span>
+        <span class="sub"><b>Home-language bridge</b><br>Serving-line questions previewed in the home language.</span>
         <span class="sub"><b>Check</b><br>Responds appropriately to 4 of 5 spoken serving-line questions.</span>
       </td>
       <td class="c3">
         <span class="cando">Follow a spoken description of a meal and identify what's in it.</span>
         <span class="sub"><b>Scaffold</b><br>Menu description played at normal rate with an ingredient note-catcher.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Ingredient terms glossed precisely; dietary-restriction vocabulary must be exact.</span>
         <span class="sub"><b>Check</b><br>Lists 4 components of a described meal and flags one restricted ingredient.</span>
       </td>
     </tr>
@@ -1117,16 +1243,19 @@
       <td class="c1">
         <span class="cando">Name a food and say yes, no, or please in the lunch line.</span>
         <span class="sub"><b>Scaffold</b><br>Pocket picture card of the day's options. Pointing plus please is a full success.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Pocket card printed bilingually so the student can order without speaking English.</span>
         <span class="sub"><b>Check</b><br>Gets the intended food using words, the card, or both.</span>
       </td>
       <td class="c2">
         <span class="cando">Order lunch and say what I like using a frame.</span>
         <span class="sub"><b>Scaffold</b><br>Frame strip: Can I have ___, please? I like ___. I don't like ___.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Polite request frame rehearsed after the home-language equivalent.</span>
         <span class="sub"><b>Check</b><br>Completes a serving-line exchange using a full polite request.</span>
       </td>
       <td class="c3">
         <span class="cando">Ask about ingredients and explain what I can't eat and why.</span>
         <span class="sub"><b>Scaffold</b><br>Open frame plus a restriction bank (allergy, religion, vegetarian) and because.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Rehearse the restriction in the home language first. Accuracy matters more than fluency here.</span>
         <span class="sub"><b>Check</b><br>Asks an ingredient question and explains a restriction with a because clause.</span>
       </td>
     </tr>
@@ -1135,16 +1264,19 @@
       <td class="c1">
         <span class="cando">Recognize food words with picture support.</span>
         <span class="sub"><b>Scaffold</b><br>Word–photo matching using the school's own menu items.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Menu items glossed once alongside photos.</span>
         <span class="sub"><b>Check</b><br>Matches 8 food words to photos.</span>
       </td>
       <td class="c2">
         <span class="cando">Read the daily menu and choose what I want.</span>
         <span class="sub"><b>Scaffold</b><br>Enlarged real menu with icons added to each line.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Menu category headings glossed in the home language.</span>
         <span class="sub"><b>Check</b><br>Selects a full meal from the printed menu and reads the choices aloud.</span>
       </td>
       <td class="c3">
         <span class="cando">Read a food label and find an ingredient I need to avoid.</span>
         <span class="sub"><b>Scaffold</b><br>Real package labels with the ingredient list boxed. Target words listed on a strip.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Allergen and ingredient terms provided bilingually and NOT faded — this is a safety translation.</span>
         <span class="sub"><b>Check</b><br>Locates a specified ingredient on 3 of 3 unfamiliar labels.</span>
       </td>
     </tr>
@@ -1153,16 +1285,19 @@
       <td class="c1">
         <span class="cando">Copy food words and circle what I like.</span>
         <span class="sub"><b>Scaffold</b><br>Picture-and-word grid with like/don't like columns to check.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Like / don't like columns labeled bilingually.</span>
         <span class="sub"><b>Check</b><br>Sorts 8 foods into like and don't like columns.</span>
       </td>
       <td class="c2">
         <span class="cando">Write sentences about foods I like and don't like.</span>
         <span class="sub"><b>Scaffold</b><br>Frames plus a food word bank with pictures.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Food word bank shown bilingually.</span>
         <span class="sub"><b>Check</b><br>Writes 4 sentences using like and don't like correctly.</span>
       </td>
       <td class="c3">
         <span class="cando">Write a short description of a meal from my home country.</span>
         <span class="sub"><b>Scaffold</b><br>Paragraph organizer plus an ingredient and adjective bank. Student is the expert here.</span>
+        <span class="sub"><b>Home-language bridge</b><br>The home-country meal may be drafted in the home language; the student is the expert and should not be capped by English.</span>
         <span class="sub"><b>Check</b><br>Writes 5 sentences naming ingredients and explaining when the meal is eaten.</span>
       </td>
     </tr>
@@ -1235,7 +1370,7 @@
     <span class="w acad">public</span>
     <span class="w acad">service</span>
   </div></div>
-  <div class="note"><h4>Teaching note</h4><p>Teach 911 explicitly, including that it is free, that it works from any phone, and that using it will not by itself bring immigration consequences — but be honest that you are a teacher, not a lawyer, and never advise on immigration status. Many newcomer families avoid police contact for well-founded reasons. Frame this unit around independence and safety, and make sure every student can say their own address and a caregiver's phone number from memory before the unit ends.</p></div>
+  <div class="note"><h4>Teaching note</h4><p>Teach 911 explicitly: what it is for, that it is free, and that it works from any phone. Do NOT make claims about whether calling brings immigration consequences — that varies by jurisdiction and enforcement posture, and a teacher is not a lawyer. Many newcomer families avoid police contact for well-founded reasons; acknowledge that honestly rather than reassuring past what you know, and route questions to a local immigrant legal-aid organization. Districts must have this note reviewed by counsel and localized before use. Frame the unit around independence and safety, and make sure every student can say their own address and a caregiver's phone number from memory before it ends.</p></div>
   <div class="scroll-x"><table class="matrix"><thead><tr>
     <th class="rowhead">Domain</th>
     <th>Level 1<br><small>Entering</small></th>
@@ -1247,16 +1382,19 @@
       <td class="c1">
         <span class="cando">Point to a community place or a direction arrow when named.</span>
         <span class="sub"><b>Scaffold</b><br>Picture cards of local places and large left/right/straight arrows.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Place words glossed; direction arrows are language-neutral.</span>
         <span class="sub"><b>Check</b><br>Identifies 6 places and 3 direction words from spoken input.</span>
       </td>
       <td class="c2">
         <span class="cando">Follow a two-step spoken direction on a simple map.</span>
         <span class="sub"><b>Scaffold</b><br>Neighborhood map with a start marker. Directions repeated on request.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Direction vocabulary pre-taught in the home language.</span>
         <span class="sub"><b>Check</b><br>Traces the correct route from a 2-step spoken direction in 4 of 5 trials.</span>
       </td>
       <td class="c3">
         <span class="cando">Follow multi-step spoken directions and a transit announcement.</span>
         <span class="sub"><b>Scaffold</b><br>Recorded bus announcement plus a 3-step direction. Note-catcher provided.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Transit announcement note-catcher headings glossed.</span>
         <span class="sub"><b>Check</b><br>Identifies the correct stop and traces a 3-step route from one listening.</span>
       </td>
     </tr>
@@ -1265,16 +1403,19 @@
       <td class="c1">
         <span class="cando">Name a place and say my address or ask for help in one word.</span>
         <span class="sub"><b>Scaffold</b><br>Wallet card with address and emergency contact. Help as a taught single word.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Wallet card printed bilingually with address and emergency contact. This is a safety artifact, not a worksheet.</span>
         <span class="sub"><b>Check</b><br>States or shows own address and says help when prompted by a scenario.</span>
       </td>
       <td class="c2">
         <span class="cando">Ask for directions to a place using a frame.</span>
         <span class="sub"><b>Scaffold</b><br>Frame: Excuse me, where is the ___? / How do I get to ___?</span>
+        <span class="sub"><b>Home-language bridge</b><br>Frame rehearsed after the home-language equivalent.</span>
         <span class="sub"><b>Check</b><br>Asks a complete direction question and repeats the answer back.</span>
       </td>
       <td class="c3">
         <span class="cando">Give directions to someone else and explain which bus to take.</span>
         <span class="sub"><b>Scaffold</b><br>Preposition and sequence bank (first, then, after that). Map to reference.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Plan the directions in the home language, give them in English.</span>
         <span class="sub"><b>Check</b><br>Gives a 3-step direction a peer can follow and names the correct route.</span>
       </td>
     </tr>
@@ -1283,16 +1424,19 @@
       <td class="c1">
         <span class="cando">Recognize community signs and my own address in print.</span>
         <span class="sub"><b>Scaffold</b><br>Photo cards of real local signage: stop, exit, open, closed, hospital.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Community and safety signs glossed and NOT faded — over-scaffold safety, never under.</span>
         <span class="sub"><b>Check</b><br>Matches 6 signs to meanings and identifies own address from 4 options.</span>
       </td>
       <td class="c2">
         <span class="cando">Read a bus schedule or a simple map key.</span>
         <span class="sub"><b>Scaffold</b><br>Real transit schedule, enlarged, with the target route highlighted and a key glossed.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Transit schedule key glossed in the home language.</span>
         <span class="sub"><b>Check</b><br>Finds the departure time for a given stop in 4 of 5 attempts.</span>
       </td>
       <td class="c3">
         <span class="cando">Read information about a community resource and explain what it offers.</span>
         <span class="sub"><b>Scaffold</b><br>Simplified flyer for a real local service (clinic, library card, food pantry).</span>
+        <span class="sub"><b>Home-language bridge</b><br>Resource flyers provided in the home language wherever the district has translations.</span>
         <span class="sub"><b>Check</b><br>Identifies what the service provides, who qualifies, and how to access it.</span>
       </td>
     </tr>
@@ -1301,16 +1445,19 @@
       <td class="c1">
         <span class="cando">Write my address and an emergency contact number.</span>
         <span class="sub"><b>Scaffold</b><br>Wallet-card template with labeled fields. Copied, then reproduced from memory.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Address order differs by country; show the US order explicitly in the home language.</span>
         <span class="sub"><b>Check</b><br>Writes own full address and one emergency number without a model.</span>
       </td>
       <td class="c2">
         <span class="cando">Label a map of my neighborhood and write a simple direction.</span>
         <span class="sub"><b>Scaffold</b><br>Blank map plus a place word bank and direction sentence frames.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Place word bank shown bilingually.</span>
         <span class="sub"><b>Check</b><br>Labels 6 places and writes 2 correct direction sentences.</span>
       </td>
       <td class="c3">
         <span class="cando">Write directions from school to a place in my community.</span>
         <span class="sub"><b>Scaffold</b><br>Sequence-word bank and a numbered organizer. Must include at least three steps.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Sequence the directions in the home language, write them in English.</span>
         <span class="sub"><b>Check</b><br>Writes 4 sequenced steps using correct prepositions and sequence words.</span>
       </td>
     </tr>
@@ -1392,16 +1539,19 @@
       <td class="c1">
         <span class="cando">Match a spoken routine verb to a picture of the action.</span>
         <span class="sub"><b>Scaffold</b><br>Action picture cards in a daily sequence. Pointing accepted.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Routine verbs glossed alongside action photos.</span>
         <span class="sub"><b>Check</b><br>Identifies 8 of 10 routine verbs from spoken input.</span>
       </td>
       <td class="c2">
         <span class="cando">Understand a short spoken routine and put the actions in order.</span>
         <span class="sub"><b>Scaffold</b><br>Picture strip to sequence while listening. Audio replayed on request.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Sequence words glossed before the ordering task.</span>
         <span class="sub"><b>Check</b><br>Orders 5 actions correctly from a spoken description.</span>
       </td>
       <td class="c3">
         <span class="cando">Follow a spoken routine and catch how often each thing happens.</span>
         <span class="sub"><b>Scaffold</b><br>Note-catcher with action and frequency columns. Normal rate, played twice.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Frequency adverbs glossed — they rarely map cleanly and are a persistent error source.</span>
         <span class="sub"><b>Check</b><br>Records 4 actions with their correct frequency adverbs.</span>
       </td>
     </tr>
@@ -1410,16 +1560,19 @@
       <td class="c1">
         <span class="cando">Name a daily action and say when I do it.</span>
         <span class="sub"><b>Scaffold</b><br>Picture cards plus a clock. Two-word answers accepted: eat, seven.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Student may name the action in the home language; teacher supplies the English verb.</span>
         <span class="sub"><b>Check</b><br>Names 5 daily actions with an approximate time.</span>
       </td>
       <td class="c2">
         <span class="cando">Describe my morning using sequence words and a frame.</span>
         <span class="sub"><b>Scaffold</b><br>Frame: First I ___. Then I ___. After that I ___. Verb bank with pictures.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Sequence frame rehearsed after the home-language equivalent.</span>
         <span class="sub"><b>Check</b><br>Produces 4 sequenced sentences about a real morning routine.</span>
       </td>
       <td class="c3">
         <span class="cando">Describe my routine with frequency words and ask a partner about theirs.</span>
         <span class="sub"><b>Scaffold</b><br>Frequency bank plus a modeled question. Open frame.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Plan the usual-versus-exception contrast in the home language, deliver it in English.</span>
         <span class="sub"><b>Check</b><br>Uses 3 different frequency adverbs correctly and asks a reciprocal question.</span>
       </td>
     </tr>
@@ -1428,16 +1581,19 @@
       <td class="c1">
         <span class="cando">Read routine verbs with picture support.</span>
         <span class="sub"><b>Scaffold</b><br>Word–picture cards for 10 high-frequency daily verbs.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Verb-picture cards glossed once.</span>
         <span class="sub"><b>Check</b><br>Matches 8 of 10 verbs to action pictures.</span>
       </td>
       <td class="c2">
         <span class="cando">Read a short paragraph about someone's day and answer when questions.</span>
         <span class="sub"><b>Scaffold</b><br>6-sentence passage with times bolded and vocabulary glossed.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Passage vocabulary glossed in the margin.</span>
         <span class="sub"><b>Check</b><br>Answers 4 of 5 literal when and what questions.</span>
       </td>
       <td class="c3">
         <span class="cando">Read two routines and compare them.</span>
         <span class="sub"><b>Scaffold</b><br>Two short passages plus a Venn organizer and comparison sentence starters.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Comparison sentence starters glossed; the comparison is written in English.</span>
         <span class="sub"><b>Check</b><br>Identifies 2 similarities and 2 differences and states one in a full sentence.</span>
       </td>
     </tr>
@@ -1446,16 +1602,19 @@
       <td class="c1">
         <span class="cando">Write times next to pictures of daily actions.</span>
         <span class="sub"><b>Scaffold</b><br>Picture timeline with blank time slots and a word bank.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Timeline word bank shown bilingually.</span>
         <span class="sub"><b>Check</b><br>Completes a 6-action timeline with times and copied verbs.</span>
       </td>
       <td class="c2">
         <span class="cando">Write 4–5 sentences about my day using sequence words.</span>
         <span class="sub"><b>Scaffold</b><br>Sequence-word bank plus a lined organizer with one line per step.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Sequence-word bank shown bilingually.</span>
         <span class="sub"><b>Check</b><br>Writes 5 sentences using at least 3 different sequence words.</span>
       </td>
       <td class="c3">
         <span class="cando">Write a paragraph about my routine using frequency adverbs correctly.</span>
         <span class="sub"><b>Scaffold</b><br>Paragraph organizer with a topic sentence. Frequency-adverb placement reminder.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Draft the paragraph in the home language if needed; final version in English.</span>
         <span class="sub"><b>Check</b><br>Writes a 6-sentence paragraph with correct third-person -s and adverb placement.</span>
       </td>
     </tr>
@@ -1539,16 +1698,19 @@
       <td class="c1">
         <span class="cando">Point to an object when it is described by one attribute.</span>
         <span class="sub"><b>Scaffold</b><br>Object sets varying by a single feature: the big ball, the red ball.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Adjectives glossed with paired objects; teach opposites together.</span>
         <span class="sub"><b>Check</b><br>Selects the correct object from 4 in 8 of 10 trials.</span>
       </td>
       <td class="c2">
         <span class="cando">Understand a spoken comparison of two things.</span>
         <span class="sub"><b>Scaffold</b><br>Paired picture cards. Comparison sentences limited to taught structures.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Explain comparison structure in the home language — languages mark comparison very differently.</span>
         <span class="sub"><b>Check</b><br>Identifies which of two items is described in 4 of 5 comparisons.</span>
       </td>
       <td class="c3">
         <span class="cando">Follow a spoken description of several items and rank them.</span>
         <span class="sub"><b>Scaffold</b><br>Ranking organizer. Description at normal rate, played twice.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Ranking organizer headings glossed.</span>
         <span class="sub"><b>Check</b><br>Correctly orders 4 items from a spoken description using superlatives.</span>
       </td>
     </tr>
@@ -1557,16 +1719,19 @@
       <td class="c1">
         <span class="cando">Describe an object with one adjective.</span>
         <span class="sub"><b>Scaffold</b><br>Adjective picture bank. Two-word answers accepted: big book.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Student may give the adjective in the home language; teacher supplies the English.</span>
         <span class="sub"><b>Check</b><br>Describes 6 objects with an appropriate adjective.</span>
       </td>
       <td class="c2">
         <span class="cando">Compare two things using a comparative frame.</span>
         <span class="sub"><b>Scaffold</b><br>Frame: The ___ is ___er than the ___. Object pairs provided.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Explicitly contrast how the home language forms comparatives with English -er / more.</span>
         <span class="sub"><b>Check</b><br>Produces 4 correct comparative sentences about real objects.</span>
       </td>
       <td class="c3">
         <span class="cando">Compare several things and justify which is best for a purpose.</span>
         <span class="sub"><b>Scaffold</b><br>Superlative bank plus a because frame. Real decision scenario provided.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Justify the choice in the home language first, then in English with because.</span>
         <span class="sub"><b>Check</b><br>Uses a superlative and justifies the choice with a because clause.</span>
       </td>
     </tr>
@@ -1575,16 +1740,19 @@
       <td class="c1">
         <span class="cando">Match adjectives to pictures.</span>
         <span class="sub"><b>Scaffold</b><br>Word–picture cards with opposite pairs shown together.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Adjective-picture cards glossed once.</span>
         <span class="sub"><b>Check</b><br>Matches 10 adjectives, including 4 opposite pairs.</span>
       </td>
       <td class="c2">
         <span class="cando">Read a description and identify which object it refers to.</span>
         <span class="sub"><b>Scaffold</b><br>3-sentence descriptions with 4 candidate pictures. Adjectives bolded.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Description vocabulary glossed.</span>
         <span class="sub"><b>Check</b><br>Correctly identifies the object in 4 of 5 descriptions.</span>
       </td>
       <td class="c3">
         <span class="cando">Read a comparison text and extract the criteria being compared.</span>
         <span class="sub"><b>Scaffold</b><br>Short product or animal comparison plus a criteria table to complete.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Criteria table headings glossed; the table is completed in English.</span>
         <span class="sub"><b>Check</b><br>Fills a 2-item, 3-criteria comparison table from a paragraph.</span>
       </td>
     </tr>
@@ -1593,16 +1761,19 @@
       <td class="c1">
         <span class="cando">Label pictures with adjectives.</span>
         <span class="sub"><b>Scaffold</b><br>Picture page with an adjective word bank and labeling lines.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Adjective word bank shown bilingually.</span>
         <span class="sub"><b>Check</b><br>Labels 8 pictures with appropriate adjectives.</span>
       </td>
       <td class="c2">
         <span class="cando">Write comparative sentences about two objects.</span>
         <span class="sub"><b>Scaffold</b><br>Frames plus an adjective bank marked for -er versus more.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Mark the -er / more split explicitly against the home-language pattern.</span>
         <span class="sub"><b>Check</b><br>Writes 4 comparative sentences with correct -er/more choice.</span>
       </td>
       <td class="c3">
         <span class="cando">Write a paragraph comparing two things and stating a preference.</span>
         <span class="sub"><b>Scaffold</b><br>Comparison organizer with criteria columns. Transition bank: however, but, while.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Plan the comparison in the home language, write it in English.</span>
         <span class="sub"><b>Check</b><br>Writes a 6-sentence comparison with 2 criteria, a transition, and a justified preference.</span>
       </td>
     </tr>
@@ -1683,16 +1854,19 @@
       <td class="c1">
         <span class="cando">Tell whether a spoken sentence is about now or before.</span>
         <span class="sub"><b>Scaffold</b><br>Two-card sort: now / before. Contrasting pairs said aloud.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Explain the now / before sort in the home language — past marking varies enormously across languages.</span>
         <span class="sub"><b>Check</b><br>Sorts 8 of 10 sentences correctly by time.</span>
       </td>
       <td class="c2">
         <span class="cando">Understand a short spoken story and put events in order.</span>
         <span class="sub"><b>Scaffold</b><br>Picture strip to sequence while listening. Replayed on request.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Story events previewed in the home language before the ordering task.</span>
         <span class="sub"><b>Check</b><br>Orders 5 story events correctly from spoken narration.</span>
       </td>
       <td class="c3">
         <span class="cando">Follow a longer spoken narrative and identify when each event happened.</span>
         <span class="sub"><b>Scaffold</b><br>Timeline organizer with blank date markers. Normal rate, played twice.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Timeline may be annotated in the home language.</span>
         <span class="sub"><b>Check</b><br>Places 5 events on a timeline with their correct time markers.</span>
       </td>
     </tr>
@@ -1701,16 +1875,19 @@
       <td class="c1">
         <span class="cando">Say one thing I did, using a past-tense word.</span>
         <span class="sub"><b>Scaffold</b><br>Picture cards of past actions plus a past-verb bank. Single sentence accepted.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Student may tell the event in the home language first; teacher supplies the English past form. Never require English for a personal story.</span>
         <span class="sub"><b>Check</b><br>Produces 3 sentences with a recognizable past-tense verb.</span>
       </td>
       <td class="c2">
         <span class="cando">Tell about a past event in 3–4 sentences using sequence words.</span>
         <span class="sub"><b>Scaffold</b><br>Sequence frame plus an irregular-past reference strip. Topic is student's choice.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Rehearse the sequence in the home language, deliver in English. The topic stays the student's choice.</span>
         <span class="sub"><b>Check</b><br>Narrates a chosen past event in 4 sentences with correct sequencing.</span>
       </td>
       <td class="c3">
         <span class="cando">Tell a longer story and explain why something happened.</span>
         <span class="sub"><b>Scaffold</b><br>Open frame with a because clause and a feelings bank. Topic entirely student-chosen.</span>
+        <span class="sub"><b>Home-language bridge</b><br>The student may narrate in the home language and then retell in English, or decline. Both are full credit.</span>
         <span class="sub"><b>Check</b><br>Narrates in connected past tense and explains one cause with because.</span>
       </td>
     </tr>
@@ -1719,16 +1896,19 @@
       <td class="c1">
         <span class="cando">Recognize common past-tense verbs in print.</span>
         <span class="sub"><b>Scaffold</b><br>Present/past word pairs on cards: go/went, is/was, see/saw.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Present/past verb pairs glossed once.</span>
         <span class="sub"><b>Check</b><br>Matches 8 present-tense verbs to their past forms.</span>
       </td>
       <td class="c2">
         <span class="cando">Read a short narrative and answer what happened questions.</span>
         <span class="sub"><b>Scaffold</b><br>6-sentence story with past verbs bolded and vocabulary glossed.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Narrative vocabulary glossed in the margin.</span>
         <span class="sub"><b>Check</b><br>Answers 4 of 5 literal comprehension questions about a narrative.</span>
       </td>
       <td class="c3">
         <span class="cando">Read a personal narrative and identify the order of events and the narrator's feelings.</span>
         <span class="sub"><b>Scaffold</b><br>Published newcomer narrative plus a timeline and a feelings-evidence organizer.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Offer published newcomer narratives in the home language where they exist.</span>
         <span class="sub"><b>Check</b><br>Sequences 5 events and cites one sentence showing how the narrator felt.</span>
       </td>
     </tr>
@@ -1737,16 +1917,19 @@
       <td class="c1">
         <span class="cando">Write or copy simple past sentences about a picture sequence.</span>
         <span class="sub"><b>Scaffold</b><br>Picture strip with past-verb word bank and one line per picture.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Past-verb word bank shown bilingually.</span>
         <span class="sub"><b>Check</b><br>Writes 4 sentences with correct past-tense verbs from a word bank.</span>
       </td>
       <td class="c2">
         <span class="cando">Write a short narrative about an event I choose.</span>
         <span class="sub"><b>Scaffold</b><br>Sequence organizer plus an irregular-past reference strip. Topic free.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Drafting in the home language is permitted; final version in English.</span>
         <span class="sub"><b>Check</b><br>Writes 5 sentences in consistent past tense with 3 sequence words.</span>
       </td>
       <td class="c3">
         <span class="cando">Write a personal narrative with a beginning, middle, and end.</span>
         <span class="sub"><b>Scaffold</b><br>Narrative organizer with a setting, events, and a closing reflection. Topic free.</span>
+        <span class="sub"><b>Home-language bridge</b><br>The student may write the narrative in the home language and translate with support. The language of the first draft is never the point.</span>
         <span class="sub"><b>Check</b><br>Writes a 7-sentence narrative in consistent past tense with a closing reflection.</span>
       </td>
     </tr>
@@ -1832,16 +2015,19 @@
       <td class="c1">
         <span class="cando">Tell whether a spoken sentence is about now or later.</span>
         <span class="sub"><b>Scaffold</b><br>Two-card sort: now / later. Contrasting pairs said aloud.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Explain the now / later sort in the home language.</span>
         <span class="sub"><b>Check</b><br>Sorts 8 of 10 sentences correctly by time reference.</span>
       </td>
       <td class="c2">
         <span class="cando">Understand someone's spoken goal and the reason for it.</span>
         <span class="sub"><b>Scaffold</b><br>Recorded peer statements. Goal and reason columns to complete.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Goal and reason vocabulary glossed.</span>
         <span class="sub"><b>Check</b><br>Identifies the goal and the reason in 4 of 5 spoken statements.</span>
       </td>
       <td class="c3">
         <span class="cando">Follow a spoken explanation of requirements and identify the steps.</span>
         <span class="sub"><b>Scaffold</b><br>Counselor explanation at normal rate plus a steps organizer. Played twice.</span>
+        <span class="sub"><b>Home-language bridge</b><br>The counselor's explanation should be INTERPRETED, not glossed — graduation requirements are too consequential to approximate.</span>
         <span class="sub"><b>Check</b><br>Lists 4 steps and identifies one condition (if/then) from the explanation.</span>
       </td>
     </tr>
@@ -1850,16 +2036,19 @@
       <td class="c1">
         <span class="cando">Say one thing I want using a frame.</span>
         <span class="sub"><b>Scaffold</b><br>Picture bank of goals plus the frame I want ___.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Student may state the goal in the home language; teacher supplies the English.</span>
         <span class="sub"><b>Check</b><br>States 3 wants using the frame and a picture prompt.</span>
       </td>
       <td class="c2">
         <span class="cando">State a goal and one reason for it.</span>
         <span class="sub"><b>Scaffold</b><br>Frame: I want to ___ because ___. Goal and reason banks provided.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Rehearse the because frame after the home-language equivalent.</span>
         <span class="sub"><b>Check</b><br>States a goal with a because clause that genuinely explains it.</span>
       </td>
       <td class="c3">
         <span class="cando">Explain a goal, the steps to reach it, and what I need help with.</span>
         <span class="sub"><b>Scaffold</b><br>Open frame with a sequence bank and an if/then structure. Counselor present.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Plan the request in the home language; hold any conversation about credits with an interpreter present.</span>
         <span class="sub"><b>Check</b><br>Explains a goal with 2 steps, one condition, and a specific request for help.</span>
       </td>
     </tr>
@@ -1868,16 +2057,19 @@
       <td class="c1">
         <span class="cando">Recognize school and goal words in print.</span>
         <span class="sub"><b>Scaffold</b><br>Word–picture cards: graduate, job, college, study, help.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Goal words glossed once.</span>
         <span class="sub"><b>Check</b><br>Matches 8 goal-related words to pictures or meanings.</span>
       </td>
       <td class="c2">
         <span class="cando">Read a short profile of someone's plan and find their goal.</span>
         <span class="sub"><b>Scaffold</b><br>5-sentence profiles with goal statements bolded and vocabulary glossed.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Profile vocabulary glossed.</span>
         <span class="sub"><b>Check</b><br>Identifies the goal and one step in 3 of 3 profiles.</span>
       </td>
       <td class="c3">
         <span class="cando">Read graduation requirements and identify what I still need.</span>
         <span class="sub"><b>Scaffold</b><br>Simplified requirement list plus the student's own transcript, with a checklist.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Graduation requirements MUST be provided in the home language. Never make a student parse their own transcript in a new language.</span>
         <span class="sub"><b>Check</b><br>Identifies 3 requirements already met and 2 still outstanding.</span>
       </td>
     </tr>
@@ -1886,16 +2078,19 @@
       <td class="c1">
         <span class="cando">Write or copy a goal sentence.</span>
         <span class="sub"><b>Scaffold</b><br>Frame with a picture goal bank and one writing line.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Goal word bank shown bilingually.</span>
         <span class="sub"><b>Check</b><br>Writes 2 goal sentences using the frame correctly.</span>
       </td>
       <td class="c2">
         <span class="cando">Write 3–4 sentences about my goals and reasons.</span>
         <span class="sub"><b>Scaffold</b><br>Frames plus goal and reason banks. Because reminder at the top.</span>
+        <span class="sub"><b>Home-language bridge</b><br>Drafting in the home language is permitted.</span>
         <span class="sub"><b>Check</b><br>Writes 4 sentences, at least 2 with a because clause.</span>
       </td>
       <td class="c3">
         <span class="cando">Write a short plan explaining my goal, my steps, and what I need.</span>
         <span class="sub"><b>Scaffold</b><br>Plan organizer: goal, three steps, one obstacle, one request. Transition bank.</span>
+        <span class="sub"><b>Home-language bridge</b><br>The plan may be drafted in the home language. The English copy is for the counselor; the family copy should be in the home language.</span>
         <span class="sub"><b>Check</b><br>Writes a 7-sentence plan with sequenced steps, one if/then, and a clear request.</span>
       </td>
     </tr>
@@ -1915,3 +2110,5 @@
 </article>
 <footer class="legal">Brooklyn &middot; Generated from <code>curriculum/units/</code> by <code>tools/build_docs.py</code> &mdash; do not hand-edit.<br>Independent alignment to the WIDA ELD Standards Framework (2020). Not affiliated with, authorized by, or endorsed by WIDA / the University of Wisconsin.</footer>
 </div></div>
+</body>
+</html>
