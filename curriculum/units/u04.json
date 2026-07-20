@@ -1,0 +1,130 @@
+{
+  "no": "04",
+  "title": "Numbers, Time & Calendar",
+  "phase": "A",
+  "weeks": "7–8",
+  "focus": "Count, days and months, tell time, talk about my daily schedule.",
+  "wida": { "standards": ["SI", "MA"], "keyUses": ["Inform"] },
+  "function": "Say and understand times, dates, and quantities in school life",
+  "grammar": [
+    "It is ___ o'clock. / It is ___ thirty.",
+    "What time is ___?",
+    "My ___ class is at ___.",
+    "Ordinal numbers: first, second, third…",
+    "on Monday / in January / at 3:00"
+  ],
+  "vocabulary": {
+    "core": ["numbers 1–100", "o'clock", "half past", "morning", "afternoon", "night", "today", "tomorrow", "yesterday", "days of the week", "months", "early", "late", "before", "after"],
+    "academic": ["schedule", "calendar", "date", "duration", "quantity", "digit", "equals", "total"]
+  },
+  "foundationalLiteracy": "Number words in print alongside numerals. Writing the date in US format and recognizing that it differs from the day/month order used in most of the world.",
+  "culturalNote": "Date format is a real source of error and embarrassment: 03/04 is March 4th here and April 3rd almost everywhere else. Teach it explicitly. Twelve-hour time with a.m./p.m. is also unfamiliar to students from 24-hour-clock countries. Some SLIFE students need genuine number-sense work, not just the English words — coordinate with the math teacher rather than assuming the concept is present.",
+  "cards": [
+    {
+      "id": "u04-listening",
+      "domain": "Listening",
+      "mode": "Interpretive",
+      "levels": {
+        "1": {
+          "canDo": "Identify a number or a day when it is said aloud.",
+          "scaffold": "Number line and day cards on the desk. Student points or holds up the card.",
+          "check": "Identifies 8 of 10 spoken numbers 1–31 and 5 of 7 days."
+        },
+        "2": {
+          "canDo": "Understand a spoken time and match it to a clock.",
+          "scaffold": "Analog and digital clock pairs. Times limited to the hour and half hour.",
+          "check": "Matches 6 of 8 spoken times to the correct clock face."
+        },
+        "3": {
+          "canDo": "Follow a spoken schedule change and identify what moved and when.",
+          "scaffold": "Note-catcher with old time / new time columns. Announcement played twice.",
+          "check": "Correctly reports the changed event and its new time and day."
+        }
+      }
+    },
+    {
+      "id": "u04-speaking",
+      "domain": "Speaking",
+      "mode": "Expressive",
+      "levels": {
+        "1": {
+          "canDo": "Count aloud and say the day or the time from a model.",
+          "scaffold": "Choral counting routine. Clock manipulative in hand.",
+          "check": "Counts 1–20 and names the current day."
+        },
+        "2": {
+          "canDo": "Say what time a class starts and what day something happens.",
+          "scaffold": "Frame: My ___ class is at ___. / ___ is on ___. Schedule in view.",
+          "check": "States 3 class times and days accurately from own schedule."
+        },
+        "3": {
+          "canDo": "Describe my week and explain a scheduling conflict.",
+          "scaffold": "Time-preposition bank (on, at, in, before, after) and a weekly grid.",
+          "check": "Describes a week in connected speech and explains one conflict with because."
+        }
+      }
+    },
+    {
+      "id": "u04-reading",
+      "domain": "Reading",
+      "mode": "Interpretive",
+      "levels": {
+        "1": {
+          "canDo": "Read numerals, days, and months on a calendar.",
+          "scaffold": "Large classroom calendar. Day and month names color-coded.",
+          "check": "Locates today's date and names the month on a printed calendar."
+        },
+        "2": {
+          "canDo": "Read a bus, bell, or lunch schedule and find a specific time.",
+          "scaffold": "Authentic school schedule, enlarged, with the target row highlighted.",
+          "check": "Answers 4 of 5 time questions from a real schedule."
+        },
+        "3": {
+          "canDo": "Read a school calendar and identify deadlines, holidays, and early-release days.",
+          "scaffold": "Month view with a legend. Three scenario questions.",
+          "check": "Identifies the next no-school day and the date an assignment is due."
+        }
+      }
+    },
+    {
+      "id": "u04-writing",
+      "domain": "Writing",
+      "mode": "Expressive",
+      "levels": {
+        "1": {
+          "canDo": "Write numerals and copy today's date correctly.",
+          "scaffold": "Date frame with month/day/year labels above the blanks.",
+          "check": "Writes the current date in US format without a model."
+        },
+        "2": {
+          "canDo": "Fill in a weekly schedule with times and subjects.",
+          "scaffold": "Blank weekly grid, word bank of subjects, own schedule to copy from.",
+          "check": "Completes a weekly grid with correct times for 5 classes."
+        },
+        "3": {
+          "canDo": "Write a short plan for my week using time expressions.",
+          "scaffold": "Preposition bank plus a model paragraph. Requires at least three time phrases.",
+          "check": "Writes 4–5 sentences using on, at, and before/after correctly."
+        }
+      }
+    }
+  ],
+  "workedTask": {
+    "domain": "Speaking",
+    "prompt": "Say when your class is",
+    "levels": {
+      "1": {
+        "say": "[number].",
+        "scaffold": "Points to the time on a clock manipulative and says the hour number only. Teacher expands to the full sentence and the student echoes."
+      },
+      "2": {
+        "say": "My [subject] class is at [time].",
+        "scaffold": "Frame with two slots plus the student's own printed schedule as the source of the answer."
+      },
+      "3": {
+        "say": "I have [subject] at [time] on [day], so I can't come [other time]. Can I come [alternative] instead?",
+        "scaffold": "Open frame plus a preposition bank. Uses the schedule to reason about a conflict and propose a solution."
+      }
+    }
+  }
+}

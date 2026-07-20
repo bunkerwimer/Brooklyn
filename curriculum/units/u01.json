@@ -1,0 +1,129 @@
+{
+  "no": "01",
+  "title": "Hello & Who I Am",
+  "phase": "A",
+  "weeks": "1–2",
+  "focus": "Greet and respond, introduce myself, give personal information, spell my name.",
+  "wida": { "standards": ["SI"], "keyUses": ["Inform"] },
+  "function": "Introduce myself and give personal information",
+  "grammar": [
+    "My name is ___.",
+    "I am from ___.",
+    "I speak ___.",
+    "This is ___."
+  ],
+  "vocabulary": {
+    "core": ["hello", "hi", "goodbye", "name", "my", "your", "from", "speak", "yes", "no", "please", "thank you", "nice to meet you"],
+    "academic": ["introduce", "information", "country", "language", "first name", "last name"]
+  },
+  "foundationalLiteracy": "The alphabet as names of letters, not yet sounds. Recognize and write my own name accurately. Letter formation for the letters in my name and country.",
+  "culturalNote": "Name order varies by culture — in many countries the family name comes first. Ask how a student wants to be called and say it correctly; a mispronounced name on day one is the fastest way to lose a newcomer. Some students have a name they use at home and one assigned at a border or camp. Let them choose.",
+  "cards": [
+    {
+      "id": "u01-listening",
+      "domain": "Listening",
+      "mode": "Interpretive",
+      "levels": {
+        "1": {
+          "canDo": "Point to the right person or photo when greeted or named aloud.",
+          "scaffold": "Photo cards of classmates on the desk. Teacher says one name; student points. Gesture accepted as a full answer.",
+          "check": "Points to the correct photo in 4 of 5 trials."
+        },
+        "2": {
+          "canDo": "Identify a person's name and country from a short spoken introduction.",
+          "scaffold": "Two-column picture grid (names / flags). Audio replays on demand at slowed rate.",
+          "check": "Marks the correct name and country from a 3-sentence spoken introduction."
+        },
+        "3": {
+          "canDo": "Follow a multi-part spoken introduction and match details to the right people.",
+          "scaffold": "Note-catcher grid with three columns. Audio plays twice at normal rate.",
+          "check": "Correctly matches 3 speakers to name, country, and language from connected speech."
+        }
+      }
+    },
+    {
+      "id": "u01-speaking",
+      "domain": "Speaking",
+      "mode": "Expressive",
+      "levels": {
+        "1": {
+          "canDo": "Say a one-word greeting and my name.",
+          "scaffold": "Echo an audio model. Word bank with photo support. A wave counts as the greeting.",
+          "check": "Produces a greeting plus own name intelligibly to a partner."
+        },
+        "2": {
+          "canDo": "Give a 2–3 sentence self-introduction using a model.",
+          "scaffold": "Sentence frames with three slots (name / country / language) and a world map.",
+          "check": "Produces 3 framed sentences with correct personal information."
+        },
+        "3": {
+          "canDo": "Introduce myself and ask a partner one question back.",
+          "scaffold": "Open frame plus one modeled question. No word bank required.",
+          "check": "Introduces self in connected speech and initiates one question to a partner."
+        }
+      }
+    },
+    {
+      "id": "u01-reading",
+      "domain": "Reading",
+      "mode": "Interpretive",
+      "levels": {
+        "1": {
+          "canDo": "Recognize my own name and the words hello, name, from with picture support.",
+          "scaffold": "Word–picture matching cards. Own name shown alongside three distractors.",
+          "check": "Selects own written name from 4 options; matches 3 core words to pictures."
+        },
+        "2": {
+          "canDo": "Read a labeled ID card and find name, country, and language.",
+          "scaffold": "Highlighter task on a large-print ID card with icon labels on each field.",
+          "check": "Locates and highlights all three fields on an unfamiliar ID card."
+        },
+        "3": {
+          "canDo": "Read a short peer profile and match it to the correct photo.",
+          "scaffold": "Three 2-sentence profiles, three photos. Key vocabulary glossed in the margin.",
+          "check": "Matches 3 of 3 profiles to photos using details, not guessing."
+        }
+      }
+    },
+    {
+      "id": "u01-writing",
+      "domain": "Writing",
+      "mode": "Expressive",
+      "levels": {
+        "1": {
+          "canDo": "Trace and copy my name and country onto a name-tent.",
+          "scaffold": "Dotted-line tracing guide, then a copy line. Model card stays in view.",
+          "check": "Produces a legible name-tent with own name spelled correctly."
+        },
+        "2": {
+          "canDo": "Complete a personal-information form (name, country, language).",
+          "scaffold": "Labeled form with icons and a word bank of country and language names.",
+          "check": "Completes all three fields legibly and in the correct slots."
+        },
+        "3": {
+          "canDo": "Write 2–3 sentences introducing myself.",
+          "scaffold": "Starter capitals provided; punctuation reminder strip at the top of the page.",
+          "check": "Writes 3 sentences with capital letters on names and end punctuation."
+        }
+      }
+    }
+  ],
+  "workedTask": {
+    "domain": "Speaking",
+    "prompt": "Introduce yourself",
+    "levels": {
+      "1": {
+        "say": "Hello. I am [name].",
+        "scaffold": "Word bank + photo cards. Traces a frame, fills one blank, echoes an audio model. Gesture routine for hello."
+      },
+      "2": {
+        "say": "Hello. My name is [name]. I am from [country]. I speak [language].",
+        "scaffold": "Sentence frames + a world map. Fills three slots, produces the string aloud from the model."
+      },
+      "3": {
+        "say": "Hi, my name is [name]. I'm from [country], and I speak [language] and a little English. [question]",
+        "scaffold": "Open frame + one modeled question. Extends independently and initiates an exchange with a partner."
+      }
+    }
+  }
+}

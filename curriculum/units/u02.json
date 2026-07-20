@@ -1,0 +1,129 @@
+{
+  "no": "02",
+  "title": "My School",
+  "phase": "A",
+  "weeks": "3–4",
+  "focus": "Places in the building, school staff and their jobs, supplies, reading my schedule.",
+  "wida": { "standards": ["SI"], "keyUses": ["Inform"] },
+  "function": "Locate places and people in my school and say where I need to go",
+  "grammar": [
+    "Where is the ___?",
+    "The ___ is ___ (next to / near / upstairs).",
+    "I need to go to the ___.",
+    "This is Ms./Mr. ___. She/He is the ___."
+  ],
+  "vocabulary": {
+    "core": ["office", "nurse", "bathroom", "cafeteria", "library", "gym", "classroom", "hallway", "teacher", "principal", "counselor", "pencil", "paper", "notebook", "backpack"],
+    "academic": ["schedule", "period", "room number", "locate", "staff", "attendance"]
+  },
+  "foundationalLiteracy": "Letter–sound correspondence for initial consonants using school words. Reading numerals on doors and matching them to a written schedule.",
+  "culturalNote": "School structures differ enormously. Passing periods, lockers, bells, and choosing your own lunch may all be new. Some students come from schools where you stay in one room all day, and some have never been in a school building at all. Walk the building physically before teaching the words.",
+  "cards": [
+    {
+      "id": "u02-listening",
+      "domain": "Listening",
+      "mode": "Interpretive",
+      "levels": {
+        "1": {
+          "canDo": "Point to a place in the school when it is named aloud.",
+          "scaffold": "Picture map of the building with icons. Teacher names one place; student points.",
+          "check": "Points to the correct place for 5 of 6 named locations."
+        },
+        "2": {
+          "canDo": "Understand a short spoken direction to a place in the building.",
+          "scaffold": "Simplified floor map with a start marker. Direction repeated on request.",
+          "check": "Traces the correct route on the map from a 2-step spoken direction."
+        },
+        "3": {
+          "canDo": "Follow a multi-step announcement and identify where I need to go and when.",
+          "scaffold": "Note-catcher with where / when / who columns. Audio at normal rate, played twice.",
+          "check": "Extracts place, time, and person from a 4-sentence announcement."
+        }
+      }
+    },
+    {
+      "id": "u02-speaking",
+      "domain": "Speaking",
+      "mode": "Expressive",
+      "levels": {
+        "1": {
+          "canDo": "Name a place in the school and say it when I need to go there.",
+          "scaffold": "Bathroom/nurse pass cards with the word and icon. One-word response accepted.",
+          "check": "Says or shows the correct place word to request permission."
+        },
+        "2": {
+          "canDo": "Ask where a place is and say where I need to go.",
+          "scaffold": "Frame strip: Where is the ___? / I need to go to the ___.",
+          "check": "Asks a staff member for a location using a full framed question."
+        },
+        "3": {
+          "canDo": "Give a classmate directions to a place in the building.",
+          "scaffold": "Preposition bank (next to, across from, upstairs) plus a map to reference.",
+          "check": "Produces a 2–3 step direction a peer can actually follow."
+        }
+      }
+    },
+    {
+      "id": "u02-reading",
+      "domain": "Reading",
+      "mode": "Interpretive",
+      "levels": {
+        "1": {
+          "canDo": "Recognize school signs and room numbers.",
+          "scaffold": "Real photographs of the building's own signage. Word–photo matching.",
+          "check": "Matches 5 signs (office, exit, restroom, library, nurse) to photos."
+        },
+        "2": {
+          "canDo": "Read my class schedule and find the room for a given period.",
+          "scaffold": "Enlarged schedule with color-coded periods and an icon per subject.",
+          "check": "Names the correct room and teacher for 3 requested periods."
+        },
+        "3": {
+          "canDo": "Read a short staff directory and say who to go to for a problem.",
+          "scaffold": "Directory with roles glossed in plain language. Three scenario cards.",
+          "check": "Matches 3 scenarios (sick, lost schedule, new to school) to the right staff member."
+        }
+      }
+    },
+    {
+      "id": "u02-writing",
+      "domain": "Writing",
+      "mode": "Expressive",
+      "levels": {
+        "1": {
+          "canDo": "Copy my room numbers and teacher names onto a schedule card.",
+          "scaffold": "Pre-printed grid; student copies from the official schedule into a pocket card.",
+          "check": "Produces a legible personal schedule card with correct room numbers."
+        },
+        "2": {
+          "canDo": "Label a map of my school with the places I use.",
+          "scaffold": "Blank building map, word bank of 8 places, icons on the bank.",
+          "check": "Labels 6 of 8 locations correctly."
+        },
+        "3": {
+          "canDo": "Write a short note asking to go somewhere or asking for help.",
+          "scaffold": "Model note plus a polite-phrase bank (May I…, I need…, Thank you).",
+          "check": "Writes a 2-sentence note with a request and a courtesy phrase."
+        }
+      }
+    }
+  ],
+  "workedTask": {
+    "domain": "Speaking",
+    "prompt": "Ask where something is",
+    "levels": {
+      "1": {
+        "say": "[place]?",
+        "scaffold": "Points to a picture card and says the single place word with rising intonation. Pass card in hand. Teacher models the full question back."
+      },
+      "2": {
+        "say": "Excuse me. Where is the [place]?",
+        "scaffold": "Frame strip taped inside the notebook cover. Practices with a partner before asking real staff."
+      },
+      "3": {
+        "say": "Excuse me, I'm looking for the [place]. I have [subject] next period. Is it [direction]?",
+        "scaffold": "Open frame plus a preposition bank. Confirms understanding by repeating the direction back."
+      }
+    }
+  }
+}
