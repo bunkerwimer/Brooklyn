@@ -35,23 +35,54 @@ vocabulary, scaffolds, render targets, check }`.
 - Each **check** emits WIDA level-movement **evidence** that rolls up into teacher/admin growth dashboards
   (the administrator's buying trigger).
 
+## Repo layout
+```
+curriculum/SCHEMA.md        the Objective Card schema — read this before authoring
+curriculum/units/u01..u12   SOURCE OF TRUTH. All 12 units, one file each.
+tools/validate.py           schema + progression checks; exits non-zero on error
+tools/build_docs.py         curriculum/ → docs/brooklyn-curriculum.html
+docs/                       generated + hand-authored docs (see note below)
+prototypes/                 working proofs
+```
+
+**Curriculum content is data, never HTML.** Edit `curriculum/units/*.json`, then:
+```bash
+python3 tools/validate.py && python3 tools/build_docs.py
+```
+No Node in this environment — tooling is Python 3 (stdlib only, no install step).
+`docs/brooklyn-curriculum.html` is build output; never hand-edit it.
+
 ## Status
 - Approach chosen: **curriculum first**, before building software.
-- **Scope & sequence v1 done** → `docs/brooklyn-scope-and-sequence.html` (12 units in 3 phases, Unit 01
-  worked as a domain × level exemplar, delivery-agnostic rendering).
+- **All 12 units authored** → `curriculum/units/`. 48 objective cards, 144 leveled variants.
+  Each unit carries a domain × level can-do matrix with a scaffold and a check per cell, plus target
+  structures, core/academic vocabulary, a foundational-literacy strand, a teaching note, and a worked
+  task at all three levels. Validated clean by `tools/validate.py`.
+- **Curriculum reference generated** → `docs/brooklyn-curriculum.html`. Verified in-browser
+  2026-07-20: 12 units, 48 domain rows, 144 leveled cells, 36 worked-task cards, both color schemes,
+  no page-level horizontal overflow (wide tables scroll inside their own container).
 - **Objective Card prototype done and verified** → `prototypes/brooklyn-objective-card.html`.
   One source card rendering to both print packet and device task. Verified in-browser 2026-07-20:
   level switch (L1/L2/L3) and surface switch (device/print) both work and compose correctly; no
   console errors. Fixed a malformed CSS rule (a selector list ran into an `@media` block) that was
   dropping the dark-mode pressed-chip color.
 
+## Known duplication (worth fixing before the content grows)
+`docs/brooklyn-scope-and-sequence.html` is the hand-designed **pitch** doc. It still hand-codes the
+12-unit grid and the Unit 01 exemplar in HTML, so that content now exists in two places — there and in
+`curriculum/units/`. Edit the JSON and the pitch doc silently goes stale. Fix by having
+`build_docs.py` emit those two sections as fragments injected between marker comments.
+
 ## Next steps
-1. Build out Units 02–12 to the depth of Unit 01 (domain × level matrices, vocab, functions, scaffolds).
-2. Author the **Objective Card** schema — the concrete data structure the app compiles from.
-3. Spec **WIDA growth reporting** — how a check becomes level-movement evidence.
+1. Fix the pitch-doc duplication above.
+2. Spec **WIDA growth reporting** — how a `check` becomes level-movement evidence. Every check is
+   already authored; nothing specifies the rollup yet.
+3. Extend the prototype to render a second domain (it only does Speaking) to prove the content model
+   generalizes across Listening/Reading/Writing.
+4. Pilot-ready packet: compile one full unit to print and put it in front of a real EL teacher.
 
 ## Open / not yet decided
-- Tech stack (currently just docs + a static prototype).
+- Tech stack (currently curriculum data + Python tooling + a static prototype).
 - Pilot / design-partner district.
 - Compliance: FERPA, COPPA (under-13), rostering (Clever/ClassLink), SSO.
 - Team.
