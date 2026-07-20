@@ -7,16 +7,21 @@ Do not reuse Groundwork repositories, deployments, databases, API keys, env file
 ## Project IDs
 
 - Local folder: `/Users/bunkerwimer/Desktop/Brooklyn Project`
-- GitHub repo: `bunkerwimer/brooklyn`
+- GitHub repo: `bunkerwimer/Brooklyn`
+- GitHub URL: `https://github.com/bunkerwimer/Brooklyn`
 - Vercel project: `brooklyn`
-- Supabase project: `brooklyn`
+- Vercel URL: `https://brooklyn-lemon.vercel.app/`
+- Supabase project: `Brooklyn`
+- Supabase project id: `atqqzsccfnqrjywnklwt`
+- Supabase dashboard: `https://supabase.com/dashboard/project/atqqzsccfnqrjywnklwt`
+- Supabase URL: `https://atqqzsccfnqrjywnklwt.supabase.co`
 
 ## Environment Variables
 
 Keep these in Brooklyn only.
 
 ```env
-NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_URL=https://atqqzsccfnqrjywnklwt.supabase.co
 NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
 ```
 
@@ -27,6 +32,7 @@ SUPABASE_SERVICE_ROLE_KEY=
 ```
 
 Never use `NEXT_PUBLIC_` for service-role keys.
+Do not commit real publishable, anon, or service-role keys.
 
 ## Separation Checklist
 
