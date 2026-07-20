@@ -1,0 +1,534 @@
+<title>Brooklyn — Objective Card · One Source, Two Surfaces</title>
+<style>
+  :root{
+    --paper:#F4F6F5; --surface:#FFFFFF; --surface-2:#ECF0EE;
+    --ink:#17242A; --ink-2:#4B5E64; --ink-3:#7C8D91;
+    --line:#D9E1DE; --line-2:#E7ECEA;
+    --accent:#1E6E63; --accent-ink:#124039; --accent-tint:#E1EEEA;
+    --warm:#B6611F; --warm-tint:#F3E6D6;
+    --good:#1E7A54; --good-bg:#DCF0E4; --bad:#B23A2E; --bad-bg:#F6E1DD;
+    --lvl1:#9AD1C6; --lvl2:#3F9E8E; --lvl3:#1B5F55;
+    --lvl1-bg:#E3F1ED; --lvl2-bg:#D2E9E2; --lvl3-bg:#C3E0D7;
+    --shadow:0 1px 2px rgba(20,45,40,.05),0 10px 30px -14px rgba(20,45,40,.28);
+    --radius:14px;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,"Cascadia Mono",Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#0E181C; --surface:#14232A; --surface-2:#1B2E36;
+      --ink:#E8EFEC; --ink-2:#A6BAB7; --ink-3:#70878A;
+      --line:#26383F; --line-2:#203138;
+      --accent:#5BC6B4; --accent-ink:#AEE3D8; --accent-tint:#173A38;
+      --warm:#E0925A; --warm-tint:#33241A;
+      --good:#5BD199; --good-bg:#12332A; --bad:#E68B7F; --bad-bg:#3A211C;
+      --lvl1:#3C6E67; --lvl2:#4FA695; --lvl3:#7ED6C5;
+      --lvl1-bg:#183531; --lvl2-bg:#1B4B43; --lvl3-bg:#215E53;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 34px -16px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="light"]{
+    --paper:#F4F6F5; --surface:#FFFFFF; --surface-2:#ECF0EE;
+    --ink:#17242A; --ink-2:#4B5E64; --ink-3:#7C8D91;
+    --line:#D9E1DE; --line-2:#E7ECEA;
+    --accent:#1E6E63; --accent-ink:#124039; --accent-tint:#E1EEEA;
+    --warm:#B6611F; --warm-tint:#F3E6D6;
+    --good:#1E7A54; --good-bg:#DCF0E4; --bad:#B23A2E; --bad-bg:#F6E1DD;
+    --lvl1:#9AD1C6; --lvl2:#3F9E8E; --lvl3:#1B5F55;
+    --lvl1-bg:#E3F1ED; --lvl2-bg:#D2E9E2; --lvl3-bg:#C3E0D7;
+    --shadow:0 1px 2px rgba(20,45,40,.05),0 10px 30px -14px rgba(20,45,40,.28);
+  }
+  :root[data-theme="dark"]{
+    --paper:#0E181C; --surface:#14232A; --surface-2:#1B2E36;
+    --ink:#E8EFEC; --ink-2:#A6BAB7; --ink-3:#70878A;
+    --line:#26383F; --line-2:#203138;
+    --accent:#5BC6B4; --accent-ink:#AEE3D8; --accent-tint:#173A38;
+    --warm:#E0925A; --warm-tint:#33241A;
+    --good:#5BD199; --good-bg:#12332A; --bad:#E68B7F; --bad-bg:#3A211C;
+    --lvl1:#3C6E67; --lvl2:#4FA695; --lvl3:#7ED6C5;
+    --lvl1-bg:#183531; --lvl2-bg:#1B4B43; --lvl3-bg:#215E53;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 34px -16px rgba(0,0,0,.7);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;}
+  .app{
+    background:var(--paper); color:var(--ink); font-family:var(--sans); line-height:1.55;
+    -webkit-font-smoothing:antialiased; min-height:100vh; padding:clamp(16px,3.5vw,34px);
+  }
+  .wrap{max-width:960px; margin:0 auto;}
+  h1,h2,h3,h4{margin:0; line-height:1.15; text-wrap:balance;}
+  p{margin:0;}
+  button{font-family:inherit; cursor:pointer;}
+  .eyebrow{font-family:var(--mono); font-size:11.5px; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); font-weight:600;}
+
+  /* banner */
+  .banner{border:1px solid var(--line); background:var(--surface); border-radius:var(--radius); padding:18px 20px; box-shadow:var(--shadow);}
+  .banner h1{font-size:clamp(19px,3vw,25px); font-weight:800; letter-spacing:-.02em; margin:8px 0 6px;}
+  .banner p{color:var(--ink-2); font-size:14.5px; max-width:70ch;}
+  .banner .idline{display:flex; flex-wrap:wrap; gap:7px; margin-top:14px;}
+  .pill{font-family:var(--mono); font-size:11.5px; padding:5px 10px; border-radius:999px; border:1px solid var(--line); background:var(--surface-2); color:var(--ink-2); white-space:nowrap;}
+  .pill b{color:var(--ink);}
+
+  /* toolbar */
+  .toolbar{display:flex; flex-wrap:wrap; gap:14px 20px; align-items:center; margin:20px 0; justify-content:space-between;}
+  .ctl{display:flex; align-items:center; gap:9px;}
+  .ctl .lbl{font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3);}
+  .seg{display:inline-flex; background:var(--surface-2); border:1px solid var(--line); border-radius:10px; padding:3px; gap:3px;}
+  .seg button{border:0; background:transparent; color:var(--ink-2); font-size:13px; font-weight:600; padding:7px 12px; border-radius:7px; display:flex; align-items:center; gap:7px;}
+  .seg button .dot{width:10px; height:10px; border-radius:3px; display:inline-block;}
+  .seg button[aria-pressed="true"]{background:var(--surface); color:var(--ink); box-shadow:0 1px 3px rgba(0,0,0,.12);}
+  .seg.levels button[data-level="1"] .dot{background:var(--lvl1);}
+  .seg.levels button[data-level="2"] .dot{background:var(--lvl2);}
+  .seg.levels button[data-level="3"] .dot{background:var(--lvl3);}
+  .seg.view button[aria-pressed="true"]{color:var(--accent);}
+
+  /* stage */
+  .stage{background:var(--surface); border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow); overflow:hidden; min-height:440px;}
+  .stage-head{padding:16px 22px; border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; gap:10px 16px; align-items:center;}
+  .lvlbadge{font-family:var(--mono); font-size:12px; font-weight:600; padding:5px 11px; border-radius:8px; display:inline-flex; align-items:center; gap:8px;}
+  .lvlbadge .dot{width:11px; height:11px; border-radius:3px;}
+  .lvl1 .lvlbadge,.lvlbadge.l1{background:var(--lvl1-bg); color:var(--ink);} .lvlbadge.l1 .dot{background:var(--lvl1);}
+  .lvlbadge.l2{background:var(--lvl2-bg); color:var(--ink);} .lvlbadge.l2 .dot{background:var(--lvl2);}
+  .lvlbadge.l3{background:var(--lvl3-bg); color:var(--ink);} .lvlbadge.l3 .dot{background:var(--lvl3);}
+  .stage-head .cando{font-size:14px; color:var(--ink-2);} .stage-head .cando b{color:var(--ink);}
+  .wida-tag{font-family:var(--mono); font-size:11px; color:var(--accent-ink); background:var(--accent-tint); padding:4px 9px; border-radius:6px; margin-left:auto;}
+
+  /* device task */
+  .device{padding:26px 24px 30px;}
+  .progress{display:flex; gap:8px; margin-bottom:22px; align-items:center;}
+  .pstep{flex:1; height:6px; border-radius:99px; background:var(--surface-2); overflow:hidden;}
+  .pstep i{display:block; height:100%; width:0; background:var(--accent); transition:width .4s ease;}
+  .pstep.done i{width:100%;} .pstep.active i{width:55%;}
+  .steplabel{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); margin-bottom:6px;}
+  .prompt{font-size:19px; font-weight:700; letter-spacing:-.01em; margin-bottom:18px; max-width:34ch;}
+
+  .listen-btn{display:inline-flex; align-items:center; gap:10px; border:1px solid var(--accent); background:var(--accent-tint); color:var(--accent-ink); font-weight:700; font-size:15px; padding:11px 18px; border-radius:12px; margin-bottom:20px;}
+  .listen-btn svg{width:20px; height:20px;}
+  .listen-btn.playing{animation:pulse 1s ease infinite;}
+  @keyframes pulse{50%{transform:scale(1.03);}}
+  .heard{font-family:var(--serif); font-size:15px; color:var(--ink-2); margin:-8px 0 20px; font-style:italic;}
+
+  .options{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; max-width:560px;}
+  .opt{border:1.5px solid var(--line); background:var(--surface); border-radius:14px; padding:18px 14px; display:flex; flex-direction:column; align-items:center; gap:10px; font-size:15px; font-weight:600; color:var(--ink); transition:transform .1s ease, border-color .15s ease;}
+  .opt svg{width:40px; height:40px; color:var(--accent);}
+  .opt:hover{transform:translateY(-2px); border-color:var(--accent);}
+  .opt.correct{border-color:var(--good); background:var(--good-bg); color:var(--good);} .opt.correct svg{color:var(--good);}
+  .opt.wrong{border-color:var(--bad); background:var(--bad-bg); color:var(--bad); animation:shake .32s;}
+  @keyframes shake{25%{transform:translateX(-5px);}75%{transform:translateX(5px);}}
+  .opt:disabled{cursor:default;}
+
+  /* build step */
+  .sentence{font-family:var(--serif); font-size:clamp(20px,3.5vw,27px); line-height:1.5; color:var(--ink); margin-bottom:24px; max-width:24ch;}
+  .slot{display:inline-block; min-width:96px; text-align:center; border-bottom:3px solid var(--warm); color:var(--warm); padding:0 6px; font-style:normal;}
+  .slot.filled{color:var(--accent); border-bottom-color:var(--accent);}
+  .blankgroup{margin-bottom:16px;}
+  .blankgroup .glabel{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-3); margin-bottom:8px;}
+  .chips{display:flex; flex-wrap:wrap; gap:8px;}
+  .chip-btn{border:1.5px solid var(--line); background:var(--surface); color:var(--ink); font-size:14px; font-weight:600; padding:9px 14px; border-radius:10px; font-family:var(--serif);}
+  .chip-btn:hover{border-color:var(--accent);}
+  .chip-btn[aria-pressed="true"]{background:var(--accent); color:#fff; border-color:var(--accent);}
+  @media (prefers-color-scheme:dark){.chip-btn[aria-pressed="true"]{color:#06201c;}}
+  :root[data-theme="dark"] .chip-btn[aria-pressed="true"]{color:#06201c;}
+
+  /* speak step */
+  .modelcard{border:1px dashed var(--accent); background:var(--accent-tint); border-radius:14px; padding:20px; margin-bottom:20px;}
+  .modelcard .say{font-family:var(--serif); font-size:clamp(19px,3.4vw,25px); color:var(--ink); line-height:1.4;}
+  .note{font-size:14px; color:var(--ink-2); margin-bottom:20px;}
+  .rowbtns{display:flex; flex-wrap:wrap; gap:12px;}
+  .btn{border:0; border-radius:12px; font-weight:700; font-size:15px; padding:12px 20px;}
+  .btn.primary{background:var(--accent); color:#fff;}
+  @media (prefers-color-scheme:dark){.btn.primary{color:#06201c;}}
+  :root[data-theme="dark"] .btn.primary{color:#06201c;}
+  .btn.ghost{background:transparent; border:1.5px solid var(--line); color:var(--ink);}
+  .btn:disabled{opacity:.45; cursor:default;}
+
+  /* done */
+  .done-wrap{text-align:center; padding:20px 10px;}
+  .done-check{width:64px; height:64px; margin:0 auto 16px; border-radius:50%; background:var(--good-bg); color:var(--good); display:flex; align-items:center; justify-content:center;}
+  .done-check svg{width:34px; height:34px;}
+  .done-wrap h3{font-size:22px; font-weight:800; margin-bottom:8px;}
+  .done-wrap p{color:var(--ink-2); max-width:46ch; margin:0 auto 6px;}
+  .done-wrap .cando-met{font-family:var(--serif); font-size:17px; color:var(--ink); margin:14px auto; max-width:40ch;}
+
+  /* PRINT PACKET (on-screen paper) */
+  .printview{padding:24px; display:flex; flex-direction:column; align-items:center; gap:16px;}
+  .print-actions{display:flex; gap:10px; align-self:stretch; justify-content:space-between; align-items:center; flex-wrap:wrap;}
+  .print-actions .hint{font-size:13px; color:var(--ink-3);}
+  .paper{
+    background:#fff; color:#141414; width:100%; max-width:640px; border-radius:6px;
+    box-shadow:0 2px 6px rgba(0,0,0,.12),0 18px 46px -20px rgba(0,0,0,.5);
+    padding:38px 40px 44px; font-size:14px; line-height:1.5;
+  }
+  .paper *{color:#141414;}
+  .paper .ph{display:flex; justify-content:space-between; align-items:flex-start; border-bottom:2px solid #141414; padding-bottom:10px; margin-bottom:6px; gap:14px;}
+  .paper .ph .course{font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:#555 !important;}
+  .paper .ph h2{font-size:20px; font-weight:800; margin-top:3px;}
+  .paper .ph .lv{font-family:var(--mono); font-size:11px; border:1.5px solid #141414; border-radius:6px; padding:4px 9px; white-space:nowrap;}
+  .paper .meta{display:flex; gap:22px; flex-wrap:wrap; font-size:12.5px; color:#333 !important; margin-bottom:4px;}
+  .paper .nameline{flex:1; min-width:150px;}
+  .paper .nameline u{display:inline-block; min-width:120px; border-bottom:1px solid #141414; text-decoration:none;}
+  .paper .obj{background:#f0f4f2; border-left:3px solid #1E6E63; padding:9px 12px; font-size:12.5px; margin:14px 0 18px;}
+  .paper .obj b{color:#124039 !important;}
+  .paper h3.sec{font-size:13px; text-transform:uppercase; letter-spacing:.06em; margin:20px 0 10px; color:#1E6E63 !important; font-family:var(--mono);}
+  .paper .frame{font-family:var(--serif); font-size:16px; margin:12px 0; line-height:2.1;}
+  .paper .fill{display:inline-block; min-width:150px; border-bottom:1.5px solid #141414;}
+  .paper .fill.lg{min-width:220px;}
+  .paper .wordbank{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;}
+  .paper .wb{border:1.5px solid #141414; border-radius:6px; padding:6px 12px; font-family:var(--serif); font-size:14px;}
+  .paper .trace{font-family:var(--serif); font-size:34px; color:#b8b8b8 !important; letter-spacing:6px; border-bottom:1px solid #141414; padding-bottom:6px;}
+  .paper .tent{border:1.5px solid #141414; border-radius:8px; height:70px; margin-top:8px; display:flex; align-items:center; justify-content:center; color:#999 !important; font-size:12px;}
+  .paper .form-row{display:flex; align-items:baseline; gap:10px; margin:11px 0; font-size:14px;}
+  .paper .form-row label{font-weight:700; min-width:120px;}
+  .paper .form-row .line{flex:1; border-bottom:1.5px solid #141414; height:20px;}
+  .paper .lines{margin-top:6px;}
+  .paper .lines .ln{border-bottom:1.5px solid #141414; height:26px; margin-bottom:12px;}
+  .paper table.interview{width:100%; border-collapse:collapse; margin-top:8px; font-size:13px;}
+  .paper table.interview th,.paper table.interview td{border:1.5px solid #141414; padding:8px 10px; text-align:left;}
+  .paper table.interview th{background:#f0f4f2; font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.05em;}
+  .paper .picnote{display:flex; align-items:center; gap:12px; margin-top:10px; color:#333 !important;}
+  .paper .picnote svg{width:44px; height:44px; color:#1E6E63 !important;}
+  .paper .foot{margin-top:26px; border-top:1px solid #ccc; padding-top:8px; font-size:10px; color:#777 !important; font-family:var(--mono);}
+
+  /* source panel */
+  .source{margin-top:20px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); box-shadow:var(--shadow); overflow:hidden;}
+  .source summary{list-style:none; cursor:pointer; padding:14px 18px; display:flex; align-items:center; gap:10px; font-weight:700; font-size:14px;}
+  .source summary::-webkit-details-marker{display:none;}
+  .source summary .tw{font-family:var(--mono); color:var(--accent); font-size:12px;}
+  .source summary .sub{font-weight:400; color:var(--ink-3); font-size:12.5px; margin-left:auto;}
+  .source pre{margin:0; padding:0 18px 18px; overflow-x:auto; font-family:var(--mono); font-size:12px; line-height:1.55; color:var(--ink-2);}
+  .source pre .k{color:var(--accent);} .source pre .s{color:var(--warm);} .source pre .n{color:var(--ink);}
+
+  footer.legal{margin-top:26px; color:var(--ink-3); font-size:11.5px; line-height:1.6; text-align:center; max-width:70ch; margin-left:auto; margin-right:auto;}
+
+  @media (prefers-reduced-motion:reduce){*{animation:none !important; transition:none !important;}}
+
+  /* PRINT */
+  @media print{
+    body{background:#fff;}
+    .app{padding:0; background:#fff;}
+    .banner,.toolbar,.source,footer.legal,.stage-head,.print-actions{display:none !important;}
+    .stage{border:0; box-shadow:none; border-radius:0; min-height:0;}
+    .printview{padding:0;}
+    .paper{box-shadow:none; max-width:100%; width:100%; padding:0.4in 0.5in; border-radius:0;}
+    @page{margin:0.5in;}
+  }
+</style>
+
+<div class="app">
+<div class="wrap">
+
+  <div class="banner">
+    <div class="eyebrow">Brooklyn · Prototype · Objective Card</div>
+    <h1>One Objective Card, two surfaces</h1>
+    <p>This is a single learning objective &mdash; <b>Unit 01, Speaking: &ldquo;Introduce myself.&rdquo;</b> Everything below is generated from <b>one data object</b>. Change the <b>proficiency level</b> or the <b>delivery surface</b> and both the interactive task and the printable packet update from the same source. That&rsquo;s the whole platform in miniature: author once, render for any classroom.</p>
+    <div class="idline">
+      <span class="pill"><b>WIDA</b> SI · Speaking</span>
+      <span class="pill"><b>Key Use</b> Inform</span>
+      <span class="pill"><b>Unit</b> 01 · Hello &amp; Who I Am</span>
+      <span class="pill" id="statePill"><b>Now</b> Level 2 · Device</span>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <div class="ctl">
+      <span class="lbl">Proficiency</span>
+      <div class="seg levels" id="levelSeg" role="group" aria-label="Proficiency level">
+        <button data-act="setLevel" data-level="1" aria-pressed="false"><span class="dot"></span>1 · Entering</button>
+        <button data-act="setLevel" data-level="2" aria-pressed="true"><span class="dot"></span>2 · Emerging</button>
+        <button data-act="setLevel" data-level="3" aria-pressed="false"><span class="dot"></span>3 · Developing</button>
+      </div>
+    </div>
+    <div class="ctl">
+      <span class="lbl">Surface</span>
+      <div class="seg view" id="viewSeg" role="group" aria-label="Delivery surface">
+        <button data-act="setView" data-view="device" aria-pressed="true">Device task</button>
+        <button data-act="setView" data-view="print" aria-pressed="false">Print packet</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="stage" id="stage"></div>
+
+  <details class="source">
+    <summary><span class="tw" id="twarr">▸</span> Show the source card <span class="sub">the one object both surfaces render from</span></summary>
+    <pre id="sourceCode"></pre>
+  </details>
+
+  <footer class="legal">
+    Prototype for Brooklyn. Independent alignment to the WIDA ELD Standards Framework (2020); not affiliated with or endorsed by WIDA / the University of Wisconsin. &ldquo;Listen&rdquo; uses your device&rsquo;s built-in speech voice when available.
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---- ICONS ----
+  var IC = {
+    wave:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11.5V6a1.5 1.5 0 0 0-3 0m3 5.5V4.5a1.5 1.5 0 0 0-3 0V6m0 0V4a1.5 1.5 0 0 0-3 0v6m0-4a1.5 1.5 0 0 0-3 0v6.5l-1.6-1.6a1.5 1.5 0 0 0-2.2 2l3 4A6 6 0 0 0 18 13"/></svg>',
+    book:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M18 3v18"/></svg>',
+    apple:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8c-1.5-2-5-2-6 1-1 3 1 8 3 9 1 .5 2 .5 3 0 1 .5 2 .5 3 0 2-1 4-6 3-9-1-3-4.5-3-6-1"/><path d="M12 8V5m0 0c0-1 1-2 2-2"/></svg>',
+    globe:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg>',
+    speaker:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12"/></svg>',
+    check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>',
+    hand:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a1.5 1.5 0 0 0-3 0m3 5V4.5a1.5 1.5 0 0 0-3 0V6m0 0V4a1.5 1.5 0 0 0-3 0v6m0-4a1.5 1.5 0 0 0-3 0v6.5l-1.6-1.6a1.5 1.5 0 0 0-2.2 2l3 4A6 6 0 0 0 18 13"/></svg>'
+  };
+
+  // ---- THE ONE SOURCE: the Objective Card ----
+  var CARD = {
+    id:"u01-speaking-introduce",
+    unit:{no:"01", title:"Hello & Who I Am"},
+    wida:{standard:"SI", standardName:"Social & Instructional language", domain:"Speaking", keyUse:"Inform"},
+    fn:"Introduce myself and give personal information",
+    grammar:"My name is ___. I am from ___. I speak ___.",
+    levels:{
+      1:{
+        label:"Entering",
+        canDo:"Say a one-word greeting and my name.",
+        listen:{prompt:"Listen. Which one means “hello”?", say:"Hello", options:[
+          {icon:"wave", label:"hello", correct:true},{icon:"book", label:"book"},{icon:"apple", label:"apple"}]},
+        build:{parts:["Hello. I am ",{b:"name"},"."], blanks:{
+          name:{label:"Your name", chips:["Ana","Marco","Sofia","Yusuf"]}}},
+        speak:{model:"Hello. I am Ana.", note:"Say it out loud. Wave and smile."},
+        print:1
+      },
+      2:{
+        label:"Emerging",
+        canDo:"Give a 2–3 sentence self-introduction using a model.",
+        listen:{prompt:"Listen. Where is the person from?", say:"I am from Guatemala.", options:[
+          {icon:"globe", label:"Guatemala", correct:true},{icon:"globe", label:"Ukraine"},{icon:"globe", label:"Haiti"}]},
+        build:{parts:["My name is ",{b:"name"},". I am from ",{b:"country"},". I speak ",{b:"language"},"."], blanks:{
+          name:{label:"Name", chips:["Ana","Marco","Sofia","Yusuf"]},
+          country:{label:"Country", chips:["Guatemala","Ukraine","Afghanistan","Haiti"]},
+          language:{label:"Language", chips:["Spanish","Ukrainian","Dari","Haitian Creole"]}}},
+        speak:{model:"Hello. My name is Ana. I am from Guatemala. I speak Spanish.", note:"Introduce yourself. Look at your partner."},
+        print:2
+      },
+      3:{
+        label:"Developing",
+        canDo:"Introduce myself and ask a partner one question.",
+        listen:{prompt:"Listen to Marco. Where is he from?", say:"Hi, my name is Marco. I'm from Ukraine, and I speak Ukrainian. What's your name?", options:[
+          {icon:"globe", label:"Ukraine", correct:true},{icon:"globe", label:"Guatemala"},{icon:"globe", label:"Afghanistan"}]},
+        build:{parts:["Hi, my name is ",{b:"name"},". I'm from ",{b:"country"},", and I speak ",{b:"language"}," and a little English. ",{b:"question"}], blanks:{
+          name:{label:"Name", chips:["Ana","Marco","Sofia","Yusuf"]},
+          country:{label:"Country", chips:["Guatemala","Ukraine","Afghanistan","Haiti"]},
+          language:{label:"Language", chips:["Spanish","Ukrainian","Dari","Haitian Creole"]},
+          question:{label:"Ask your partner a question", chips:["What's your name?","How are you?","Where are you from?"]}}},
+        speak:{model:"Hi, my name is Ana. I'm from Guatemala, and I speak Spanish and a little English. What's your name?", note:"Introduce yourself, then ask your partner a question."},
+        print:3
+      }
+    }
+  };
+
+  var STEPS = ["listen","build","speak","done"];
+  var state = {level:2, view:"device", step:0, answers:{}, chosen:null};
+
+  var stage = document.getElementById("stage");
+
+  // ---- speech ----
+  function speak(text, btn){
+    if(!("speechSynthesis" in window)) return;
+    try{
+      window.speechSynthesis.cancel();
+      var u = new SpeechSynthesisUtterance(text);
+      u.rate = state.level===1 ? .8 : .92; u.lang="en-US";
+      if(btn){ btn.classList.add("playing"); u.onend=function(){btn.classList.remove("playing");}; u.onerror=function(){btn.classList.remove("playing");}; }
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+
+  function lvl(){ return CARD.levels[state.level]; }
+
+  // ---- render dispatch ----
+  function render(){
+    document.getElementById("statePill").innerHTML = "<b>Now</b> Level "+state.level+" · "+(state.view==="device"?"Device":"Print");
+    // toggles
+    Array.prototype.forEach.call(document.querySelectorAll("#levelSeg button"), function(b){
+      b.setAttribute("aria-pressed", String(+b.dataset.level===state.level)); });
+    Array.prototype.forEach.call(document.querySelectorAll("#viewSeg button"), function(b){
+      b.setAttribute("aria-pressed", String(b.dataset.view===state.view)); });
+
+    var L = lvl();
+    var head = '<div class="stage-head">'
+      + '<span class="lvlbadge l'+state.level+'"><span class="dot"></span>Level '+state.level+' · '+L.label+'</span>'
+      + '<span class="cando"><b>Can-Do:</b> '+L.canDo+'</span>'
+      + '<span class="wida-tag">SI · '+CARD.wida.domain+' · L'+state.level+'</span></div>';
+
+    stage.innerHTML = head + (state.view==="device" ? renderDevice(L) : renderPrint(L));
+    renderSource();
+  }
+
+  // ---- DEVICE ----
+  function renderDevice(L){
+    var s = STEPS[state.step];
+    var prog = '<div class="progress">'
+      + progStep(0) + progStep(1) + progStep(2) + '</div>';
+    var body;
+    if(s==="listen") body = stepListen(L);
+    else if(s==="build") body = stepBuild(L);
+    else if(s==="speak") body = stepSpeak(L);
+    else body = stepDone(L);
+    return '<div class="device">'+prog+body+'</div>';
+  }
+  function progStep(i){
+    var cls = i<state.step ? "done" : (i===state.step ? "active" : "");
+    return '<div class="pstep '+cls+'"><i></i></div>';
+  }
+  function stepListen(L){
+    var opts = L.listen.options.map(function(o,i){
+      var cls = state.chosen==null ? "" : (o.correct ? "correct" : (i===state.chosen ? "wrong" : ""));
+      var dis = state.chosen!=null ? "disabled" : "";
+      return '<button class="opt '+cls+'" data-act="choose" data-idx="'+i+'" '+dis+'>'
+        + (o.icon?IC[o.icon]:"") + '<span>'+o.label+'</span></button>';
+    }).join("");
+    var next = state.chosen!=null ? '<div class="rowbtns" style="margin-top:22px"><button class="btn primary" data-act="next">Continue &rarr;</button></div>' : '';
+    return '<div class="steplabel">Step 1 of 3 · Listening</div>'
+      + '<div class="prompt">'+L.listen.prompt+'</div>'
+      + '<button class="listen-btn" data-act="listen" data-say="'+esc(L.listen.say)+'">'+IC.speaker+' Listen</button>'
+      + '<div class="options">'+opts+'</div>'+next;
+  }
+  function stepBuild(L){
+    var parts = L.build.parts.map(function(p){
+      if(typeof p==="string") return esc(p);
+      var v = state.answers[p.b];
+      return '<span class="slot'+(v?" filled":"")+'">'+(v?esc(v):"_____")+'</span>';
+    }).join("");
+    var groups = Object.keys(L.build.blanks).map(function(k){
+      var g = L.build.blanks[k];
+      var chips = g.chips.map(function(c){
+        var on = state.answers[k]===c;
+        return '<button class="chip-btn" data-act="fill" data-b="'+k+'" data-val="'+esc(c)+'" aria-pressed="'+on+'">'+esc(c)+'</button>';
+      }).join("");
+      return '<div class="blankgroup"><div class="glabel">'+g.label+'</div><div class="chips">'+chips+'</div></div>';
+    }).join("");
+    var complete = Object.keys(L.build.blanks).every(function(k){ return !!state.answers[k]; });
+    var btn = '<div class="rowbtns"><button class="btn primary" data-act="next" '+(complete?"":"disabled")+'>Say it &rarr;</button></div>';
+    return '<div class="steplabel">Step 2 of 3 · Build the sentence</div>'
+      + '<div class="sentence">'+parts+'</div>'+groups+btn;
+  }
+  function stepSpeak(L){
+    return '<div class="steplabel">Step 3 of 3 · Speaking</div>'
+      + '<div class="prompt">Now say it yourself.</div>'
+      + '<div class="modelcard"><div class="say">&ldquo;'+esc(userSentence(L))+'&rdquo;</div></div>'
+      + '<div class="note">'+L.speak.note+'</div>'
+      + '<div class="rowbtns">'
+      + '<button class="listen-btn" style="margin:0" data-act="listen" data-say="'+esc(userSentence(L))+'">'+IC.speaker+' Hear the model</button>'
+      + '<button class="btn primary" data-act="next">I said it &nbsp;&checkmark;</button></div>';
+  }
+  function stepDone(L){
+    return '<div class="done-wrap"><div class="done-check">'+IC.check+'</div>'
+      + '<h3>You introduced yourself!</h3>'
+      + '<p class="cando-met">&ldquo;'+esc(userSentence(L))+'&rdquo;</p>'
+      + '<p><b>Can-Do met:</b> '+L.canDo+'</p>'
+      + '<p style="margin-top:10px">This same objective just became a <b>printable packet</b> too &mdash; switch the surface above to see it, with zero screen time.</p>'
+      + '<div class="rowbtns" style="justify-content:center; margin-top:20px">'
+      + '<button class="btn ghost" data-act="restart">Try again</button>'
+      + '<button class="btn primary" data-act="setView" data-view="print">See the print packet &rarr;</button></div></div>';
+  }
+  function userSentence(L){
+    // build the student's sentence from filled answers, falling back to the model
+    var any = Object.keys(L.build.blanks).some(function(k){return state.answers[k];});
+    if(!any) return L.speak.model;
+    return L.build.parts.map(function(p){
+      if(typeof p==="string") return p;
+      return state.answers[p.b] || "_____";
+    }).join("");
+  }
+
+  // ---- PRINT PACKET ----
+  function renderPrint(L){
+    return '<div class="printview">'
+      + '<div class="print-actions"><span class="hint">This is exactly what prints &mdash; no student device needed.</span>'
+      + '<button class="btn primary" data-act="print">Print / Save as PDF</button></div>'
+      + '<div class="paper">'+paperHead(L)+paperBody(L)+paperFoot()+'</div></div>';
+  }
+  function paperHead(L){
+    return '<div class="ph"><div><div class="course">Brooklyn · Unit '+CARD.unit.no+' · '+CARD.unit.title+'</div>'
+      + '<h2>Introduce Myself</h2></div>'
+      + '<div class="lv">Level '+state.level+'<br>'+L.label+'</div></div>'
+      + '<div class="meta"><span class="nameline">Name: <u>&nbsp;</u></span><span class="nameline">Date: <u>&nbsp;</u></span></div>'
+      + '<div class="obj"><b>Objective (Can-Do):</b> '+L.canDo+' &nbsp;·&nbsp; <b>WIDA:</b> SI · Speaking</div>';
+  }
+  function paperBody(L){
+    if(L.print===1){
+      return '<h3 class="sec">A. My name tent</h3>'
+        + '<div class="picnote">'+IC.hand+'<span>Trace your name. Then say &ldquo;Hello!&rdquo; and wave.</span></div>'
+        + '<div class="trace">A n a</div>'
+        + '<div class="tent">Fold here &mdash; write your name big</div>'
+        + '<h3 class="sec">B. Say hello</h3>'
+        + '<div class="frame">Hello. I am <span class="fill lg">&nbsp;</span>.</div>'
+        + '<h3 class="sec">C. Word bank</h3>'
+        + '<div class="wordbank"><span class="wb">Hello</span><span class="wb">I</span><span class="wb">am</span><span class="wb">my name</span></div>';
+    }
+    if(L.print===2){
+      return '<h3 class="sec">A. My information</h3>'
+        + formRow("Name")+formRow("Country")+formRow("Home language")+formRow("Grade")
+        + '<h3 class="sec">B. Sentence frames &mdash; fill in the blanks</h3>'
+        + '<div class="frame">My name is <span class="fill">&nbsp;</span>.</div>'
+        + '<div class="frame">I am from <span class="fill">&nbsp;</span>.</div>'
+        + '<div class="frame">I speak <span class="fill">&nbsp;</span>.</div>'
+        + '<h3 class="sec">C. Word bank</h3>'
+        + '<div class="wordbank"><span class="wb">Guatemala</span><span class="wb">Ukraine</span><span class="wb">Afghanistan</span><span class="wb">Haiti</span>'
+        + '<span class="wb">Spanish</span><span class="wb">Ukrainian</span><span class="wb">Dari</span><span class="wb">Haitian Creole</span></div>';
+    }
+    return '<h3 class="sec">A. Write about yourself (2–3 sentences)</h3>'
+      + '<div class="frame" style="font-size:14px; line-height:1.6">Starters: <i>Hi, my name is… &nbsp; I’m from… &nbsp; I speak… &nbsp; I want to…</i></div>'
+      + '<div class="lines"><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>'
+      + '<h3 class="sec">B. Ask a partner. Write their answers.</h3>'
+      + '<table class="interview"><thead><tr><th>Question</th><th>My partner&rsquo;s answer</th></tr></thead>'
+      + '<tbody><tr><td>What&rsquo;s your name?</td><td></td></tr>'
+      + '<tr><td>Where are you from?</td><td></td></tr>'
+      + '<tr><td>What language do you speak?</td><td></td></tr></tbody></table>';
+  }
+  function formRow(lab){ return '<div class="form-row"><label>'+lab+':</label><span class="line"></span></div>'; }
+  function paperFoot(){ return '<div class="foot">Brooklyn · Objective '+CARD.id+' · Generated from one source card · WIDA (2020), independent alignment</div>'; }
+
+  // ---- SOURCE PANEL ----
+  function renderSource(){
+    var L = lvl();
+    var obj = {
+      id:CARD.id, unit:CARD.unit, wida:CARD.wida, "function":CARD.fn,
+      level:state.level, label:L.label, canDo:L.canDo,
+      renders:["device_task","print_packet"],
+      variant:{ listen:L.listen.prompt, build:L.build.parts.map(function(p){return typeof p==="string"?p:"{"+p.b+"}";}).join(""), speakModel:L.speak.model }
+    };
+    document.getElementById("sourceCode").innerHTML = pretty(obj);
+  }
+  function pretty(o){
+    var j = JSON.stringify(o,null,2);
+    j = j.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    j = j.replace(/&quot;([^&]*?)&quot;(\s*:)/g,'<span class="k">"$1"</span>$2'); // keys
+    j = j.replace(/:\s&quot;([^&]*?)&quot;/g,': <span class="s">"$1"</span>');    // string vals
+    j = j.replace(/&quot;/g,'"');
+    return j;
+  }
+
+  // ---- helpers ----
+  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+  // ---- events ----
+  document.addEventListener("click", function(e){
+    var t = e.target.closest("[data-act]"); if(!t) return;
+    var act = t.dataset.act;
+    if(act==="setLevel"){ state.level=+t.dataset.level; state.step=0; state.answers={}; state.chosen=null; render(); }
+    else if(act==="setView"){ state.view=t.dataset.view; render(); }
+    else if(act==="listen"){ speak(t.dataset.say, t.closest(".listen-btn")); }
+    else if(act==="choose"){
+      if(state.chosen!=null) return;
+      state.chosen=+t.dataset.idx; render();
+    }
+    else if(act==="fill"){ state.answers[t.dataset.b]=t.dataset.val; render(); }
+    else if(act==="next"){ if(state.step<STEPS.length-1){ state.step++; state.chosen=null; render(); } }
+    else if(act==="restart"){ state.step=0; state.answers={}; state.chosen=null; render(); }
+    else if(act==="print"){ window.print(); }
+  });
+  document.querySelector(".source").addEventListener("toggle", function(e){
+    document.getElementById("twarr").textContent = e.target.open ? "▾" : "▸";
+  });
+
+  render();
+})();
+</script>
