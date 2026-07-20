@@ -1,0 +1,130 @@
+{
+  "no": "11",
+  "title": "My Story",
+  "phase": "C",
+  "weeks": "21–22",
+  "focus": "Simple past, sequence words, narrate my journey and past events.",
+  "wida": { "standards": ["LA"], "keyUses": ["Narrate"] },
+  "function": "Tell about something that happened in the past",
+  "grammar": [
+    "Simple past regular: -ed (walked, started)",
+    "Simple past irregular: went, came, was/were, had, saw, took",
+    "Time markers: yesterday, last year, two years ago, when I was ___",
+    "Sequence: first, next, then, after that, finally",
+    "Did you ___? / I didn't ___."
+  ],
+  "vocabulary": {
+    "core": ["was", "were", "went", "came", "had", "saw", "took", "moved", "left", "arrived", "started", "stayed", "before", "after", "ago", "last", "then", "finally"],
+    "academic": ["past", "event", "sequence", "narrative", "experience", "timeline", "chronological", "recount"]
+  },
+  "foundationalLiteracy": "The -ed ending and its three spoken sounds (/t/, /d/, /əd/) — walked, moved, started. High-frequency irregular past forms as sight words, since they cannot be decoded by rule.",
+  "culturalNote": "This is the highest-risk unit in the entire sequence. Many newcomers have journeys involving violence, family separation, detention, or loss, and 'tell your story' is a demand that can retraumatize. Three rules, non-negotiable: (1) Narrating one's own migration is ALWAYS optional — offer a neutral alternative (a past school day, a holiday, a story from a book) with no penalty and no explanation required. (2) Never make personal narratives public — no gallery walks, no reading aloud, no posting on the wall unless a student volunteers. (3) Know your mandated-reporter obligations and your school's counseling referral path before you begin, because disclosures do happen in this unit. Teach the past tense with neutral content first, then let students choose their own topic. A student who writes about a soccer game instead of a border crossing has met the standard completely.",
+  "cards": [
+    {
+      "id": "u11-listening",
+      "domain": "Listening",
+      "mode": "Interpretive",
+      "levels": {
+        "1": {
+          "canDo": "Tell whether a spoken sentence is about now or before.",
+          "scaffold": "Two-card sort: now / before. Contrasting pairs said aloud.",
+          "check": "Sorts 8 of 10 sentences correctly by time."
+        },
+        "2": {
+          "canDo": "Understand a short spoken story and put events in order.",
+          "scaffold": "Picture strip to sequence while listening. Replayed on request.",
+          "check": "Orders 5 story events correctly from spoken narration."
+        },
+        "3": {
+          "canDo": "Follow a longer spoken narrative and identify when each event happened.",
+          "scaffold": "Timeline organizer with blank date markers. Normal rate, played twice.",
+          "check": "Places 5 events on a timeline with their correct time markers."
+        }
+      }
+    },
+    {
+      "id": "u11-speaking",
+      "domain": "Speaking",
+      "mode": "Expressive",
+      "levels": {
+        "1": {
+          "canDo": "Say one thing I did, using a past-tense word.",
+          "scaffold": "Picture cards of past actions plus a past-verb bank. Single sentence accepted.",
+          "check": "Produces 3 sentences with a recognizable past-tense verb."
+        },
+        "2": {
+          "canDo": "Tell about a past event in 3–4 sentences using sequence words.",
+          "scaffold": "Sequence frame plus an irregular-past reference strip. Topic is student's choice.",
+          "check": "Narrates a chosen past event in 4 sentences with correct sequencing."
+        },
+        "3": {
+          "canDo": "Tell a longer story and explain why something happened.",
+          "scaffold": "Open frame with a because clause and a feelings bank. Topic entirely student-chosen.",
+          "check": "Narrates in connected past tense and explains one cause with because."
+        }
+      }
+    },
+    {
+      "id": "u11-reading",
+      "domain": "Reading",
+      "mode": "Interpretive",
+      "levels": {
+        "1": {
+          "canDo": "Recognize common past-tense verbs in print.",
+          "scaffold": "Present/past word pairs on cards: go/went, is/was, see/saw.",
+          "check": "Matches 8 present-tense verbs to their past forms."
+        },
+        "2": {
+          "canDo": "Read a short narrative and answer what happened questions.",
+          "scaffold": "6-sentence story with past verbs bolded and vocabulary glossed.",
+          "check": "Answers 4 of 5 literal comprehension questions about a narrative."
+        },
+        "3": {
+          "canDo": "Read a personal narrative and identify the order of events and the narrator's feelings.",
+          "scaffold": "Published newcomer narrative plus a timeline and a feelings-evidence organizer.",
+          "check": "Sequences 5 events and cites one sentence showing how the narrator felt."
+        }
+      }
+    },
+    {
+      "id": "u11-writing",
+      "domain": "Writing",
+      "mode": "Expressive",
+      "levels": {
+        "1": {
+          "canDo": "Write or copy simple past sentences about a picture sequence.",
+          "scaffold": "Picture strip with past-verb word bank and one line per picture.",
+          "check": "Writes 4 sentences with correct past-tense verbs from a word bank."
+        },
+        "2": {
+          "canDo": "Write a short narrative about an event I choose.",
+          "scaffold": "Sequence organizer plus an irregular-past reference strip. Topic free.",
+          "check": "Writes 5 sentences in consistent past tense with 3 sequence words."
+        },
+        "3": {
+          "canDo": "Write a personal narrative with a beginning, middle, and end.",
+          "scaffold": "Narrative organizer with a setting, events, and a closing reflection. Topic free.",
+          "check": "Writes a 7-sentence narrative in consistent past tense with a closing reflection."
+        }
+      }
+    }
+  ],
+  "workedTask": {
+    "domain": "Speaking",
+    "prompt": "Tell about something that happened (student chooses the topic)",
+    "levels": {
+      "1": {
+        "say": "I [past verb].",
+        "scaffold": "Picks a picture card of a past action and says one sentence. Any topic — a game, a meal, a trip. No personal disclosure of any kind is required."
+      },
+      "2": {
+        "say": "First, I [past verb]. Then I [past verb]. After that, I [past verb]. It was [feeling].",
+        "scaffold": "Four-slot sequence frame with an irregular-past strip. Student chooses the event; a neutral option is always offered alongside."
+      },
+      "3": {
+        "say": "[Time marker], I [past verb]. It happened because [reason]. I felt [feeling], but later [past verb]. Now I [present verb].",
+        "scaffold": "Open frame moving past → cause → feeling → present. The past-to-present pivot lets a student end on their own terms, which matters more here than the grammar does."
+      }
+    }
+  }
+}

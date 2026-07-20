@@ -1,0 +1,130 @@
+{
+  "no": "09",
+  "title": "Daily Routines",
+  "phase": "C",
+  "weeks": "17–18",
+  "focus": "Present tense, frequency words, describe a typical day at school and home.",
+  "wida": { "standards": ["SI", "LA"], "keyUses": ["Inform", "Narrate"] },
+  "function": "Describe what I do regularly and how often I do it",
+  "grammar": [
+    "Simple present: I wake up at ___. She works at ___.",
+    "Third-person -s: he goes, she takes",
+    "Frequency adverbs: always, usually, sometimes, never",
+    "Time sequencing: first, then, after that, finally",
+    "Do you ___? / Does he ___?"
+  ],
+  "vocabulary": {
+    "core": ["wake up", "get up", "eat", "go", "come", "start", "finish", "study", "work", "sleep", "walk", "ride", "always", "usually", "sometimes", "never", "every day", "on weekends"],
+    "academic": ["routine", "schedule", "frequency", "sequence", "typical", "daily", "describe", "process"]
+  },
+  "foundationalLiteracy": "The -s ending on third-person verbs versus the -s plural on nouns — a persistent confusion worth naming explicitly. Reading a paragraph as a connected text rather than a list of sentences.",
+  "culturalNote": "This is the first unit where students narrate their own lives at paragraph length, and home routines vary widely — some students work jobs, care for siblings, or send money home. Don't let 'a typical day' become an implicit comparison in which their life looks wrong. Let students narrate school routines if home is too personal. Note also that a student who works a night shift is not lazy when they sleep in class; this unit often surfaces that information for the first time.",
+  "cards": [
+    {
+      "id": "u09-listening",
+      "domain": "Listening",
+      "mode": "Interpretive",
+      "levels": {
+        "1": {
+          "canDo": "Match a spoken routine verb to a picture of the action.",
+          "scaffold": "Action picture cards in a daily sequence. Pointing accepted.",
+          "check": "Identifies 8 of 10 routine verbs from spoken input."
+        },
+        "2": {
+          "canDo": "Understand a short spoken routine and put the actions in order.",
+          "scaffold": "Picture strip to sequence while listening. Audio replayed on request.",
+          "check": "Orders 5 actions correctly from a spoken description."
+        },
+        "3": {
+          "canDo": "Follow a spoken routine and catch how often each thing happens.",
+          "scaffold": "Note-catcher with action and frequency columns. Normal rate, played twice.",
+          "check": "Records 4 actions with their correct frequency adverbs."
+        }
+      }
+    },
+    {
+      "id": "u09-speaking",
+      "domain": "Speaking",
+      "mode": "Expressive",
+      "levels": {
+        "1": {
+          "canDo": "Name a daily action and say when I do it.",
+          "scaffold": "Picture cards plus a clock. Two-word answers accepted: eat, seven.",
+          "check": "Names 5 daily actions with an approximate time."
+        },
+        "2": {
+          "canDo": "Describe my morning using sequence words and a frame.",
+          "scaffold": "Frame: First I ___. Then I ___. After that I ___. Verb bank with pictures.",
+          "check": "Produces 4 sequenced sentences about a real morning routine."
+        },
+        "3": {
+          "canDo": "Describe my routine with frequency words and ask a partner about theirs.",
+          "scaffold": "Frequency bank plus a modeled question. Open frame.",
+          "check": "Uses 3 different frequency adverbs correctly and asks a reciprocal question."
+        }
+      }
+    },
+    {
+      "id": "u09-reading",
+      "domain": "Reading",
+      "mode": "Interpretive",
+      "levels": {
+        "1": {
+          "canDo": "Read routine verbs with picture support.",
+          "scaffold": "Word–picture cards for 10 high-frequency daily verbs.",
+          "check": "Matches 8 of 10 verbs to action pictures."
+        },
+        "2": {
+          "canDo": "Read a short paragraph about someone's day and answer when questions.",
+          "scaffold": "6-sentence passage with times bolded and vocabulary glossed.",
+          "check": "Answers 4 of 5 literal when and what questions."
+        },
+        "3": {
+          "canDo": "Read two routines and compare them.",
+          "scaffold": "Two short passages plus a Venn organizer and comparison sentence starters.",
+          "check": "Identifies 2 similarities and 2 differences and states one in a full sentence."
+        }
+      }
+    },
+    {
+      "id": "u09-writing",
+      "domain": "Writing",
+      "mode": "Expressive",
+      "levels": {
+        "1": {
+          "canDo": "Write times next to pictures of daily actions.",
+          "scaffold": "Picture timeline with blank time slots and a word bank.",
+          "check": "Completes a 6-action timeline with times and copied verbs."
+        },
+        "2": {
+          "canDo": "Write 4–5 sentences about my day using sequence words.",
+          "scaffold": "Sequence-word bank plus a lined organizer with one line per step.",
+          "check": "Writes 5 sentences using at least 3 different sequence words."
+        },
+        "3": {
+          "canDo": "Write a paragraph about my routine using frequency adverbs correctly.",
+          "scaffold": "Paragraph organizer with a topic sentence. Frequency-adverb placement reminder.",
+          "check": "Writes a 6-sentence paragraph with correct third-person -s and adverb placement."
+        }
+      }
+    }
+  ],
+  "workedTask": {
+    "domain": "Speaking",
+    "prompt": "Describe your school day",
+    "levels": {
+      "1": {
+        "say": "[time]. [action].",
+        "scaffold": "Lays out picture cards in order and names each with a time. The sequence is carried by the cards, not by language."
+      },
+      "2": {
+        "say": "First I [action]. Then I [action]. After that I [action]. I finish at [time].",
+        "scaffold": "Four-slot sequence frame with a verb bank. The sequence words are now doing the work the cards used to do."
+      },
+      "3": {
+        "say": "I usually [action] at [time], but sometimes I [action] instead because [reason]. On weekends it's different — I never [action]. What about you?",
+        "scaffold": "Open frame contrasting usual and exceptional with because. Handling an exception to a general rule is a genuine academic-language move."
+      }
+    }
+  }
+}

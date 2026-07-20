@@ -1,0 +1,130 @@
+{
+  "no": "06",
+  "title": "Family & Home",
+  "phase": "B",
+  "weeks": "11–12",
+  "focus": "Family members, describe people, rooms and where I live.",
+  "wida": { "standards": ["SI"], "keyUses": ["Inform", "Narrate"] },
+  "function": "Describe the people I live with and where I live",
+  "grammar": [
+    "I live with ___.",
+    "This is my ___.",
+    "He/She is ___ (tall / kind / twelve).",
+    "I have ___ brothers and ___ sisters.",
+    "There is / There are ___."
+  ],
+  "vocabulary": {
+    "core": ["mother", "father", "sister", "brother", "grandmother", "grandfather", "aunt", "uncle", "cousin", "baby", "house", "apartment", "room", "kitchen", "bedroom", "bathroom", "live", "together"],
+    "academic": ["family", "relative", "household", "describe", "appearance", "generation", "guardian"]
+  },
+  "foundationalLiteracy": "Possessive 's in print. Compound words for rooms (bed-room, bath-room) as a decoding pattern.",
+  "culturalNote": "This unit can be painful. Many newcomers are separated from parents, live with distant relatives or a sponsor, are unaccompanied minors, or have lost family members. Never assign a family tree as required work, never ask who a student lives with in front of peers, and always offer an alternative: describe a person who is important to you. Also avoid assuming a nuclear family — extended and multi-household families are the norm for most of the world.",
+  "cards": [
+    {
+      "id": "u06-listening",
+      "domain": "Listening",
+      "mode": "Interpretive",
+      "levels": {
+        "1": {
+          "canDo": "Point to a family member in a picture when the word is said.",
+          "scaffold": "Generic family picture cards, not the student's own family.",
+          "check": "Identifies 6 family words from spoken input."
+        },
+        "2": {
+          "canDo": "Understand a short spoken description of a person and pick them out.",
+          "scaffold": "Four photos varying by one or two features. Description replayed on request.",
+          "check": "Selects the correct person from 4 photos in 4 of 5 trials."
+        },
+        "3": {
+          "canDo": "Follow a spoken description of a family and map the relationships.",
+          "scaffold": "Blank relationship web to fill in while listening. Played twice.",
+          "check": "Correctly places 5 people and their relationships from connected speech."
+        }
+      }
+    },
+    {
+      "id": "u06-speaking",
+      "domain": "Speaking",
+      "mode": "Expressive",
+      "levels": {
+        "1": {
+          "canDo": "Name family members and say who I live with in single words.",
+          "scaffold": "Picture cards. One-word answers fully accepted.",
+          "check": "Names 4 family members and indicates who they live with."
+        },
+        "2": {
+          "canDo": "Describe a person using two or three sentences.",
+          "scaffold": "Frame: This is my ___. He/She is ___. Adjective bank with pictures.",
+          "check": "Produces 3 framed sentences describing one person."
+        },
+        "3": {
+          "canDo": "Describe my home and the people in it, and ask a partner about theirs.",
+          "scaffold": "Open frame, adjective and room bank, one modeled question to ask back.",
+          "check": "Describes home and people in connected speech and asks a reciprocal question."
+        }
+      }
+    },
+    {
+      "id": "u06-reading",
+      "domain": "Reading",
+      "mode": "Interpretive",
+      "levels": {
+        "1": {
+          "canDo": "Match family words to pictures.",
+          "scaffold": "Word–picture cards with a model line already matched.",
+          "check": "Matches 6 of 8 family words to pictures."
+        },
+        "2": {
+          "canDo": "Read a short description of a family and answer who questions.",
+          "scaffold": "5-sentence passage with a picture and glossed vocabulary.",
+          "check": "Answers 4 of 5 literal who and how many questions."
+        },
+        "3": {
+          "canDo": "Read a longer description and infer a relationship that isn't stated directly.",
+          "scaffold": "Passage plus an inference prompt: How do you know? Evidence sentence starter.",
+          "check": "Makes one correct inference and cites the sentence that supports it."
+        }
+      }
+    },
+    {
+      "id": "u06-writing",
+      "domain": "Writing",
+      "mode": "Expressive",
+      "levels": {
+        "1": {
+          "canDo": "Label pictures of people and rooms.",
+          "scaffold": "Picture page with a word bank and labeling lines.",
+          "check": "Labels 6 items correctly."
+        },
+        "2": {
+          "canDo": "Write 3–4 sentences describing a person who is important to me.",
+          "scaffold": "Frames plus an adjective bank. Student chooses the person freely.",
+          "check": "Writes 3 sentences with a subject, a verb, and one adjective each."
+        },
+        "3": {
+          "canDo": "Write a paragraph describing my home and who is in it.",
+          "scaffold": "Paragraph organizer (topic sentence, 3 details, closing). There is/are reminder.",
+          "check": "Writes a 5-sentence paragraph with a topic sentence and correct there is/are."
+        }
+      }
+    }
+  ],
+  "workedTask": {
+    "domain": "Speaking",
+    "prompt": "Describe someone important to you",
+    "levels": {
+      "1": {
+        "say": "My [relation]. [adjective].",
+        "scaffold": "Two picture cards — one person, one adjective. Student places them side by side and names them. Teacher expands into a sentence and the student echoes."
+      },
+      "2": {
+        "say": "This is my [relation]. She is [adjective] and [adjective]. She lives in [place].",
+        "scaffold": "Three-sentence frame with an adjective bank. Student may use a photo or a drawing."
+      },
+      "3": {
+        "say": "The person I want to tell you about is my [relation]. She's [adjective], and she [action] every day. I miss her because [reason]. Who is important to you?",
+        "scaffold": "Open frame with a because clause and a reciprocal question. The because is the academic-language move — this is where opinion becomes explanation."
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "no": "08",
+  "title": "My Community",
+  "phase": "B",
+  "weeks": "15–16",
+  "focus": "Places in town, ask for and give directions, transportation, staying safe.",
+  "wida": { "standards": ["SI", "SS"], "keyUses": ["Inform", "Explain"] },
+  "function": "Get where I need to go and ask for help in my community",
+  "grammar": [
+    "Where is the ___?",
+    "Go straight. Turn left / right.",
+    "It's next to / across from / between ___.",
+    "How do I get to ___?",
+    "I take the ___ (bus / train).",
+    "Prepositions of place and movement"
+  ],
+  "vocabulary": {
+    "core": ["store", "bank", "hospital", "clinic", "library", "park", "bus", "bus stop", "train", "street", "corner", "left", "right", "straight", "near", "far", "stop", "help", "police", "emergency", "address"],
+    "academic": ["community", "transportation", "route", "location", "direction", "resource", "public", "service"]
+  },
+  "foundationalLiteracy": "Reading street signs and addresses. Number-and-word combinations (1400 South, Route 9). Own address to automaticity — this is a safety skill, not just a literacy one.",
+  "culturalNote": "Teach 911 explicitly, including that it is free, that it works from any phone, and that using it will not by itself bring immigration consequences — but be honest that you are a teacher, not a lawyer, and never advise on immigration status. Many newcomer families avoid police contact for well-founded reasons. Frame this unit around independence and safety, and make sure every student can say their own address and a caregiver's phone number from memory before the unit ends.",
+  "cards": [
+    {
+      "id": "u08-listening",
+      "domain": "Listening",
+      "mode": "Interpretive",
+      "levels": {
+        "1": {
+          "canDo": "Point to a community place or a direction arrow when named.",
+          "scaffold": "Picture cards of local places and large left/right/straight arrows.",
+          "check": "Identifies 6 places and 3 direction words from spoken input."
+        },
+        "2": {
+          "canDo": "Follow a two-step spoken direction on a simple map.",
+          "scaffold": "Neighborhood map with a start marker. Directions repeated on request.",
+          "check": "Traces the correct route from a 2-step spoken direction in 4 of 5 trials."
+        },
+        "3": {
+          "canDo": "Follow multi-step spoken directions and a transit announcement.",
+          "scaffold": "Recorded bus announcement plus a 3-step direction. Note-catcher provided.",
+          "check": "Identifies the correct stop and traces a 3-step route from one listening."
+        }
+      }
+    },
+    {
+      "id": "u08-speaking",
+      "domain": "Speaking",
+      "mode": "Expressive",
+      "levels": {
+        "1": {
+          "canDo": "Name a place and say my address or ask for help in one word.",
+          "scaffold": "Wallet card with address and emergency contact. Help as a taught single word.",
+          "check": "States or shows own address and says help when prompted by a scenario."
+        },
+        "2": {
+          "canDo": "Ask for directions to a place using a frame.",
+          "scaffold": "Frame: Excuse me, where is the ___? / How do I get to ___?",
+          "check": "Asks a complete direction question and repeats the answer back."
+        },
+        "3": {
+          "canDo": "Give directions to someone else and explain which bus to take.",
+          "scaffold": "Preposition and sequence bank (first, then, after that). Map to reference.",
+          "check": "Gives a 3-step direction a peer can follow and names the correct route."
+        }
+      }
+    },
+    {
+      "id": "u08-reading",
+      "domain": "Reading",
+      "mode": "Interpretive",
+      "levels": {
+        "1": {
+          "canDo": "Recognize community signs and my own address in print.",
+          "scaffold": "Photo cards of real local signage: stop, exit, open, closed, hospital.",
+          "check": "Matches 6 signs to meanings and identifies own address from 4 options."
+        },
+        "2": {
+          "canDo": "Read a bus schedule or a simple map key.",
+          "scaffold": "Real transit schedule, enlarged, with the target route highlighted and a key glossed.",
+          "check": "Finds the departure time for a given stop in 4 of 5 attempts."
+        },
+        "3": {
+          "canDo": "Read information about a community resource and explain what it offers.",
+          "scaffold": "Simplified flyer for a real local service (clinic, library card, food pantry).",
+          "check": "Identifies what the service provides, who qualifies, and how to access it."
+        }
+      }
+    },
+    {
+      "id": "u08-writing",
+      "domain": "Writing",
+      "mode": "Expressive",
+      "levels": {
+        "1": {
+          "canDo": "Write my address and an emergency contact number.",
+          "scaffold": "Wallet-card template with labeled fields. Copied, then reproduced from memory.",
+          "check": "Writes own full address and one emergency number without a model."
+        },
+        "2": {
+          "canDo": "Label a map of my neighborhood and write a simple direction.",
+          "scaffold": "Blank map plus a place word bank and direction sentence frames.",
+          "check": "Labels 6 places and writes 2 correct direction sentences."
+        },
+        "3": {
+          "canDo": "Write directions from school to a place in my community.",
+          "scaffold": "Sequence-word bank and a numbered organizer. Must include at least three steps.",
+          "check": "Writes 4 sequenced steps using correct prepositions and sequence words."
+        }
+      }
+    }
+  ],
+  "workedTask": {
+    "domain": "Speaking",
+    "prompt": "Ask a stranger for directions",
+    "levels": {
+      "1": {
+        "say": "[place]?",
+        "scaffold": "Shows a written place name or points at a map and says the word with rising intonation. Works with a stranger who speaks no shared language."
+      },
+      "2": {
+        "say": "Excuse me. Where is the [place], please?",
+        "scaffold": "Polite frame plus the taught repair move: Can you show me on the map? Practiced as a role-play before use."
+      },
+      "3": {
+        "say": "Excuse me, how do I get to [place] from here? Is it walking distance, or should I take the [bus]? So I go [direction] and then turn [direction] — is that right?",
+        "scaffold": "Open frame with a confirmation move at the end. Repeating the direction back is the comprehension-check strategy this level is really teaching."
+      }
+    }
+  }
+}
