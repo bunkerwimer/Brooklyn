@@ -6,3 +6,10 @@ node_modules/
 .vercel/
 .supabase/
 .claude/
+
+# Internal working notes — deliberately untracked.
+# The repo is public; these hold frank pre-review assessment (unreviewed content,
+# coverage gaps, project IDs) that is meant for us, not for a district reading
+# the repo. Keep them local. See git history for versions pushed before 2026-07-20.
+CLAUDE.md
+BROOKLYN_SETUP.md
