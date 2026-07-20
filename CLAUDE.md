@@ -44,14 +44,15 @@ vocabulary, scaffolds, render targets, check }`.
 curriculum/SCHEMA.md        the Objective Card schema — read this before authoring
 curriculum/units/u01..u12   SOURCE OF TRUTH. All 12 units, one file each.
 tools/validate.py           schema + progression checks; exits non-zero on error
-tools/build_docs.py         curriculum/ → docs/brooklyn-curriculum.html
+tools/build_docs.py         curriculum/ → docs/brooklyn-curriculum.html (reference, one page)
+tools/build_app.py          curriculum/ → docs/brooklyn-browser.html (teacher app)
 docs/                       generated + hand-authored docs (see note below)
 prototypes/                 working proofs
 ```
 
 **Curriculum content is data, never HTML.** Edit `curriculum/units/*.json`, then:
 ```bash
-python3 tools/validate.py && python3 tools/build_docs.py
+python3 tools/validate.py && python3 tools/build_docs.py && python3 tools/build_app.py
 ```
 No Node in this environment — tooling is Python 3 (stdlib only, no install step).
 `docs/brooklyn-curriculum.html` is build output; never hand-edit it.
@@ -62,6 +63,12 @@ No Node in this environment — tooling is Python 3 (stdlib only, no install ste
   Each unit carries a domain × level can-do matrix with a scaffold and a check per cell, plus target
   structures, core/academic vocabulary, a foundational-literacy strand, a teaching note, and a worked
   task at all three levels. Validated clean by `tools/validate.py`.
+- **Curriculum browser built** → `docs/brooklyn-browser.html`. The teacher-facing surface and the
+  landing page's primary entry: Units → Unit → Page, with a **print tray** that collects pages across
+  any units and prints exactly those. Student / Teacher / Both output, copies multiplier, tray persists
+  in localStorage. Self-contained single file (curriculum inlined — `file://` can't `fetch()`).
+  Driven end-to-end in-browser 2026-07-20: cross-unit selection, per-unit clear, mode switching,
+  copies, print CSS parsed, zero console errors, AA-clean in both themes at mobile and desktop.
 - **Curriculum reference generated** → `docs/brooklyn-curriculum.html`. Verified in-browser
   2026-07-20: 12 units, 48 domain rows, 144 leveled cells, 36 worked-task cards, both color schemes,
   no page-level horizontal overflow (wide tables scroll inside their own container).
@@ -103,6 +110,16 @@ Two places still hold copies of curriculum content instead of reading it:
 
 **`Brooklyn Unit 1.pdf` is stale** — it was printed before the id fix, so its footer still reads
 `u01-speaking-introduce`. Reprint from the prototype (Level 1 → Print packet → Print / Save as PDF).
+
+## Content gaps that matter more than code
+1. **No images.** Nearly every L1 scaffold says "picture support" / "photo cards" / "picture strip"
+   and we ship zero images. A Level 1 newcomer packet without pictures is not usable. The browser's
+   student pages render an explicit "Picture support goes here — not yet produced" slot so the gap is
+   visible on every page rather than hidden. This is the single biggest blocker to classroom use.
+2. **No day-by-day.** A unit is a 2-week spec, not a lesson plan. Teachers will ask what to do Monday.
+3. **Vocabulary is a flat list**, not printable word cards / word-bank artifacts.
+4. Student-facing "I can…" statements are derived at render time from `canDo`. All 144 convert cleanly,
+   but a reviewer should check the wording rather than trusting the transform.
 
 ## Next steps
 1. Fix the pitch-doc duplication above.
