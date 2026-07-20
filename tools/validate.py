@@ -125,6 +125,42 @@ def check_unit(path):
     return unit
 
 
+def check_prototype(units):
+    """The prototype hardcodes its own copy of the u01 Speaking card, because a
+    file:// page cannot fetch the JSON. That copy drifted from the curriculum
+    once already, so verify it still agrees. Delete this check once the
+    prototype's card is generated at build time.
+    """
+    proto = ROOT / "prototypes" / "brooklyn-objective-card.html"
+    if not proto.exists():
+        return
+    src = proto.read_text()
+    u01 = next((u for u in units if u.get("no") == "01"), None)
+    if not u01:
+        return
+    speaking = next((c for c in u01["cards"] if c["domain"] == "Speaking"), None)
+    if not speaking:
+        return
+
+    m = re.search(r'id:"([^"]+)"', src)
+    if m and m.group(1) != speaking["id"]:
+        errors.append(f"prototype: card id {m.group(1)!r} != curriculum {speaking['id']!r}")
+
+    m = re.search(r'fn:"([^"]+)"', src)
+    if m and m.group(1) != u01["function"]:
+        errors.append(f"prototype: function drifted from curriculum u01")
+
+    for i, lv in enumerate(LEVELS):
+        found = re.findall(r'canDo:"([^"]+)"', src)
+        if i < len(found):
+            want = speaking["levels"][lv]["canDo"]
+            if found[i] != want:
+                errors.append(
+                    f"prototype: L{lv} can-do drifted from curriculum\n"
+                    f"          prototype:  {found[i]}\n"
+                    f"          curriculum: {want}")
+
+
 def main():
     paths = sorted(UNITS_DIR.glob("u*.json"))
     if not paths:
@@ -138,6 +174,8 @@ def main():
     expected = [f"{i:02d}" for i in range(1, len(units) + 1)]
     if numbers != expected:
         errors.append(f"unit numbers not contiguous: {numbers}")
+
+    check_prototype(units)
 
     ids = [c["id"] for u in units for c in u.get("cards", []) if "id" in c]
     dupes = {i for i in ids if ids.count(i) > 1}

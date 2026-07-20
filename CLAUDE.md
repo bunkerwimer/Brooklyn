@@ -68,10 +68,20 @@ No Node in this environment — tooling is Python 3 (stdlib only, no install ste
   dropping the dark-mode pressed-chip color.
 
 ## Known duplication (worth fixing before the content grows)
-`docs/brooklyn-scope-and-sequence.html` is the hand-designed **pitch** doc. It still hand-codes the
-12-unit grid and the Unit 01 exemplar in HTML, so that content now exists in two places — there and in
-`curriculum/units/`. Edit the JSON and the pitch doc silently goes stale. Fix by having
-`build_docs.py` emit those two sections as fragments injected between marker comments.
+Two places still hold copies of curriculum content instead of reading it:
+
+1. **`docs/brooklyn-scope-and-sequence.html`** — the hand-designed **pitch** doc. It hand-codes the
+   12-unit grid and the Unit 01 exemplar, so that content exists there *and* in `curriculum/units/`.
+   Fix by having `build_docs.py` emit those two sections as fragments injected between marker comments.
+2. **`prototypes/brooklyn-objective-card.html`** — hardcodes its own u01 Speaking card, because a
+   `file://` page can't `fetch()` the JSON. This **already drifted** (2026-07-20): the card id was
+   `u01-speaking-introduce` and the L3 can-do had lost the word "back". Both realigned to the
+   curriculum, and `validate.py` now fails if they diverge again. Real fix: generate the prototype's
+   card at build time, which requires extending the schema to carry render details (listen prompts,
+   build blanks, speech models) the curriculum doesn't hold yet.
+
+**`Brooklyn Unit 1.pdf` is stale** — it was printed before the id fix, so its footer still reads
+`u01-speaking-introduce`. Reprint from the prototype (Level 1 → Print packet → Print / Save as PDF).
 
 ## Next steps
 1. Fix the pitch-doc duplication above.
